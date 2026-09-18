@@ -39,14 +39,15 @@ $sections: (
 
   // Sizes
   --aside-width: 12.5rem;
-  --card-image-max-width: 12.5rem;
   --card-image-height: 12.5rem;
+  --card-image-max-width: 12.5rem;
+  --card-preview-text-min-height: 6rem;
   --footer-min-height: 12.5rem;
   --header-height: 3.75rem;
 
   // Borders
-  --card-border-radius: 0;
   --button-border-radius: 0;
+  --card-border-radius: 0;
 
   // Spacing
   --spacing-base: 1rem;
@@ -232,7 +233,7 @@ $sections: (
 // Components
 // ========================================
 .card-group {
-  align-items: stretch;
+  align-items: start;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-base);
@@ -243,8 +244,6 @@ $sections: (
     display: flex;
     flex-basis: 0;
     flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
     gap: var(--spacing-base);
     padding: var(--spacing-base);
 
@@ -261,12 +260,56 @@ $sections: (
         gap: var(--spacing-base);
         height: 100%;
 
-        .article-title {
+        .card-preview {
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          display: -webkit-box;
+          line-clamp: 4;
           margin: 0;
+          min-height: var(--card-preview-text-min-height);
+          overflow: hidden;
+        }
+
+        .card-details {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .card-button {
+            align-self: flex-end;
+            align-content: center;
+            background: var(--color-primary);
+            border: none;
+            border-radius: var(--button-border-radius);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            order: 2;
+            padding: var(--spacing-base) var(--spacing-sm);
+            width: 100%;
+
+            .button-text {
+              color: var(--color-text);
+              font-family: 'Inter', sans-serif;
+              font-size: var(--font-size-xs);
+              letter-spacing: var(--letter-space-2xs);
+              text-align: center;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      &:has(.card-details[open]) {
+        .card-preview {
+          display: none;
         }
 
         .paragraph {
-          margin: 0;
+          &:first-of-type {
+            margin-top: 0;
+          }
         }
       }
 
@@ -275,29 +318,6 @@ $sections: (
         height: var(--card-image-height);
         object-fit: cover;
         width: 100%;
-      }
-    }
-
-    .card-button {
-      align-self: flex-end;
-      align-content: center;
-      background: var(--color-primary);
-      border: none;
-      border-radius: var(--button-border-radius);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      padding: var(--spacing-base) var(--spacing-sm);
-      width: 100%;
-
-      .button-link {
-        color: var(--color-text);
-        font-family: 'Inter', sans-serif;
-        font-size: var(--font-size-xs);
-        letter-spacing: var(--letter-space-2xs);
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
       }
     }
   }
@@ -398,16 +418,16 @@ $sections: (
       width: 100%;
 
       &:hover {
-        color: var(--color-text);
         background-color: var(--color-hover);
+        color: var(--color-text);
       }
 
       .toc-link {
         color: inherit;
         font-family: 'Inter', sans-serif;
         font-size: var(--font-size-xs);
-        line-height: var(--line-height-base);
         letter-spacing: var(--letter-space-2xs);
+        line-height: var(--line-height-base);
         padding: var(--spacing-base);
         text-align: end;
         text-decoration: none;
@@ -460,8 +480,8 @@ input[type='checkbox'] {
 
   .main-nav,
   input[type='checkbox']:checked ~ .main-nav {
-    display: flex;
     background-color: unset;
+    display: flex;
     flex-direction: row;
     height: 100%;
     justify-content: start;
@@ -545,8 +565,8 @@ input[type='checkbox'] {
 
   .section-title {
     font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
     letter-spacing: var(--letter-space-xl);
+    line-height: var(--line-height-xl);
   }
 
   .toc {
@@ -558,8 +578,8 @@ input[type='checkbox'] {
 @media (width >= $breakpoint-large) {
   .card-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: var(--spacing-base);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
     .card {
       display: flex;
@@ -578,13 +598,13 @@ input[type='checkbox'] {
 
   .page-title {
     font-size: var(--font-size-3xl);
-    line-height: var(--line-height-3xl);
     letter-spacing: var(--letter-space-3xl);
+    line-height: var(--line-height-3xl);
   }
 
   .section-title {
     font-size: var(--font-size-2xl);
-    line-height: var(--line-height-2xl);
     letter-spacing: var(--letter-space-2xl);
+    line-height: var(--line-height-2xl);
   }
 }

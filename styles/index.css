@@ -7,12 +7,13 @@
   --color-text-subtle: #b9b9b8;
   --color-text: #fafaf8;
   --aside-width: 12.5rem;
-  --card-image-max-width: 12.5rem;
   --card-image-height: 12.5rem;
+  --card-image-max-width: 12.5rem;
+  --card-preview-text-min-height: 6rem;
   --footer-min-height: 12.5rem;
   --header-height: 3.75rem;
-  --card-border-radius: 0;
   --button-border-radius: 0;
+  --card-border-radius: 0;
   --spacing-base: 1rem;
   --spacing-sm: 2.25rem;
   --viewport-width-360: $breakpoint-small;
@@ -160,7 +161,7 @@
 }
 
 .card-group {
-  align-items: stretch;
+  align-items: start;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-base);
@@ -172,8 +173,6 @@
   display: flex;
   flex-basis: 0;
   flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
   gap: var(--spacing-base);
   padding: var(--spacing-base);
 }
@@ -193,22 +192,23 @@
   height: 100%;
 }
 
-.card-group .card .card-figure .card-caption .article-title {
+.card-group .card .card-figure .card-caption .card-preview {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  line-clamp: 4;
   margin: 0;
+  min-height: var(--card-preview-text-min-height);
+  overflow: hidden;
 }
 
-.card-group .card .card-figure .card-caption .paragraph {
-  margin: 0;
-}
-
-.card-group .card .card-figure .card-image {
-  flex-shrink: 0;
-  height: var(--card-image-height);
-  object-fit: cover;
+.card-group .card .card-figure .card-caption .card-details {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-.card-group .card .card-button {
+.card-group .card .card-figure .card-caption .card-details .card-button {
   align-self: flex-end;
   align-content: center;
   background: var(--color-primary);
@@ -217,11 +217,12 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  order: 2;
   padding: var(--spacing-base) var(--spacing-sm);
   width: 100%;
 }
 
-.card-group .card .card-button .button-link {
+.card-group .card .card-figure .card-caption .card-details .card-button .button-text {
   color: var(--color-text);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
@@ -229,6 +230,21 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.card-group .card .card-figure:has(.card-details[open]) .card-preview {
+  display: none;
+}
+
+.card-group .card .card-figure:has(.card-details[open]) .paragraph:first-of-type {
+  margin-top: 0;
+}
+
+.card-group .card .card-figure .card-image {
+  flex-shrink: 0;
+  height: var(--card-image-height);
+  object-fit: cover;
+  width: 100%;
 }
 
 .container {
@@ -329,16 +345,16 @@
 }
 
 .toc .toc-group .toc-item:hover {
-  color: var(--color-text);
   background-color: var(--color-hover);
+  color: var(--color-text);
 }
 
 .toc .toc-group .toc-item .toc-link {
   color: inherit;
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
-  line-height: var(--line-height-base);
   letter-spacing: var(--letter-space-2xs);
+  line-height: var(--line-height-base);
   padding: var(--spacing-base);
   text-align: end;
   text-decoration: none;
@@ -466,8 +482,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   .main-nav,
   input[type="checkbox"]:checked ~ .main-nav {
-    display: flex;
     background-color: unset;
+    display: flex;
     flex-direction: row;
     height: 100%;
     justify-content: start;
@@ -539,8 +555,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   .section-title {
     font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
     letter-spacing: var(--letter-space-xl);
+    line-height: var(--line-height-xl);
   }
 
   .toc {
@@ -552,8 +568,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 @media (width >= 90rem) {
   .card-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: var(--spacing-base);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 
   .card-group .card {
@@ -572,13 +588,13 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   .page-title {
     font-size: var(--font-size-3xl);
-    line-height: var(--line-height-3xl);
     letter-spacing: var(--letter-space-3xl);
+    line-height: var(--line-height-3xl);
   }
 
   .section-title {
     font-size: var(--font-size-2xl);
-    line-height: var(--line-height-2xl);
     letter-spacing: var(--letter-space-2xl);
+    line-height: var(--line-height-2xl);
   }
 }
