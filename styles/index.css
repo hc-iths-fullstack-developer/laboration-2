@@ -241,6 +241,10 @@
   width: 100%;
 }
 
+.hero-black-hole {
+  background-image: url("../images/black-hole-hero.jpg");
+}
+
 .hero-exoplanet {
   background-image: url("../images/exoplanet-hero.jpg");
 }
@@ -355,6 +359,11 @@ input[type="checkbox"]:checked ~ .main-nav {
   width: 100dvw;
 }
 
+#body:has(#accretion-disk:target) .toc-item:has(.toc-link[href="#accretion-disk"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
 #body:has(#birth:target) .toc-item:has(.toc-link[href="#birth"]) {
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
@@ -370,12 +379,32 @@ input[type="checkbox"]:checked ~ .main-nav {
   font-weight: var(--font-weight-text-active);
 }
 
+#body:has(#corona:target) .toc-item:has(.toc-link[href="#corona"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
 #body:has(#death:target) .toc-item:has(.toc-link[href="#death"]) {
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#discovery:target) .toc-item:has(.toc-link[href="#discovery"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#doppler-beaming:target) .toc-item:has(.toc-link[href="#doppler-beaming"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#event-horizon:target) .toc-item:has(.toc-link[href="#event-horizon"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#event-horizon-shadow:target) .toc-item:has(.toc-link[href="#event-horizon-shadow"]) {
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
 }
@@ -406,6 +435,21 @@ input[type="checkbox"]:checked ~ .main-nav {
 }
 
 #body:has(#our-galaxy:target) .toc-item:has(.toc-link[href="#our-galaxy"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#particle-jets:target) .toc-item:has(.toc-link[href="#particle-jets"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#photon-sphere:target) .toc-item:has(.toc-link[href="#photon-sphere"]) {
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+}
+
+#body:has(#singularity:target) .toc-item:has(.toc-link[href="#singularity"]) {
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
 }

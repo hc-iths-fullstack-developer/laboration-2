@@ -5,17 +5,25 @@ $breakpoint-small: 22.5rem;
 $breakpoint-medium: 61.25rem;
 $breakpoint-large: 90rem;
 $sections: (
+  accretion-disk,
   birth,
   cannibalism,
   collisions,
+  corona,
   death,
   discovery,
+  doppler-beaming,
+  event-horizon,
+  event-horizon-shadow,
   evolution,
   formation,
   galaxy-bars,
   life,
   mergers,
   our-galaxy,
+  particle-jets,
+  photon-sphere,
+  singularity,
   types
 );
 
@@ -303,6 +311,10 @@ $sections: (
   justify-content: center;
   padding-inline: var(--spacing-base);
   width: 100%;
+}
+
+.hero-black-hole {
+  background-image: url('../images/black-hole-hero.jpg');
 }
 
 .hero-exoplanet {
