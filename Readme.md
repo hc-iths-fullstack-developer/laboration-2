@@ -1,75 +1,75 @@
 # README
 
-    Kursens andra laboration är ett individuellt projekt.
+Kursens andra laboration är ett individuellt projekt.
 
-    Objektivet är att bygga en webbplats åt en påhittad (eller riktig) organisation/kund. Tanken är att komma på sin egen projektidé, men här är tre exempel som kan användas för inspiration:
+Objektivet är att bygga en webbplats åt en påhittad (eller riktig) organisation/kund. Tanken är att komma på sin egen projektidé, men här är tre exempel som kan användas för inspiration:
 
-    + En webbplats åt en restaurang, ett café, eller liknande
++ En webbplats åt en restaurang, ett café, eller liknande
 
-    + En webbplats åt någon typ av evanemang, till exempel en musikfestival
++ En webbplats åt någon typ av evanemang, till exempel en musikfestival
 
-    + En e-handelsbutik, som till exempel säljer kläder
++ En e-handelsbutik, som till exempel säljer kläder
 
 ## Krav
 
 ### Gör en skiss
 
-    Skapa (innan kodandet påbörjas) en skiss (i form av en bild) som beskriver webbplatsens layout/design. Det gör ingenting om skissen slutar vara aktuell, och webbplatsen slutar “uppfylla” skissen, under arbetets gång. Inkludera skissen i inlämningen i form av bildfil. Bildfilen ska vara av typen PNG och ska heta `sketch.png`. (Tips: Skissen kan vara simpel och kan göras med penna och papper eller programvara.)
+Skapa (innan kodandet påbörjas) en skiss (i form av en bild) som beskriver webbplatsens layout/design. Det gör ingenting om skissen slutar vara aktuell, och webbplatsen slutar “uppfylla” skissen, under arbetets gång. Inkludera skissen i inlämningen i form av bildfil. Bildfilen ska vara av typen PNG och ska heta `sketch.png`. (Tips: Skissen kan vara simpel och kan göras med penna och papper eller programvara.)
 
 ### Ta fram en färgpalett
 
-    Webbplatsen ska bygga på en färgpalett. Likt med skissen gör det ingenting om paletten slutar vara aktuell. Inkludera färgpaletten i inlämningen i form av en bildfil. Bildfilen ska vara av typen PNG och ska heta palette.png. (Tips: Använd <https://coolors.co/> eller <https://color.adobe.com/>. Du kan ta en skärmbild i dessa tjänster genom att högerklicka och välja Take Screenshot i Firefox.)
+Webbplatsen ska bygga på en färgpalett. Likt med skissen gör det ingenting om paletten slutar vara aktuell. Inkludera färgpaletten i inlämningen i form av en bildfil. Bildfilen ska vara av typen PNG och ska heta palette.png. (Tips: Använd <https://coolors.co/> eller <https://color.adobe.com/>. Du kan ta en skärmbild i dessa tjänster genom att högerklicka och välja Take Screenshot i Firefox.)
 
 ### Se till att färgkontrasterna är tillgängliga
 
-    Webbplatsen ska vara tillgänglig i det avseende att det alltid är tillräckligt hög kontrast mellan text och bakgrund. AA-kraven måste uppfyllas. (Tips: <https://color.review/> kan vara behjälpligt kring att identifiera lämpliga färger att använda.)
+Webbplatsen ska vara tillgänglig i det avseende att det alltid är tillräckligt hög kontrast mellan text och bakgrund. AA-kraven måste uppfyllas. (Tips: <https://color.review/> kan vara behjälpligt kring att identifiera lämpliga färger att använda.)
 
 ### Skapa minst två webbsidor
 
-    Webbplatsen måste bestå av minst två unika webbsidor (HTML-filer). En av HTML-filerna (startsidan/hemsidan) ska heta index.html så att användaren hamnar på denna webbsida först. Länkar (a-element) ska skapas så att användaren kan navigera mellan webbsidorna.
+Webbplatsen måste bestå av minst två unika webbsidor (HTML-filer). En av HTML-filerna (startsidan/hemsidan) ska heta index.html så att användaren hamnar på denna webbsida först. Länkar (a-element) ska skapas så att användaren kan navigera mellan webbsidorna.
 
 ### Implementera en layout med CSS
 
-    Webbplatsen ska ha en layout som nyttjar Flexbox och/eller Grid Layout på ett lämpligt sätt. Lös problem med dessa tekniker som skulle vara svåra att lösa utan Flexbox eller Grid Layout.
+Webbplatsen ska ha en layout som nyttjar Flexbox och/eller Grid Layout på ett lämpligt sätt. Lös problem med dessa tekniker som skulle vara svåra att lösa utan Flexbox eller Grid Layout.
 
 ### Gör webbplatsen responsiv
 
-    Webbplatsen ska fungera väl på alla bredder mellan 360px (mobiler) och 980px (desktop). Använd media queries för detta. Inget innehåll ska hamna “utanför” webbläsaren så att användaren behöver scrolla i sidled. (Tips: Det kommer sannolikt att vara effektivare att bygga sajten med “mobile-first”-process (för små skärmar först), istället för tvärtom (för datorskärmar först, för att sedan “skala ner” den till att fungera väl på små skärmar).)
+Webbplatsen ska fungera väl på alla bredder mellan 360px (mobiler) och 980px (desktop). Använd media queries för detta. Inget innehåll ska hamna “utanför” webbläsaren så att användaren behöver scrolla i sidled. (Tips: Det kommer sannolikt att vara effektivare att bygga sajten med “mobile-first”-process (för små skärmar först), istället för tvärtom (för datorskärmar först, för att sedan “skala ner” den till att fungera väl på små skärmar).)
 
 ### Sätt unika title- och description-meta-element
 
-    Använd title-elementet och description-meta-elementet.
+Använd title-elementet och description-meta-elementet.
 
 ### Använd rubriker
 
-    Skapa rubriker med h-element (alltså h1-h6), på ett lämpligt sätt, enligt Google:s SEO-rekommendationer kring att hjälpa Google och användare att förstå innehållet och tillgänglighetsrekommendationerna Skriv beskrivande sidtitlar.
+Skapa rubriker med h-element (alltså h1-h6), på ett lämpligt sätt, enligt Google:s SEO-rekommendationer kring att hjälpa Google och användare att förstå innehållet och tillgänglighetsrekommendationerna Skriv beskrivande sidtitlar.
 
 ### Glöm inte alt-attributet
 
-    Inkludera minst ett img-element ska (som utgångspunkt) ha ett beskrivande alt-attribut i linje med tillgänglighetskravet kring att beskriva med text allt innehåll som inte är text och Google:s SEO-rekommendationer kring optimering av bilder.
+Inkludera minst ett img-element ska (som utgångspunkt) ha ett beskrivande alt-attribut i linje med tillgänglighetskravet kring att beskriva med text allt innehåll som inte är text och Google:s SEO-rekommendationer kring optimering av bilder.
 
 ### Validera din kod
 
-    All kod ska vara fri från fel i W3C:s valideringstjänster för HTML och CSS. Varningar från valideringstjänsterna accepteras.
+All kod ska vara fri från fel i W3C:s valideringstjänster för HTML och CSS. Varningar från valideringstjänsterna accepteras.
 
-    Ett tillräckligt stort bidrag måste göras. Insatsen kommer att bedömas utifrån att projektet pågår i runt en vecka.
+Ett tillräckligt stort bidrag måste göras. Insatsen kommer att bedömas utifrån att projektet pågår i runt en vecka.
 
-    Inkludera (detta är ett krav) en fil som heter README.txt i rotmappen på ditt projekt (samma mapp som innehåller index.html) som innehåller följande information:
+Inkludera (detta är ett krav) en fil som heter README.txt i rotmappen på ditt projekt (samma mapp som innehåller index.html) som innehåller följande information:
 
-    vilken eller vilka webbplatser du har hämtat inspiration från, och
-    var bilderna kommer från.
++ vilken eller vilka webbplatser du har hämtat inspiration från, och
++ var bilderna kommer från.
 
-    Paketera webbplatsen, README.txt-filen, samt skiss- och palettbilderna, som en Zip-fil och ladda upp denna fil här på itslearning.
-    Webbplatsen ska också publiceras
+Paketera webbplatsen, README.txt-filen, samt skiss- och palettbilderna, som en Zip-fil och ladda upp denna fil här på itslearning.
+Webbplatsen ska också publiceras
 
-    Webbplatsen ska även publiceras på webben via FTP.
+Webbplatsen ska även publiceras på webben via FTP.
 
-    Följande uppgifter ska användas att publicera webbplatsen:
+Följande uppgifter ska användas att publicera webbplatsen:
 
-    Värdnamn: ftp.ithsstudent.se
-    Användarnamn: student@ithsundervisning.se
-    Lösenord: hjy@023;GH
-    Mapp: public_html/jsu26g/x, där "x" byts ut mot ett valfritt namn
+Värdnamn: ftp.ithsstudent.se
+Användarnamn: <student@ithsundervisning.se>
+Lösenord: hjy@023;GH
+Mapp: public_html/jsu26g/x, där "x" byts ut mot ett valfritt namn
 
 Placera dina filer i en egen mapp inuti jsu26g-mappen. Lägg inte filer direkt i start-mappen, skapa en egen mapp i mappen jsu26g.
 
