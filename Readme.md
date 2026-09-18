@@ -22,7 +22,7 @@ Webbplatsen ska bygga på en **färgpalett**. Likt med skissen gör det ingentin
 
 ### 3. Se till att färgkontrasterna är tillgängliga
 
-Webbplatsen ska vara tillgänglig i det avseende att det alltid är [tillräckligt hög kontrast mellan text och bakgrund]<https://webbriktlinjer.se/riktlinjer/126-tillrackliga-kontraster/>. AA-kraven måste uppfyllas. (Tips: <https://color.review/> kan vara behjälpligt kring att identifiera lämpliga färger att använda.)
+Webbplatsen ska vara tillgänglig i det avseende att det alltid är [tillräckligt hög kontrast mellan text och bakgrund](https://webbriktlinjer.se/riktlinjer/126-tillrackliga-kontraster/). AA-kraven måste uppfyllas. (Tips: <https://color.review/> kan vara behjälpligt kring att identifiera lämpliga färger att använda.)
 
 ### 4. Skapa minst två webbsidor
 
@@ -38,15 +38,15 @@ Webbplatsen ska **fungera väl på alla bredder mellan 360px (mobiler) och 980px
 
 ### 7. Sätt unika title- och description-meta-element
 
-Använd [title-elementet]<https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv&visit_id=637667214098085977-1872329024&rd=1#uniquepagetitles> och [description-meta-elementet]<https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv&visit_id=637667214098085977-1872329024&rd=1#descriptionmeta>.
+Använd [title-elementet](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv&visit_id=637667214098085977-1872329024&rd=1#uniquepagetitles) och [description-meta-elementet](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv&visit_id=637667214098085977-1872329024&rd=1#descriptionmeta).
 
 ### 8. Använd rubriker
 
-[Skapa rubriker med h-element]<https://webbriktlinjer.se/riktlinjer/105-skapa-rubriker-med-h-element/> (alltså h1-h6), på ett lämpligt sätt, enligt [Google:s SEO-rekommendationer kring att hjälpa Google och användare att förstå innehållet]<https://support.google.com/webmasters/answer/7451184?hl=sv&ref_topic=9460495#understand_your_content> och tillgänglighetsrekommendationerna [Skriv beskrivande sidtitlar]<https://webbriktlinjer.se/riktlinjer/135-skriv-beskrivande-sidtitlar/>.
+[Skapa rubriker med h-element](https://webbriktlinjer.se/riktlinjer/105-skapa-rubriker-med-h-element/) (alltså h1-h6), på ett lämpligt sätt, enligt [Google:s SEO-rekommendationer kring att hjälpa Google och användare att förstå innehållet](https://support.google.com/webmasters/answer/7451184?hl=sv&ref_topic=9460495#understand_your_content) och tillgänglighetsrekommendationerna [Skriv beskrivande sidtitlar](https://webbriktlinjer.se/riktlinjer/135-skriv-beskrivande-sidtitlar/).
 
 ### 9. Glöm inte alt-attributet
 
-Inkludera minst ett img-element ska (som utgångspunkt) ha ett beskrivande alt-attribut i linje med tillgänglighetskravet kring att [beskriva med text allt innehåll som inte är text]<https://webbriktlinjer.se/riktlinjer/115-textalternativ/> och [Google:s SEO-rekommendationer kring optimering av bilder]<https://support.google.com/webmasters/answer/7451184?hl=sv&ref_topic=9460495#images>.
+Inkludera minst ett img-element ska (som utgångspunkt) ha ett beskrivande alt-attribut i linje med tillgänglighetskravet kring att [beskriva med text allt innehåll som inte är text](https://webbriktlinjer.se/riktlinjer/115-textalternativ/) och [Google:s SEO-rekommendationer kring optimering av bilder](https://support.google.com/webmasters/answer/7451184?hl=sv&ref_topic=9460495#images).
 
 ### 10. Validera din kod
 
@@ -84,25 +84,25 @@ Se modulen **Publicering** för mer information om hur FTP-överföringar kan g�
 
 Skriv **enhetligt formaterad kod**. Indenteringen ska vara konsekvent. Det ska till exempel inte vara två mellanslags indentering i ett CSS-block, och fyra i ett annat. Detta gäller för både HTML och CSS. Se modulen “Några kodkonventioner” för ett exempel kring hur automatisk kodformatering kan konfigureras. Enhetlig formatering bidrar till kod som är enklare att underhålla och vidareutveckla.
 
-Skriv **semantisk HTML-kod** för att [förmedla information, struktur och relationer i koden]<https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/formedla-information-struktur-och-relationer-i-koden>, det vill säga använda det mest passade HTML-elementet för allt innehåll. Det är till exempel inte acceptabelt att använda ett `div`-element för att kapsla in ett textstycke, eller att använda `h4` för att representera en huvudrubrik. Vidare ska `br`-element generellt sett **inte** användas för att skapa avstånd (det är väldigt ovanligt att br är rätt element att använda för detta; använd som utgångspunkt `margin`- eller `padding`-egenskaperna istället). Semantisk kod bidrar till sökmotoroptimering, tillgänglighet, samt kod som är enklare att underhålla och vidareutveckla.
+Skriv **semantisk HTML-kod** för att [förmedla information, struktur och relationer i koden](https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/formedla-information-struktur-och-relationer-i-koden), det vill säga använda det mest passade HTML-elementet för allt innehåll. Det är till exempel inte acceptabelt att använda ett `div`-element för att kapsla in ett textstycke, eller att använda `h4` för att representera en huvudrubrik. Vidare ska `br`-element generellt sett **inte** användas för att skapa avstånd (det är väldigt ovanligt att br är rätt element att använda för detta; använd som utgångspunkt `margin`- eller `padding`-egenskaperna istället). Semantisk kod bidrar till sökmotoroptimering, tillgänglighet, samt kod som är enklare att underhålla och vidareutveckla.
 
-Använd **HTML5-strukturelement** (till exempel såsom `header`, `main` och `footer`) för att [hjälpa användare med skärmläsare att bläddra mellan sidornas olika delar]<https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/gor-det-mojligt-att-hoppa-forbi-aterkommande-innehall>. (ARIA behöver inte användas.)
+Använd **HTML5-strukturelement** (till exempel såsom `header`, `main` och `footer`) för att [hjälpa användare med skärmläsare att bläddra mellan sidornas olika delar](https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/gor-det-mojligt-att-hoppa-forbi-aterkommande-innehall). (ARIA behöver inte användas.)
 
 Använd minst **en väljare utöver type selector, class selector och ID selector** (för att lösa ett problem där väljaren i fråga är lämplig).
 
 **Namnge klasser, ID-värden och filer på ett beskrivande sätt**. Det är till exempel inte acceptabelt att skapa en klass som heter “my-class”, eller en bild till “my-image”, eftersom detta namn inte kommunicerar tillräckligt mycket om vad objektet i fråga representerar. Beskrivande namn bidrar till kod som är enklare att underhålla och vidareutveckla.
 
-Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimeringsförbättringar utöver kraven som nämns ovan. Se <https://www.digg.se/webbriktlinjer> för riktlinjer kring tillgänglighet, och [Googles SEO-rekommendationer]<https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv> för tips kring sökmotoroptimeringar.
+Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimeringsförbättringar utöver kraven som nämns ovan. Se <https://www.digg.se/webbriktlinjer> för riktlinjer kring tillgänglighet, och [Googles SEO-rekommendationer](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv) för tips kring sökmotoroptimeringar.
 
 ## Källor
 
 ### CSS
 
-[Reset]<https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d>
+[Reset](https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d)
 
 ### Text och bilder
 
-[Welcome-to-the-Universe]<https://science.nasa.gov/universe/>
+[Welcome to the Universe](https://science.nasa.gov/universe/)
 
 ### Färger
 
@@ -110,6 +110,6 @@ Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimerin
 
 ### Typografi
 
-[Perfect-Fourth-Typescale]<https://precise-type.com/>
+[Perfect Fourth Typescale](https://precise-type.com/)
 
 [Font-Pairings]<>
