@@ -66,10 +66,10 @@ Webbplatsen ska även publiceras på webben via FTP.
 
 Följande uppgifter ska användas att publicera webbplatsen:
 
-Värdnamn: ftp.ithsstudent.se
-Användarnamn: <student@ithsundervisning.se>
-Lösenord: hjy@023;GH
-Mapp: public_html/jsu26g/x, där "x" byts ut mot ett valfritt namn
++ Värdnamn: ftp.ithsstudent.se
++ Användarnamn: <student@ithsundervisning.se>
++ Lösenord: hjy@023;GH
++ Mapp: public_html/jsu26g/x, där "x" byts ut mot ett valfritt namn
 
 Placera dina filer i en egen mapp inuti jsu26g-mappen. Lägg inte filer direkt i start-mappen, skapa en egen mapp i mappen jsu26g.
 
