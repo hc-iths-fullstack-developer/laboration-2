@@ -61,7 +61,7 @@ Ett **tillräckligt stort bidrag** måste göras. Insatsen kommer att bedömas u
 
 Paketera webbplatsen, README.txt-filen, samt skiss- och palettbilderna, som en **Zip-fil** och ladda upp denna fil här på itslearning.
 
-## 11. Webbplatsen ska också publiceras
+### 11. Webbplatsen ska också publiceras
 
 Webbplatsen ska även **publiceras på webben** via FTP.
 
@@ -80,7 +80,7 @@ Om mappnamnet **inte** är ditt namn, meddela då att det är du som ligger bako
 
 Se modulen **Publicering** för mer information om hur FTP-överföringar kan göras.
 
-### 11. Extra krav för VG
+### 12. Extra krav för VG
 
 Skriv **enhetligt formaterad kod**. Indenteringen ska vara konsekvent. Det ska till exempel inte vara två mellanslags indentering i ett CSS-block, och fyra i ett annat. Detta gäller för både HTML och CSS. Se modulen “Några kodkonventioner” för ett exempel kring hur automatisk kodformatering kan konfigureras. Enhetlig formatering bidrar till kod som är enklare att underhålla och vidareutveckla.
 
