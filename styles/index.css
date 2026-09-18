@@ -7,8 +7,7 @@
   --color-text-subtle: #b9b9b8;
   --color-text: #fafaf8;
   --aside-width: 12.5rem;
-  --aside-min-height-360: 12.5rem;
-  --border-radius: 0.75rem;
+  --border-radius: 0;
   --card-image-max-width: 12.5rem;
   --card-image-height: 12.5rem;
   --footer-min-height: 12.5rem;
@@ -27,9 +26,9 @@
   --font-size-xl: 3.1875rem;
   --font-size-2xl: 4.25rem;
   --font-size-3xl: 5.6875rem;
-  --heading-weight: 700;
-  --text-weight: 400;
-  --text-weight-active: 700;
+  --font-weight-heading: 700;
+  --font-weight-text: 400;
+  --font-weight-text-active: 700;
   --line-height-2xs: 1.7778;
   --line-height-xs: 1.6667;
   --line-height-base: 1.5;
@@ -65,7 +64,6 @@
 #body #aside {
   grid-area: aside;
   height: auto;
-  min-height: 0;
   width: 100%;
 }
 
@@ -107,7 +105,7 @@
 .heading {
   color: var(--color-text);
   font-family: "JetBrains Mono", monospace;
-  font-weight: var(--heading-weight);
+  font-weight: var(--font-weight-heading);
   margin-block: var(--spacing-sm) var(--spacing-base);
 }
 
@@ -121,7 +119,7 @@
   color: var(--color-text-subtle);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-base);
-  font-weight: var(--text-weight);
+  font-weight: var(--font-weight-text);
   letter-spacing: var(--letter-space-base);
   line-height: var(--line-height-base);
   margin-block: var(--spacing-base) var(--spacing-base);
@@ -153,7 +151,7 @@
   color: var(--color-text-subtle);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
-  font-weight: var(--text-weight);
+  font-weight: var(--font-weight-text);
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
   margin-block: var(--spacing-sm) var(--spacing-base);
@@ -277,7 +275,7 @@
 
 .main-nav .main-nav-link.active {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 .main-nav-label {
@@ -354,62 +352,62 @@ input[type="checkbox"]:checked ~ .main-nav {
 
 #body:has(#birth:target) .toc-item:has(.toc-link[href="#birth"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#cannibalism:target) .toc-item:has(.toc-link[href="#cannibalism"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#collisions:target) .toc-item:has(.toc-link[href="#collisions"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#death:target) .toc-item:has(.toc-link[href="#death"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#discovery:target) .toc-item:has(.toc-link[href="#discovery"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#evolution:target) .toc-item:has(.toc-link[href="#evolution"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#formation:target) .toc-item:has(.toc-link[href="#formation"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#galaxy-bars:target) .toc-item:has(.toc-link[href="#galaxy-bars"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#life:target) .toc-item:has(.toc-link[href="#life"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#mergers:target) .toc-item:has(.toc-link[href="#mergers"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#our-galaxy:target) .toc-item:has(.toc-link[href="#our-galaxy"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 #body:has(#types:target) .toc-item:has(.toc-link[href="#types"]) {
   color: var(--color-text);
-  font-weight: var(--text-weight-active);
+  font-weight: var(--font-weight-text-active);
 }
 
 @media (width >= 22.5rem) {
