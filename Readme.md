@@ -102,7 +102,7 @@ Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimerin
 
 ### Text och bilder
 
-[NASA page on the universe](https://science.nasa.gov/universe/)
+[NASA pages on the universe](https://science.nasa.gov/universe/)
 [Space.com page on black holes](https://www.space.com/astronomy/black-holes/tiny-primordial-black-holes-created-in-the-big-bang-may-have-rapidly-grown-to-supermassive-sizes)
 
 ### Färger
