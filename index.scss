@@ -115,7 +115,7 @@ $sections: (
 // ========================================
 // Mixins
 // ========================================
-@mixin toc-active {
+@mixin toc-nav-active {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -530,7 +530,7 @@ $sections: (
     flex-direction: column;
     margin-top: var(--spacing-sm);
 
-    .toc-item {
+    .toc-nav-item {
       align-items: end;
       display: flex;
       flex-direction: column;
@@ -538,7 +538,7 @@ $sections: (
       line-height: 1;
       width: 100%;
 
-      .toc-link {
+      .toc-nav-link {
         color: var(--color-text-subtle);
         font-family: 'Inter', sans-serif;
         font-size: var(--font-size-xs);
@@ -592,9 +592,9 @@ input[type='checkbox'] {
 #body {
   @each $section in $sections {
     &:has(##{$section}:target) {
-      .toc-item:has(.toc-link[href='##{$section}']) {
-        .toc-link {
-          @include toc-active;
+      .toc-nav-item:has(.toc-nav-link[href='##{$section}']) {
+        .toc-nav-link {
+          @include toc-nav-active;
         }
       }
     }

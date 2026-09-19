@@ -430,7 +430,7 @@
   margin-top: var(--spacing-sm);
 }
 
-.toc-nav .toc-nav-group .toc-item {
+.toc-nav .toc-nav-group .toc-nav-item {
   align-items: end;
   display: flex;
   flex-direction: column;
@@ -439,7 +439,7 @@
   width: 100%;
 }
 
-.toc-nav .toc-nav-group .toc-item .toc-link {
+.toc-nav .toc-nav-group .toc-nav-item .toc-nav-link {
   color: var(--color-text-subtle);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
@@ -455,7 +455,7 @@
   width: 100%;
 }
 
-.toc-nav .toc-nav-group .toc-item .toc-link::before {
+.toc-nav .toc-nav-group .toc-nav-item .toc-nav-link::before {
   background: linear-gradient(90deg, transparent, var(--color-background-hover));
   content: "";
   inset: 0;
@@ -466,11 +466,11 @@
   z-index: -1;
 }
 
-.toc-nav .toc-nav-group .toc-item .toc-link:hover {
+.toc-nav .toc-nav-group .toc-nav-item .toc-nav-link:hover {
   color: var(--color-text);
 }
 
-.toc-nav .toc-nav-group .toc-item .toc-link:hover::before {
+.toc-nav .toc-nav-group .toc-nav-item .toc-nav-link:hover::before {
   opacity: 1;
 }
 
@@ -478,7 +478,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   display: block;
 }
 
-#body:has(#accretion-disk:target) .toc-item:has(.toc-link[href="#accretion-disk"]) .toc-link {
+#body:has(#accretion-disk:target) .toc-nav-item:has(.toc-nav-link[href="#accretion-disk"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -488,7 +488,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#birth:target) .toc-item:has(.toc-link[href="#birth"]) .toc-link {
+#body:has(#birth:target) .toc-nav-item:has(.toc-nav-link[href="#birth"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -498,7 +498,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#cannibalism:target) .toc-item:has(.toc-link[href="#cannibalism"]) .toc-link {
+#body:has(#cannibalism:target) .toc-nav-item:has(.toc-nav-link[href="#cannibalism"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -508,7 +508,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#collisions:target) .toc-item:has(.toc-link[href="#collisions"]) .toc-link {
+#body:has(#collisions:target) .toc-nav-item:has(.toc-nav-link[href="#collisions"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -518,7 +518,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#corona:target) .toc-item:has(.toc-link[href="#corona"]) .toc-link {
+#body:has(#corona:target) .toc-nav-item:has(.toc-nav-link[href="#corona"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -528,7 +528,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#death:target) .toc-item:has(.toc-link[href="#death"]) .toc-link {
+#body:has(#death:target) .toc-nav-item:has(.toc-nav-link[href="#death"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -538,7 +538,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#discovery:target) .toc-item:has(.toc-link[href="#discovery"]) .toc-link {
+#body:has(#discovery:target) .toc-nav-item:has(.toc-nav-link[href="#discovery"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -548,7 +548,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#doppler-beaming:target) .toc-item:has(.toc-link[href="#doppler-beaming"]) .toc-link {
+#body:has(#doppler-beaming:target) .toc-nav-item:has(.toc-nav-link[href="#doppler-beaming"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -558,7 +558,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#event-horizon:target) .toc-item:has(.toc-link[href="#event-horizon"]) .toc-link {
+#body:has(#event-horizon:target) .toc-nav-item:has(.toc-nav-link[href="#event-horizon"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -568,7 +568,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#event-horizon-shadow:target) .toc-item:has(.toc-link[href="#event-horizon-shadow"]) .toc-link {
+#body:has(#event-horizon-shadow:target) .toc-nav-item:has(.toc-nav-link[href="#event-horizon-shadow"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -578,7 +578,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#evolution:target) .toc-item:has(.toc-link[href="#evolution"]) .toc-link {
+#body:has(#evolution:target) .toc-nav-item:has(.toc-nav-link[href="#evolution"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -588,7 +588,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#formation:target) .toc-item:has(.toc-link[href="#formation"]) .toc-link {
+#body:has(#formation:target) .toc-nav-item:has(.toc-nav-link[href="#formation"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -598,7 +598,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#galaxy-bars:target) .toc-item:has(.toc-link[href="#galaxy-bars"]) .toc-link {
+#body:has(#galaxy-bars:target) .toc-nav-item:has(.toc-nav-link[href="#galaxy-bars"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -608,7 +608,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#life:target) .toc-item:has(.toc-link[href="#life"]) .toc-link {
+#body:has(#life:target) .toc-nav-item:has(.toc-nav-link[href="#life"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -618,7 +618,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#mergers:target) .toc-item:has(.toc-link[href="#mergers"]) .toc-link {
+#body:has(#mergers:target) .toc-nav-item:has(.toc-nav-link[href="#mergers"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -628,7 +628,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#our-galaxy:target) .toc-item:has(.toc-link[href="#our-galaxy"]) .toc-link {
+#body:has(#our-galaxy:target) .toc-nav-item:has(.toc-nav-link[href="#our-galaxy"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -638,7 +638,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#particle-jets:target) .toc-item:has(.toc-link[href="#particle-jets"]) .toc-link {
+#body:has(#particle-jets:target) .toc-nav-item:has(.toc-nav-link[href="#particle-jets"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -648,7 +648,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#photon-sphere:target) .toc-item:has(.toc-link[href="#photon-sphere"]) .toc-link {
+#body:has(#photon-sphere:target) .toc-nav-item:has(.toc-nav-link[href="#photon-sphere"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -658,7 +658,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#singularity:target) .toc-item:has(.toc-link[href="#singularity"]) .toc-link {
+#body:has(#singularity:target) .toc-nav-item:has(.toc-nav-link[href="#singularity"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
@@ -668,7 +668,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#types:target) .toc-item:has(.toc-link[href="#types"]) .toc-link {
+#body:has(#types:target) .toc-nav-item:has(.toc-nav-link[href="#types"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
