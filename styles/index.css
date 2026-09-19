@@ -405,15 +405,16 @@
 }
 
 .toc-nav .toc-nav-group {
+  display: flex;
   border-right: var(--color-surface);
   border-right-style: solid;
-  border-width: 2px;
+  border-width: var(--border-width-sm);
+  flex-direction: column;
   margin-top: var(--spacing-sm);
 }
 
 .toc-nav .toc-nav-group .toc-item {
   align-items: end;
-  color: var(--color-text-subtle);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -421,126 +422,243 @@
   width: 100%;
 }
 
-.toc-nav .toc-nav-group .toc-item:hover {
-  background-color: var(--color-hover-bg);
-  color: var(--color-text);
-}
-
 .toc-nav .toc-nav-group .toc-item .toc-link {
-  color: inherit;
+  color: var(--color-text-subtle);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
+  isolation: isolate;
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-base);
   padding: var(--spacing-base);
+  position: relative;
   text-align: end;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.3s ease;
   width: 100%;
+}
+
+.toc-nav .toc-nav-group .toc-item .toc-link::before {
+  background: linear-gradient(90deg, transparent, var(--color-hover-bg));
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.toc-nav .toc-nav-group .toc-item .toc-link:hover {
+  color: var(--color-text);
+}
+
+.toc-nav .toc-nav-group .toc-item .toc-link:hover::before {
+  opacity: 1;
 }
 
 input[type="checkbox"]:checked ~ .main-nav {
   display: block;
 }
 
-#body:has(#accretion-disk:target) .toc-item:has(.toc-link[href="#accretion-disk"]) {
+#body:has(#accretion-disk:target) .toc-item:has(.toc-link[href="#accretion-disk"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#birth:target) .toc-item:has(.toc-link[href="#birth"]) {
+#body:has(#birth:target) .toc-item:has(.toc-link[href="#birth"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#cannibalism:target) .toc-item:has(.toc-link[href="#cannibalism"]) {
+#body:has(#cannibalism:target) .toc-item:has(.toc-link[href="#cannibalism"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#collisions:target) .toc-item:has(.toc-link[href="#collisions"]) {
+#body:has(#collisions:target) .toc-item:has(.toc-link[href="#collisions"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#corona:target) .toc-item:has(.toc-link[href="#corona"]) {
+#body:has(#corona:target) .toc-item:has(.toc-link[href="#corona"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#death:target) .toc-item:has(.toc-link[href="#death"]) {
+#body:has(#death:target) .toc-item:has(.toc-link[href="#death"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#discovery:target) .toc-item:has(.toc-link[href="#discovery"]) {
+#body:has(#discovery:target) .toc-item:has(.toc-link[href="#discovery"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#doppler-beaming:target) .toc-item:has(.toc-link[href="#doppler-beaming"]) {
+#body:has(#doppler-beaming:target) .toc-item:has(.toc-link[href="#doppler-beaming"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#event-horizon:target) .toc-item:has(.toc-link[href="#event-horizon"]) {
+#body:has(#event-horizon:target) .toc-item:has(.toc-link[href="#event-horizon"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#event-horizon-shadow:target) .toc-item:has(.toc-link[href="#event-horizon-shadow"]) {
+#body:has(#event-horizon-shadow:target) .toc-item:has(.toc-link[href="#event-horizon-shadow"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#evolution:target) .toc-item:has(.toc-link[href="#evolution"]) {
+#body:has(#evolution:target) .toc-item:has(.toc-link[href="#evolution"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#formation:target) .toc-item:has(.toc-link[href="#formation"]) {
+#body:has(#formation:target) .toc-item:has(.toc-link[href="#formation"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#galaxy-bars:target) .toc-item:has(.toc-link[href="#galaxy-bars"]) {
+#body:has(#galaxy-bars:target) .toc-item:has(.toc-link[href="#galaxy-bars"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#life:target) .toc-item:has(.toc-link[href="#life"]) {
+#body:has(#life:target) .toc-item:has(.toc-link[href="#life"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#mergers:target) .toc-item:has(.toc-link[href="#mergers"]) {
+#body:has(#mergers:target) .toc-item:has(.toc-link[href="#mergers"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#our-galaxy:target) .toc-item:has(.toc-link[href="#our-galaxy"]) {
+#body:has(#our-galaxy:target) .toc-item:has(.toc-link[href="#our-galaxy"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#particle-jets:target) .toc-item:has(.toc-link[href="#particle-jets"]) {
+#body:has(#particle-jets:target) .toc-item:has(.toc-link[href="#particle-jets"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#photon-sphere:target) .toc-item:has(.toc-link[href="#photon-sphere"]) {
+#body:has(#photon-sphere:target) .toc-item:has(.toc-link[href="#photon-sphere"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#singularity:target) .toc-item:has(.toc-link[href="#singularity"]) {
+#body:has(#singularity:target) .toc-item:has(.toc-link[href="#singularity"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
-#body:has(#types:target) .toc-item:has(.toc-link[href="#types"]) {
+#body:has(#types:target) .toc-item:has(.toc-link[href="#types"]) .toc-link {
   color: var(--color-text);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
   font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
 @media (width >= 22.5rem) {

@@ -113,6 +113,12 @@ $sections: (
 @mixin toc-active {
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right: var(--color-accent);
+  border-right-width: var(--border-width-sm);
+  border-right-style: solid;
+  font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
 }
 
 @mixin main-nav-reset {
@@ -498,36 +504,58 @@ $sections: (
   width: 100%;
 
   .toc-nav-group {
+    display: flex;
     border-right: var(--color-surface);
     border-right-style: solid;
-    border-width: 2px;
+    border-width: var(--border-width-sm);
+    flex-direction: column;
     margin-top: var(--spacing-sm);
 
     .toc-item {
       align-items: end;
-      color: var(--color-text-subtle);
       display: flex;
       flex-direction: column;
       justify-content: center;
       line-height: 1;
       width: 100%;
 
-      &:hover {
-        background-color: var(--color-hover-bg);
-        color: var(--color-text);
-      }
-
       .toc-link {
-        color: inherit;
+        color: var(--color-text-subtle);
         font-family: 'Inter', sans-serif;
         font-size: var(--font-size-xs);
+        isolation: isolate;
         letter-spacing: var(--letter-space-2xs);
         line-height: var(--line-height-base);
         padding: var(--spacing-base);
+        position: relative;
         text-align: end;
         text-decoration: none;
         text-transform: uppercase;
+        transition: color 0.3s ease;
         width: 100%;
+
+        &::before {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            var(--color-hover-bg)
+          );
+          content: '';
+          inset: 0;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          transition: opacity 0.3s ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          color: var(--color-text);
+
+          &::before {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -546,7 +574,9 @@ input[type='checkbox'] {
   @each $section in $sections {
     &:has(##{$section}:target) {
       .toc-item:has(.toc-link[href='##{$section}']) {
-        @include toc-active;
+        .toc-link {
+          @include toc-active;
+        }
       }
     }
   }
