@@ -520,6 +520,15 @@ $sections: (
   }
 }
 
+.logo {
+  height: var(--header-height);
+  width: var(--header-height);
+
+  path {
+    fill: var(--color-accent);
+  }
+}
+
 .toc-nav {
   display: none;
   max-height: calc(100dvh - var(--header-height) - var(--spacing-base));
@@ -605,6 +614,15 @@ input[type='checkbox'] {
       }
     }
   }
+
+  #header {
+    .container {
+      align-items: center;
+      flex-direction: row;
+      gap: var(--spacing-base);
+      justify-content: start;
+    }
+  }
 }
 
 // ========================================
@@ -674,9 +692,15 @@ input[type='checkbox'] {
     }
   }
 
+  .logo {
+    margin-left: calc(
+      var(--aside-width-md) - var(--header-height) - var(--spacing-base) * 3
+    );
+  }
+
+
   .main-nav {
     @include main-nav-reset;
-    margin-left: var(--aside-width-md);
 
     .main-nav-group {
       flex-direction: row;
@@ -774,8 +798,10 @@ input[type='checkbox'] {
     }
   }
 
-  .main-nav {
-    margin-left: var(--aside-width-lg);
+  .logo {
+    margin-left: calc(
+      var(--aside-width-lg) - var(--header-height) - var(--spacing-base) * 3
+    );
   }
 
   .page-title {
