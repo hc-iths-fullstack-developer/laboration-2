@@ -32,16 +32,16 @@ $sections: (
   --color-accent: #1eff00;
   --color-accent-subtle: #1eff0015;
   --color-background: #0a0a0a;
+  --color-background-hover: #1a1a1a6c;
   --color-surface: #1a1a1a;
-  --color-hover-bg: #1a1a1a6c;
-  --color-hover-surface: #b9b9b80e;
+  --color-surface-hover: #b9b9b80e;
   --color-text: #fafaf8;
   --color-text-subtle: #b9b9b8;
 
   // Sizes
-  --aside-width-mobile: 100%;
-  --aside-width-medium: 12.5rem;
-  --aside-width-large: 25rem;
+  --aside-width-sm: 100%;
+  --aside-width-md: 12.5rem;
+  --aside-width-lg: 25rem;
   --card-image-height: 12.875rem;
   --card-image-max-width: 12.875rem;
   --card-preview-text-min-height: 6rem;
@@ -51,9 +51,8 @@ $sections: (
   --header-width: 100%;
 
   // Borders
-  --button-border-radius: 0;
-  --card-border-radius: 0;
-
+  --border-radius-base: 0;
+  --border-radius-sm: 0;
   --border-width-base: 1px;
   --border-width-sm: 2px;
 
@@ -62,9 +61,15 @@ $sections: (
   --spacing-sm: 2.25rem;
 
   // Breakpoints
-  --viewport-width-360: $breakpoint-small;
-  --viewport-width-980: $breakpoint-medium;
-  --viewport-width-1440: $breakpoint-large;
+  --viewport-width-sm: $breakpoint-small;
+  --viewport-width-md: $breakpoint-medium;
+  --viewport-width-lg: $breakpoint-large;
+
+  // Effects
+  --hover-background-color-effect: background-color 0.3s ease;
+  --hover-border-color-effect: border-color 0.3s ease;
+  --hover-color-effect: color 0.3s ease;
+  --hover-opacity-effect: opacity 0.3s ease;
 
   // Typography
   --font-size-2xs: 0.5625rem;
@@ -111,12 +116,11 @@ $sections: (
 // Mixins
 // ========================================
 @mixin toc-active {
-  color: var(--color-text);
-  font-weight: var(--font-weight-text-active);
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
   border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
 }
@@ -156,7 +160,7 @@ $sections: (
   #aside {
     grid-area: aside;
     height: auto;
-    width: var(--aside-width-mobile);
+    width: var(--aside-width-sm);
   }
 
   #footer {
@@ -169,7 +173,7 @@ $sections: (
 
   #header {
     background-color: var(--color-surface);
-    border-bottom: var(--color-hover-surface);
+    border-bottom: var(--color-surface-hover);
     border-bottom-width: var(--border-width-base);
     border-bottom-style: solid;
     grid-area: header;
@@ -268,8 +272,8 @@ $sections: (
 
   .card {
     background-color: var(--color-surface);
-    border-radius: var(--card-border-radius);
-    border-color: var(--color-hover-surface);
+    border-radius: var(--border-radius-sm);
+    border-color: var(--color-surface-hover);
     border-width: var(--border-width-base);
     border-style: solid;
     display: flex;
@@ -309,24 +313,39 @@ $sections: (
           .card-button {
             align-content: center;
             align-self: flex-end;
-            background: var(--color-accent);
-            border: none;
-            border-radius: var(--button-border-radius);
+            background-color: var(--color-surface-hover);
+            border-color: var(--color-surface-hover);
+            border-radius: var(--border-radius-base);
+            border-style: solid;
+            border-width: var(--border-width-base);
             cursor: pointer;
             display: flex;
             flex-direction: column;
             order: 2;
             padding: var(--spacing-base) var(--spacing-sm);
+            transition:
+              var(--hover-background-color-effect),
+              var(--hover-border-color-effect);
             width: 100%;
 
             .button-text {
-              color: var(--color-text);
+              color: var(--color-text-subtle);
               font-family: 'Inter', sans-serif;
               font-size: var(--font-size-xs);
               letter-spacing: var(--letter-space-2xs);
+              transition: var(--hover-color-effect);
               text-align: center;
               text-decoration: none;
               text-transform: uppercase;
+            }
+
+            &:hover {
+              background-color: var(--color-surface-hover);
+              border-color: var(--color-accent);
+
+              .button-text {
+                color: var(--color-text);
+              }
             }
 
             .read-more {
@@ -437,21 +456,21 @@ $sections: (
         text-decoration: none;
         text-transform: uppercase;
         text-wrap: nowrap;
-        transition: color 0.3s ease;
+        transition: var(--hover-color-effect);
         width: 100%;
 
         &::before {
           background: linear-gradient(
             270deg,
             transparent,
-            var(--color-hover-bg)
+            var(--color-background-hover)
           );
           content: '';
           inset: 0;
           opacity: 0;
           pointer-events: none;
           position: absolute;
-          transition: opacity 0.3s ease;
+          transition: var(--hover-opacity-effect);
           z-index: -1;
         }
 
@@ -531,21 +550,21 @@ $sections: (
         text-align: end;
         text-decoration: none;
         text-transform: uppercase;
-        transition: color 0.3s ease;
+        transition: var(--hover-color-effect);
         width: 100%;
 
         &::before {
           background: linear-gradient(
             90deg,
             transparent,
-            var(--color-hover-bg)
+            var(--color-background-hover)
           );
           content: '';
           inset: 0;
           opacity: 0;
           pointer-events: none;
           position: absolute;
-          transition: opacity 0.3s ease;
+          transition: var(--hover-opacity-effect);
           z-index: -1;
         }
 
@@ -614,9 +633,7 @@ input[type='checkbox'] {
       'hero hero hero'
       'aside main .'
       'footer footer footer';
-    grid-template-columns: var(--aside-width-medium) auto var(
-        --aside-width-medium
-      );
+    grid-template-columns: var(--aside-width-md) auto var(--aside-width-md);
     grid-template-rows:
       var(--header-height)
       1fr
@@ -626,7 +643,7 @@ input[type='checkbox'] {
     #aside {
       align-content: start;
       justify-self: end;
-      width: var(--aside-width-medium);
+      width: var(--aside-width-md);
 
       .container {
         align-items: end;
@@ -653,7 +670,7 @@ input[type='checkbox'] {
 
   .main-nav {
     @include main-nav-reset;
-    margin-left: var(--aside-width-medium);
+    margin-left: var(--aside-width-md);
 
     .main-nav-group {
       flex-direction: row;
@@ -664,7 +681,7 @@ input[type='checkbox'] {
           &::before {
             background: linear-gradient(
               transparent,
-              var(--color-hover-surface)
+              var(--color-surface-hover)
             );
           }
 
@@ -675,11 +692,11 @@ input[type='checkbox'] {
               var(--color-accent-subtle)
             );
             border-bottom: var(--color-accent);
-            border-bottom-width: var(--border-width-sm);
             border-bottom-style: solid;
+            border-bottom-width: var(--border-width-sm);
             border-left: unset;
-            border-left-width: unset;
             border-left-style: unset;
+            border-left-width: unset;
           }
         }
       }
@@ -705,7 +722,7 @@ input[type='checkbox'] {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
-    margin-left: var(--aside-width-medium);
+    margin-left: var(--aside-width-md);
     text-align: start;
   }
 
@@ -723,12 +740,10 @@ input[type='checkbox'] {
 
 @media (width >= $breakpoint-large) {
   #body {
-    grid-template-columns: var(--aside-width-large) auto var(
-        --aside-width-large
-      );
+    grid-template-columns: var(--aside-width-lg) auto var(--aside-width-lg);
 
     #aside {
-      width: var(--aside-width-large);
+      width: var(--aside-width-lg);
     }
   }
 
@@ -753,14 +768,14 @@ input[type='checkbox'] {
   }
 
   .main-nav {
-    margin-left: var(--aside-width-large);
+    margin-left: var(--aside-width-lg);
   }
 
   .page-title {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
     line-height: var(--line-height-3xl);
-    margin-left: var(--aside-width-large);
+    margin-left: var(--aside-width-lg);
   }
 
   .section-title {
