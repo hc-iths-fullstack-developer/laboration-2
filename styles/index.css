@@ -611,6 +611,10 @@ input[type="checkbox"]:checked ~ .main-nav {
     width: 100%;
   }
 
+  .main-nav {
+    margin-left: var(--aside-width-large);
+  }
+
   .page-title {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
