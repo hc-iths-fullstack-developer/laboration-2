@@ -276,8 +276,8 @@ $sections: (
           width: 100%;
 
           .card-button {
-            align-self: flex-end;
             align-content: center;
+            align-self: flex-end;
             background: var(--color-primary);
             border: none;
             border-radius: var(--button-border-radius);
@@ -297,6 +297,14 @@ $sections: (
               text-decoration: none;
               text-transform: uppercase;
             }
+
+            .read-more {
+              display: inline;
+            }
+
+            .read-less {
+              display: none;
+            }
           }
         }
       }
@@ -306,9 +314,19 @@ $sections: (
           display: none;
         }
 
-        .paragraph {
-          &:first-of-type {
+        .card-details {
+          .paragraph:first-of-type {
             margin-top: 0;
+          }
+
+          .card-button {
+            .read-more {
+              display: none;
+            }
+
+            .read-less {
+              display: inline;
+            }
           }
         }
       }

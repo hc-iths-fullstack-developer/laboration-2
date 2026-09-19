@@ -209,8 +209,8 @@
 }
 
 .card-group .card .card-figure .card-caption .card-details .card-button {
-  align-self: flex-end;
   align-content: center;
+  align-self: flex-end;
   background: var(--color-primary);
   border: none;
   border-radius: var(--button-border-radius);
@@ -232,12 +232,28 @@
   text-transform: uppercase;
 }
 
+.card-group .card .card-figure .card-caption .card-details .card-button .read-more {
+  display: inline;
+}
+
+.card-group .card .card-figure .card-caption .card-details .card-button .read-less {
+  display: none;
+}
+
 .card-group .card .card-figure:has(.card-details[open]) .card-preview {
   display: none;
 }
 
-.card-group .card .card-figure:has(.card-details[open]) .paragraph:first-of-type {
+.card-group .card .card-figure:has(.card-details[open]) .card-details .paragraph:first-of-type {
   margin-top: 0;
+}
+
+.card-group .card .card-figure:has(.card-details[open]) .card-details .card-button .read-more {
+  display: none;
+}
+
+.card-group .card .card-figure:has(.card-details[open]) .card-details .card-button .read-less {
+  display: inline;
 }
 
 .card-group .card .card-figure .card-image {
