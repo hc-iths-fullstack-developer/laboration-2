@@ -164,7 +164,7 @@ $sections: (
   }
 
   #footer {
-    background-color: var(--color-accent);
+    background-color: var(--color-surface);
     grid-area: footer;
     min-height: var(--footer-min-height);
     width: var(--footer-width);
@@ -174,7 +174,7 @@ $sections: (
   #header {
     background-color: var(--color-surface);
     border-bottom: var(--color-surface-hover);
-    border-bottom-width: var(--border-width-base);
+    border-bottom-width: var(--border-width-sm);
     border-bottom-style: solid;
     grid-area: header;
     height: var(--header-height);
@@ -274,7 +274,7 @@ $sections: (
     background-color: var(--color-surface);
     border-radius: var(--border-radius-sm);
     border-color: var(--color-surface-hover);
-    border-width: var(--border-width-base);
+    border-width: var(--border-width-sm);
     border-style: solid;
     display: flex;
     flex-basis: 0;
@@ -317,12 +317,13 @@ $sections: (
             border-color: var(--color-surface-hover);
             border-radius: var(--border-radius-base);
             border-style: solid;
-            border-width: var(--border-width-base);
+            border-width: var(--border-width-sm);
             cursor: pointer;
             display: flex;
             flex-direction: column;
             order: 2;
-            padding: var(--spacing-base) var(--spacing-sm);
+            padding: calc(var(--spacing-base) - var(--border-width-sm))
+              var(--spacing-sm);
             transition:
               var(--hover-background-color-effect),
               var(--hover-border-color-effect);
@@ -484,11 +485,16 @@ $sections: (
 
         &.active {
           color: var(--color-text);
-          background: linear-gradient(transparent, var(--color-accent-subtle));
+          background: linear-gradient(
+            270deg,
+            transparent,
+            var(--color-accent-subtle)
+          );
           border-left: var(--color-accent);
           border-left-width: var(--border-width-sm);
           border-left-style: solid;
           font-weight: var(--font-weight-text-active);
+          margin-bottom: unset;
         }
       }
     }
@@ -697,6 +703,7 @@ input[type='checkbox'] {
             border-left: unset;
             border-left-style: unset;
             border-left-width: unset;
+            margin-bottom: calc(-1 * var(--border-width-sm));
           }
         }
       }
