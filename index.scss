@@ -33,18 +33,22 @@ $sections: (
   --color-background: #0a0a0a;
   --color-primary: #1b1bff;
   --color-surface: #1a1a1a;
-  --color-hover: #1a1a1a6c;
+  --color-hover-bg: #1a1a1a6c;
+  --color-hover-surface: #b9b9b80e;
   --color-text-subtle: #b9b9b8;
   --color-text: #fafaf8;
 
   // Sizes
-  --aside-width: 12.5rem;
+  --aside-width-mobile: 100%;
+  --aside-width-medium: 12.5rem;
   --aside-width-large: 25rem;
   --card-image-height: 12.875rem;
   --card-image-max-width: 12.875rem;
   --card-preview-text-min-height: 6rem;
   --footer-min-height: 12.5rem;
+  --footer-width: 100%;
   --header-height: 3.75rem;
+  --header-width: 100%;
 
   // Borders
   --button-border-radius: 0;
@@ -108,6 +112,17 @@ $sections: (
   font-weight: var(--font-weight-text-active);
 }
 
+@mixin main-nav-reset {
+  background-color: unset;
+  display: block;
+  height: 100%;
+  left: unset;
+  padding: unset;
+  position: relative;
+  top: unset;
+  width: unset;
+}
+
 // ========================================
 // Layout
 // ========================================
@@ -132,25 +147,24 @@ $sections: (
   #aside {
     grid-area: aside;
     height: auto;
-    width: 100%;
+    width: var(--aside-width-mobile);
   }
 
   #footer {
     background-color: var(--color-primary);
     grid-area: footer;
     min-height: var(--footer-min-height);
-    width: 100%;
+    width: var(--footer-width);
     z-index: var(--hell-index);
   }
 
   #header {
     background-color: var(--color-surface);
-    backdrop-filter: blur(12px);
     grid-area: header;
     height: var(--header-height);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: var(--header-width);
     z-index: var(--heaven-index);
   }
 
@@ -203,6 +217,7 @@ $sections: (
   line-height: var(--line-height-lg);
   margin-inline: auto;
   text-align: center;
+  text-shadow: var(--color-background) 1px 0 10px;
   z-index: var(--earth-index);
 }
 
@@ -373,23 +388,49 @@ $sections: (
 }
 
 .main-nav {
-  align-items: center;
+  background-color: var(--color-background);
   display: none;
-  gap: var(--spacing-base);
-  height: 100%;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: var(--header-height);
+  width: 100dvw;
 
-  .main-nav-link {
-    color: var(--color-text-subtle);
-    font-family: 'Inter', sans-serif;
-    font-size: var(--font-size-xs);
-    letter-spacing: var(--letter-space-2xs);
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  .main-nav-group {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: start;
 
-    &.active {
-      color: var(--color-text);
-      font-weight: var(--font-weight-text-active);
+    .main-nav-item {
+      display: flex;
+
+      &:hover {
+        background-color: var(--color-hover-bg);
+      }
+
+      .main-nav-link {
+        color: var(--color-text-subtle);
+        font-family: 'Inter', sans-serif;
+        font-size: var(--font-size-xs);
+        height: auto;
+        letter-spacing: var(--letter-space-2xs);
+        line-height: calc(var(--header-height) - var(--spacing-base) * 2);
+        padding: var(--spacing-base);
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        width: 100%;
+
+        &.active {
+          color: var(--color-text);
+          font-weight: var(--font-weight-text-active);
+        }
+      }
     }
   }
 }
@@ -433,11 +474,10 @@ $sections: (
       flex-direction: column;
       justify-content: center;
       line-height: 1;
-      min-height: 48px;
       width: 100%;
 
       &:hover {
-        background-color: var(--color-hover);
+        background-color: var(--color-hover-bg);
         color: var(--color-text);
       }
 
@@ -462,16 +502,7 @@ $sections: (
 // ========================================
 input[type='checkbox'] {
   &:checked ~ .main-nav {
-    background-color: var(--color-background);
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
-    left: 0;
-    padding: var(--spacing-base);
-    position: absolute;
-    top: var(--header-height);
-    width: 100dvw;
+    display: block;
   }
 }
 
@@ -497,24 +528,6 @@ input[type='checkbox'] {
     }
   }
 
-  .main-nav,
-  input[type='checkbox']:checked ~ .main-nav {
-    background-color: unset;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: start;
-    left: unset;
-    padding: unset;
-    position: unset;
-    top: unset;
-    width: unset;
-  }
-
-  .main-nav-label {
-    display: none;
-  }
-
   .page-title {
     font-size: var(--font-size-xl);
     letter-spacing: var(--letter-space-xl);
@@ -535,7 +548,9 @@ input[type='checkbox'] {
       'hero hero hero'
       'aside main .'
       'footer footer footer';
-    grid-template-columns: var(--aside-width) auto var(--aside-width);
+    grid-template-columns: var(--aside-width-medium) auto var(
+        --aside-width-medium
+      );
     grid-template-rows:
       var(--header-height)
       1fr
@@ -545,7 +560,7 @@ input[type='checkbox'] {
     #aside {
       align-content: start;
       justify-self: end;
-      width: var(--aside-width);
+      width: var(--aside-width-medium);
 
       .container {
         align-items: end;
@@ -571,14 +586,41 @@ input[type='checkbox'] {
   }
 
   .main-nav {
-    margin-left: var(--aside-width);
+    @include main-nav-reset;
+    margin-left: var(--aside-width-medium);
+
+    .main-nav-group {
+      flex-direction: row;
+      justify-content: start;
+
+      .main-nav-item {
+        &:hover {
+          background-color: var(--color-hover-surface);
+        }
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    &:checked ~ .main-nav {
+      @include main-nav-reset;
+
+      .main-nav-group {
+        flex-direction: row;
+        justify-content: start;
+      }
+    }
+  }
+
+  .main-nav-label {
+    display: none;
   }
 
   .page-title {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
-    margin-left: var(--aside-width);
+    margin-left: var(--aside-width-medium);
     text-align: start;
   }
 
