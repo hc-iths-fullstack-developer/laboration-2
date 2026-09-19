@@ -39,6 +39,7 @@ $sections: (
 
   // Sizes
   --aside-width: 12.5rem;
+  --aside-width-large: 25rem;
   --card-image-height: 12.875rem;
   --card-image-max-width: 12.875rem;
   --card-preview-text-min-height: 6rem;
@@ -412,7 +413,7 @@ $sections: (
   }
 }
 
-.toc {
+.toc-nav {
   display: none;
   max-height: calc(100dvh - var(--header-height) - var(--spacing-base));
   overflow-y: auto;
@@ -587,13 +588,23 @@ input[type='checkbox'] {
     line-height: var(--line-height-xl);
   }
 
-  .toc {
+  .toc-nav {
     display: block;
     padding-top: var(--header-height);
   }
 }
 
 @media (width >= $breakpoint-large) {
+  #body {
+    grid-template-columns: var(--aside-width-large) auto var(
+        --aside-width-large
+      );
+
+    #aside {
+      width: var(--aside-width-large);
+    }
+  }
+
   .card-group {
     display: grid;
     gap: var(--spacing-base);
@@ -618,6 +629,7 @@ input[type='checkbox'] {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
     line-height: var(--line-height-3xl);
+    margin-left: var(--aside-width-large);
   }
 
   .section-title {
