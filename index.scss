@@ -30,6 +30,7 @@ $sections: (
 :root {
   // Colors
   --color-accent: #ff7de9;
+  --color-accent-hover: #ffa4f0;
   --color-accent-subtle: #ff7de91e;
   --color-background: #0a0a0a;
   --color-background-hover: #1a1a1a6c;
@@ -215,6 +216,17 @@ $sections: (
   color: var(--color-accent);
   font-family: 'Inter', sans-serif;
   text-decoration: underline dotted;
+  transition: var(--hover-color-effect);
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.link-external {
+  &::after {
+    content: ' ↗';
+  }
 }
 
 .paragraph {
@@ -248,6 +260,12 @@ $sections: (
   letter-spacing: var(--letter-space-sm);
   line-height: var(--line-height-sm);
   margin: 0;
+}
+
+.footer-title {
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-space-sm);
+  line-height: var(--line-height-sm);
 }
 
 .subtitle {
@@ -400,6 +418,26 @@ $sections: (
   justify-content: center;
   padding-inline: var(--spacing-base);
   width: 100%;
+}
+
+.footer-nav {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  padding-block: var(--header-height);
+
+  .footer-nav-group {
+    flex-basis: 0;
+
+    .footer-nav-item {
+      display: flex;
+
+      .link {
+        line-height: var(--line-height-base);
+      }
+    }
+  }
 }
 
 .hero-black-hole {
@@ -647,8 +685,14 @@ input[type='checkbox'] {
 
   #footer {
     .container {
+      justify-content: start;
       margin-inline: auto;
       width: auto;
+
+      .section {
+        padding-block: unset;
+        padding-inline: var(--spacing-base);
+      }
     }
   }
 
@@ -855,6 +899,13 @@ input[type='checkbox'] {
     }
   }
 
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--spacing-base);
+    width: 100%;
+  }
+
   .logo {
     margin-left: calc(
       var(--aside-width-lg) - var(--header-height) - var(--spacing-base) * 3
@@ -872,5 +923,11 @@ input[type='checkbox'] {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
+  }
+}
+
+@media only screen and (max-device-width: $breakpoint-large) {
+  #hero {
+    background-attachment: scroll;
   }
 }
