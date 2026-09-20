@@ -158,6 +158,20 @@ $sections: (
     auto;
   justify-items: center;
 
+  &.index-page {
+    grid-template-areas:
+      'header'
+      'hero'
+      'main'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      var(--header-height)
+      auto
+      1fr
+      auto;
+  }
+
   #aside {
     grid-area: aside;
     height: auto;
@@ -410,12 +424,47 @@ $sections: (
   }
 }
 
+.card-index {
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  padding-block: var(--header-height);
+
+  .card-figure-index {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--header-height);
+    height: 100%;
+
+    .card-caption-index {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  .card-image-index {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    flex-shrink: 0;
+    max-width: calc(var(--card-image-height) * 2 - var(--spacing-base) * 2);
+    object-fit: cover;
+    width: 100%;
+
+    &.right-aligned {
+      order: unset;
+    }
+  }
+}
+
 .container {
   align-items: start;
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: center;
+  justify-content: start;
   padding-inline: var(--spacing-base);
   width: 100%;
 }
@@ -685,7 +734,6 @@ input[type='checkbox'] {
 
   #footer {
     .container {
-      justify-content: start;
       margin-inline: auto;
       width: auto;
 
@@ -700,7 +748,14 @@ input[type='checkbox'] {
     .container {
       align-items: center;
       flex-direction: row;
-      justify-content: start;
+    }
+  }
+
+  #hero {
+    .container {
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }
@@ -780,6 +835,27 @@ input[type='checkbox'] {
         .card-image {
           max-width: var(--card-image-max-width);
         }
+      }
+    }
+  }
+
+  .card-index {
+    .card-figure-index {
+      flex-direction: row;
+      margin-inline: calc(
+        var(--aside-width-md));
+
+      .card-caption-index {
+        align-items: start;
+
+      }
+    }
+
+    .card-image-index {
+      max-width: calc(var(--card-image-height) * 2);
+
+      &.right-aligned {
+        order: 2;
       }
     }
   }
@@ -896,6 +972,23 @@ input[type='checkbox'] {
           width: 100%;
         }
       }
+    }
+  }
+
+  .card-index {
+    .card-figure-index {
+      margin-inline: calc(
+        var(--aside-width-lg));
+
+      .card-caption-index {
+        .paragraph {
+          max-width: 65ch;
+        }
+      }
+    }
+
+    .card-image-index {
+      max-width: calc(var(--card-image-height) * 2);
     }
   }
 
