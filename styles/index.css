@@ -802,7 +802,6 @@ input[type="checkbox"]:checked ~ .main-nav {
 
 #body #footer .container .section {
   padding-block: unset;
-  padding-inline: var(--spacing-base);
 }
 
 #body #header .container {
