@@ -29,7 +29,7 @@ $sections: (
 
 :root {
   // Colors
-  --color-accent: #FF7DE9;
+  --color-accent: #ff7de9;
   --color-accent-subtle: #ff7de91e;
   --color-background: #0a0a0a;
   --color-background-hover: #1a1a1a6c;
@@ -520,10 +520,7 @@ $sections: (
     transition: var(--hover-color-effect);
 
     &::before {
-      background: linear-gradient(
-        transparent,
-        var(--color-surface-hover)
-      );
+      background: linear-gradient(transparent, var(--color-surface-hover));
       content: '';
       inset: 0;
       opacity: 0;
@@ -648,6 +645,13 @@ input[type='checkbox'] {
     }
   }
 
+  #footer {
+    .container {
+      margin-inline: auto;
+      width: auto;
+    }
+  }
+
   #header {
     .container {
       align-items: center;
@@ -704,6 +708,12 @@ input[type='checkbox'] {
       .container {
         align-items: end;
         justify-content: start;
+      }
+    }
+
+    #footer {
+      .container {
+        margin-inline: var(--aside-width-md);
       }
     }
 
@@ -816,6 +826,12 @@ input[type='checkbox'] {
 
     #aside {
       width: var(--aside-width-lg);
+    }
+
+    #footer {
+      .container {
+        margin-inline: var(--aside-width-lg);
+      }
     }
   }
 

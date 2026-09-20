@@ -1,5 +1,5 @@
 :root {
-  --color-accent: #FF7DE9;
+  --color-accent: #ff7de9;
   --color-accent-subtle: #ff7de91e;
   --color-background: #0a0a0a;
   --color-background-hover: #1a1a1a6c;
@@ -716,6 +716,11 @@ input[type="checkbox"]:checked ~ .main-nav {
   margin-right: calc(-1 * var(--border-width-sm));
 }
 
+#body #footer .container {
+  margin-inline: auto;
+  width: auto;
+}
+
 #body #header .container {
   align-items: center;
   flex-direction: row;
@@ -756,6 +761,10 @@ input[type="checkbox"]:checked ~ .main-nav {
   #body #aside .container {
     align-items: end;
     justify-content: start;
+  }
+
+  #body #footer .container {
+    margin-inline: var(--aside-width-md);
   }
 
   #body #header .container {
@@ -860,6 +869,10 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   #body #aside {
     width: var(--aside-width-lg);
+  }
+
+  #body #footer .container {
+    margin-inline: var(--aside-width-lg);
   }
 
   .card-group {
