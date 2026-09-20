@@ -890,7 +890,7 @@ input[type="checkbox"]:checked ~ .main-nav {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
-    margin-left: var(--aside-width-md);
+    margin-inline: var(--aside-width-md);
     text-align: start;
   }
 
@@ -954,7 +954,7 @@ input[type="checkbox"]:checked ~ .main-nav {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
     line-height: var(--line-height-3xl);
-    margin-left: var(--aside-width-lg);
+    margin-inline: var(--aside-width-lg);
   }
 
   .section-title {
