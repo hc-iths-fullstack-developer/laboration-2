@@ -164,7 +164,7 @@
   line-height: var(--line-height-lg);
   margin-inline: auto;
   text-align: center;
-  text-shadow: var(--color-background) 1px 0 10px;
+  text-shadow: 0 1px 4px var(--color-background);
   z-index: var(--earth-index);
 }
 
