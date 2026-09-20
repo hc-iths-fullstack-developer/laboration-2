@@ -107,10 +107,9 @@ Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimerin
 
 ### Färger
 
-[Palette]<>
+[Palette](<https://coolors.co/>)
 
 ### Typografi
 
 [Perfect Fourth Typescale](https://precise-type.com/)
-
-[Font-Pairings]<>
+[Font-Pairings](https://fonts.google.com/)
