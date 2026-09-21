@@ -433,6 +433,7 @@ $sections: (
 .card-index {
   display: flex;
   flex-direction: column;
+  padding-inline: var(--spacing-base);
 
   .card-figure-index {
     align-items: center;
@@ -870,7 +871,7 @@ input[type='checkbox'] {
   .card-index {
     .card-figure-index {
       flex-direction: row;
-      margin-inline: calc(var(--aside-width-md) - var(--spacing-base));
+      margin-inline: var(--aside-width-md);
     }
 
     .card-image-index {
@@ -1003,7 +1004,7 @@ input[type='checkbox'] {
 
   .card-index {
     .card-figure-index {
-      margin-inline: calc(var(--aside-width-lg) - var(--spacing-base));
+      margin-inline: var(--aside-width-lg);
 
       .card-caption-index {
         .paragraph {

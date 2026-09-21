@@ -326,6 +326,7 @@
 .card-index {
   display: flex;
   flex-direction: column;
+  padding-inline: var(--spacing-base);
 }
 
 .card-index .card-figure-index {
@@ -890,7 +891,7 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   .card-index .card-figure-index {
     flex-direction: row;
-    margin-inline: calc(var(--aside-width-md) - var(--spacing-base));
+    margin-inline: var(--aside-width-md);
   }
 
   .card-index .card-image-index {
@@ -1014,7 +1015,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   }
 
   .card-index .card-figure-index {
-    margin-inline: calc(var(--aside-width-lg) - var(--spacing-base));
+    margin-inline: var(--aside-width-lg);
   }
 
   .card-index .card-figure-index .card-caption-index .paragraph {
