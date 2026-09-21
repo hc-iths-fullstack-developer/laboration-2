@@ -170,9 +170,13 @@
 }
 
 .section-title {
+  border-left: var(--color-accent);
+  border-left-style: solid;
+  border-left-width: var(--border-width-sm);
   font-size: var(--font-size-md);
   letter-spacing: var(--letter-space-md);
   line-height: var(--line-height-md);
+  padding-left: var(--spacing-sm);
 }
 
 .card-title {
