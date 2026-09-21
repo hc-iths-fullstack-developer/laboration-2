@@ -119,8 +119,8 @@ $sections: (
 @mixin toc-nav-active {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -189,8 +189,8 @@ $sections: (
   #header {
     background-color: var(--color-surface);
     border-bottom: var(--color-surface-hover);
-    border-bottom-width: var(--border-width-sm);
     border-bottom-style: solid;
+    border-bottom-width: var(--border-width-sm);
     grid-area: header;
     height: var(--header-height);
     position: fixed;
@@ -201,9 +201,9 @@ $sections: (
 
   #hero {
     background-attachment: fixed;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
     grid-area: hero;
     height: 50dvh;
     width: 100%;
@@ -251,6 +251,7 @@ $sections: (
   letter-spacing: var(--letter-space-base);
   line-height: var(--line-height-base);
   margin-block: var(--spacing-base) var(--spacing-base);
+  max-width: 80ch;
 }
 
 .page-title {
@@ -290,6 +291,7 @@ $sections: (
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
   margin-block: var(--spacing-sm) var(--spacing-base);
+  max-width: 100ch;
   text-transform: uppercase;
 }
 
@@ -432,40 +434,18 @@ $sections: (
 
   .card-figure-index {
     align-items: center;
+    background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
     display: flex;
     flex-direction: column;
     gap: var(--header-height);
     height: 100%;
+    padding: var(--spacing-base);
 
     .card-caption-index {
       align-items: center;
       display: flex;
       flex-direction: column;
       height: 100%;
-
-      &.left-aligned {
-        background: linear-gradient(
-          270deg,
-          transparent,
-          var(--color-accent-subtle)
-        );
-        border-left: var(--color-accent);
-        border-left-width: var(--border-width-sm);
-        border-left-style: solid;
-        padding-left: var(--spacing-base);
-      }
-
-      &.right-aligned {
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--color-accent-subtle)
-        );
-        border-right: var(--color-accent);
-        border-right-width: var(--border-width-sm);
-        border-right-style: solid;
-        padding-right: var(--spacing-base);
-      }
     }
   }
 
@@ -604,8 +584,8 @@ $sections: (
               var(--color-accent-subtle)
             );
             border-left: var(--color-accent);
-            border-left-width: var(--border-width-sm);
             border-left-style: solid;
+            border-left-width: var(--border-width-sm);
             font-weight: var(--font-weight-text-active);
             margin-bottom: unset;
           }
@@ -678,10 +658,10 @@ $sections: (
   width: 100%;
 
   .toc-nav-group {
-    display: flex;
     border-right: var(--color-surface);
     border-right-style: solid;
     border-width: var(--border-width-sm);
+    display: flex;
     flex-direction: column;
     margin-top: var(--spacing-sm);
 
@@ -1001,7 +981,7 @@ input[type='checkbox'] {
 
       .card-caption-index {
         .paragraph {
-          max-width: 65ch;
+          max-width: 80ch;
         }
       }
     }

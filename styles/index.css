@@ -100,8 +100,8 @@
 #body #header {
   background-color: var(--color-surface);
   border-bottom: var(--color-surface-hover);
-  border-bottom-width: var(--border-width-sm);
   border-bottom-style: solid;
+  border-bottom-width: var(--border-width-sm);
   grid-area: header;
   height: var(--header-height);
   position: fixed;
@@ -112,9 +112,9 @@
 
 #body #hero {
   background-attachment: fixed;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
   grid-area: hero;
   height: 50dvh;
   width: 100%;
@@ -156,6 +156,7 @@
   letter-spacing: var(--letter-space-base);
   line-height: var(--line-height-base);
   margin-block: var(--spacing-base) var(--spacing-base);
+  max-width: 80ch;
 }
 
 .page-title {
@@ -195,6 +196,7 @@
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
   margin-block: var(--spacing-sm) var(--spacing-base);
+  max-width: 100ch;
   text-transform: uppercase;
 }
 
@@ -326,10 +328,12 @@
 
 .card-index .card-figure-index {
   align-items: center;
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   display: flex;
   flex-direction: column;
   gap: var(--header-height);
   height: 100%;
+  padding: var(--spacing-base);
 }
 
 .card-index .card-figure-index .card-caption-index {
@@ -337,22 +341,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.card-index .card-figure-index .card-caption-index.left-aligned {
-  background: linear-gradient(270deg, transparent, var(--color-accent-subtle));
-  border-left: var(--color-accent);
-  border-left-width: var(--border-width-sm);
-  border-left-style: solid;
-  padding-left: var(--spacing-base);
-}
-
-.card-index .card-figure-index .card-caption-index.right-aligned {
-  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
-  border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
-  border-right-style: solid;
-  padding-right: var(--spacing-base);
 }
 
 .card-index .card-image-index {
@@ -486,8 +474,8 @@
   color: var(--color-text);
   background: linear-gradient(270deg, transparent, var(--color-accent-subtle));
   border-left: var(--color-accent);
-  border-left-width: var(--border-width-sm);
   border-left-style: solid;
+  border-left-width: var(--border-width-sm);
   font-weight: var(--font-weight-text-active);
   margin-bottom: unset;
 }
@@ -554,10 +542,10 @@
 }
 
 .toc-nav .toc-nav-group {
-  display: flex;
   border-right: var(--color-surface);
   border-right-style: solid;
   border-width: var(--border-width-sm);
+  display: flex;
   flex-direction: column;
   margin-top: var(--spacing-sm);
 }
@@ -613,8 +601,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#accretion-disk:target) .toc-nav-item:has(.toc-nav-link[href="#accretion-disk"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -623,8 +611,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#birth:target) .toc-nav-item:has(.toc-nav-link[href="#birth"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -633,8 +621,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#cannibalism:target) .toc-nav-item:has(.toc-nav-link[href="#cannibalism"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -643,8 +631,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#collisions:target) .toc-nav-item:has(.toc-nav-link[href="#collisions"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -653,8 +641,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#corona:target) .toc-nav-item:has(.toc-nav-link[href="#corona"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -663,8 +651,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#death:target) .toc-nav-item:has(.toc-nav-link[href="#death"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -673,8 +661,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#discovery:target) .toc-nav-item:has(.toc-nav-link[href="#discovery"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -683,8 +671,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#doppler-beaming:target) .toc-nav-item:has(.toc-nav-link[href="#doppler-beaming"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -693,8 +681,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#event-horizon:target) .toc-nav-item:has(.toc-nav-link[href="#event-horizon"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -703,8 +691,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#event-horizon-shadow:target) .toc-nav-item:has(.toc-nav-link[href="#event-horizon-shadow"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -713,8 +701,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#evolution:target) .toc-nav-item:has(.toc-nav-link[href="#evolution"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -723,8 +711,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#formation:target) .toc-nav-item:has(.toc-nav-link[href="#formation"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -733,8 +721,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#galaxy-bars:target) .toc-nav-item:has(.toc-nav-link[href="#galaxy-bars"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -743,8 +731,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#life:target) .toc-nav-item:has(.toc-nav-link[href="#life"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -753,8 +741,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#mergers:target) .toc-nav-item:has(.toc-nav-link[href="#mergers"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -763,8 +751,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#our-galaxy:target) .toc-nav-item:has(.toc-nav-link[href="#our-galaxy"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -773,8 +761,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#particle-jets:target) .toc-nav-item:has(.toc-nav-link[href="#particle-jets"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -783,8 +771,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#photon-sphere:target) .toc-nav-item:has(.toc-nav-link[href="#photon-sphere"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -793,8 +781,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#singularity:target) .toc-nav-item:has(.toc-nav-link[href="#singularity"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -803,8 +791,8 @@ input[type="checkbox"]:checked ~ .main-nav {
 #body:has(#types:target) .toc-nav-item:has(.toc-nav-link[href="#types"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right: var(--color-accent);
-  border-right-width: var(--border-width-sm);
   border-right-style: solid;
+  border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
   margin-right: calc(-1 * var(--border-width-sm));
@@ -1020,7 +1008,7 @@ input[type="checkbox"]:checked ~ .main-nav {
   }
 
   .card-index .card-figure-index .card-caption-index .paragraph {
-    max-width: 65ch;
+    max-width: 80ch;
   }
 
   .footer-nav {
