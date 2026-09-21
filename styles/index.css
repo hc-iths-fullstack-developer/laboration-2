@@ -323,7 +323,11 @@
   display: flex;
   flex-basis: 0;
   flex-direction: column;
-  padding-block: var(--header-height);
+  padding-top: var(--header-height);
+}
+
+.card-index:last-child {
+  padding-bottom: var(--header-height);
 }
 
 .card-index .card-figure-index {

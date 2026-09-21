@@ -430,7 +430,11 @@ $sections: (
   display: flex;
   flex-basis: 0;
   flex-direction: column;
-  padding-block: var(--header-height);
+  padding-top: var(--header-height);
+
+  &:last-child {
+    padding-bottom: var(--header-height);
+  }
 
   .card-figure-index {
     align-items: center;
@@ -844,7 +848,6 @@ input[type='checkbox'] {
     .card-figure-index {
       flex-direction: row;
       margin-inline: calc(var(--aside-width-md) - var(--spacing-base));
-
     }
 
     .card-image-index {
