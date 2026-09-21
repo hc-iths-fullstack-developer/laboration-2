@@ -442,6 +442,30 @@ $sections: (
       display: flex;
       flex-direction: column;
       height: 100%;
+
+      &.left-aligned {
+        background: linear-gradient(
+          270deg,
+          transparent,
+          var(--color-accent-subtle)
+        );
+        border-left: var(--color-accent);
+        border-left-width: var(--border-width-sm);
+        border-left-style: solid;
+        padding-left: var(--spacing-base);
+      }
+
+      &.right-aligned {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--color-accent-subtle)
+        );
+        border-right: var(--color-accent);
+        border-right-width: var(--border-width-sm);
+        border-right-style: solid;
+        padding-right: var(--spacing-base);
+      }
     }
   }
 
@@ -753,7 +777,7 @@ input[type='checkbox'] {
     .container {
       align-items: center;
       flex-direction: row;
-      justify-content: center;
+      justify-content: start;
     }
   }
 }
@@ -840,7 +864,7 @@ input[type='checkbox'] {
   .card-index {
     .card-figure-index {
       flex-direction: row;
-      margin-inline: calc(var(--aside-width-md));
+      margin-inline: calc(var(--aside-width-md) - var(--spacing-base));
 
       .card-caption-index {
         align-items: start;
@@ -973,7 +997,7 @@ input[type='checkbox'] {
 
   .card-index {
     .card-figure-index {
-      margin-inline: calc(var(--aside-width-lg));
+      margin-inline: calc(var(--aside-width-lg) - var(--spacing-base));
 
       .card-caption-index {
         .paragraph {
