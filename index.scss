@@ -118,7 +118,7 @@ $sections: (
 // ========================================
 @mixin toc-nav-active {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
-  border-right: var(--color-accent);
+  border-right-color: var(--color-accent);
   border-right-style: solid;
   border-right-width: var(--border-width-sm);
   color: var(--color-text);
@@ -180,6 +180,9 @@ $sections: (
 
   #footer {
     background-color: var(--color-surface);
+    border-top-color: var(--color-surface-hover);
+    border-top-style: solid;
+    border-top-width: var(--border-width-sm);
     grid-area: footer;
     min-height: var(--footer-min-height);
     width: var(--footer-width);
@@ -188,7 +191,7 @@ $sections: (
 
   #header {
     background-color: var(--color-surface);
-    border-bottom: var(--color-surface-hover);
+    border-bottom-color: var(--color-surface-hover);
     border-bottom-style: solid;
     border-bottom-width: var(--border-width-sm);
     grid-area: header;
@@ -265,7 +268,7 @@ $sections: (
 }
 
 .section-title {
-  border-left: var(--color-accent);
+  border-left-color: var(--color-accent);
   border-left-style: solid;
   border-left-width: var(--border-width-sm);
   font-size: var(--font-size-md);
@@ -421,6 +424,9 @@ $sections: (
       }
 
       .card-image {
+        border-color: var(--color-surface-hover);
+        border-style: solid;
+        border-width: var(--border-width-sm);
         flex-shrink: 0;
         height: var(--card-image-height);
         object-fit: cover;
@@ -451,7 +457,10 @@ $sections: (
 
   .card-image-index {
     aspect-ratio: 1 / 1;
+    border-color: var(--color-surface-hover);
     border-radius: 50%;
+    border-style: solid;
+    border-width: var(--border-width-sm);
     max-width: calc(var(--card-image-height) * 2);
     object-fit: cover;
     width: 100%;
@@ -584,7 +593,7 @@ $sections: (
               transparent,
               var(--color-accent-subtle)
             );
-            border-left: var(--color-accent);
+            border-left-color: var(--color-accent);
             border-left-style: solid;
             border-left-width: var(--border-width-sm);
             font-weight: var(--font-weight-text-active);
@@ -677,9 +686,9 @@ $sections: (
   width: 100%;
 
   .toc-nav-group {
-    border-right: var(--color-surface);
+    border-right-color: var(--color-surface);
     border-right-style: solid;
-    border-width: var(--border-width-sm);
+    border-right-width: var(--border-width-sm);
     display: flex;
     flex-direction: column;
     margin-top: var(--spacing-sm);
@@ -910,10 +919,10 @@ input[type='checkbox'] {
                 transparent,
                 var(--color-accent-subtle)
               );
-              border-bottom: var(--color-accent);
+              border-bottom-color: var(--color-accent);
               border-bottom-style: solid;
               border-bottom-width: var(--border-width-sm);
-              border-left: unset;
+              border-left-color: unset;
               border-left-style: unset;
               border-left-width: unset;
               margin-bottom: calc(-1 * var(--border-width-sm));
