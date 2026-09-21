@@ -325,23 +325,15 @@
 
 .card-index {
   display: flex;
-  flex-basis: 0;
   flex-direction: column;
-  padding-top: var(--header-height);
-}
-
-.card-index:last-child {
-  padding-bottom: var(--header-height);
 }
 
 .card-index .card-figure-index {
   align-items: center;
-  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   display: flex;
   flex-direction: column;
   gap: var(--header-height);
   height: 100%;
-  padding: var(--spacing-base);
 }
 
 .card-index .card-figure-index .card-caption-index {
@@ -358,10 +350,6 @@
   width: 100%;
 }
 
-.card-index .card-image-index.right-aligned {
-  order: unset;
-}
-
 .container {
   align-items: stretch;
   display: flex;
@@ -370,6 +358,11 @@
   justify-content: start;
   padding-inline: var(--spacing-base);
   width: 100%;
+}
+
+.container.index {
+  gap: var(--spacing-sm);
+  padding-inline: 0;
 }
 
 .footer-nav {
@@ -527,6 +520,16 @@
 }
 
 .section:last-child {
+  padding-bottom: var(--header-height);
+}
+
+.section.right-aligned {
+  background: linear-gradient(90deg, transparent, var(--color-background-hover));
+  padding-bottom: var(--header-height);
+}
+
+.section.left-aligned {
+  background: linear-gradient(270deg, transparent, var(--color-background-hover));
   padding-bottom: var(--header-height);
 }
 
@@ -825,6 +828,10 @@ input[type="checkbox"]:checked ~ .main-nav {
   justify-content: start;
 }
 
+.section.right-aligned .card-image-index {
+  order: unset;
+}
+
 @media (width >= 22.5rem) {
   .card-group .card .card-button {
     width: auto;
@@ -888,10 +895,6 @@ input[type="checkbox"]:checked ~ .main-nav {
 
   .card-index .card-image-index {
     min-width: calc(var(--card-image-height));
-  }
-
-  .card-index .card-image-index.right-aligned {
-    order: 2;
   }
 
   .logo {
@@ -959,6 +962,10 @@ input[type="checkbox"]:checked ~ .main-nav {
     line-height: var(--line-height-2xl);
     margin-inline: var(--aside-width-md);
     text-align: start;
+  }
+
+  .section.right-aligned .card-image-index {
+    order: 2;
   }
 
   .section-title {

@@ -265,7 +265,6 @@ $sections: (
 }
 
 .section-title {
-  //background: linear-gradient(270deg, transparent, var(--color-accent-subtle));
   border-left: var(--color-accent);
   border-left-style: solid;
   border-left-width: var(--border-width-sm);
@@ -433,22 +432,14 @@ $sections: (
 
 .card-index {
   display: flex;
-  flex-basis: 0;
   flex-direction: column;
-  padding-top: var(--header-height);
-
-  &:last-child {
-    padding-bottom: var(--header-height);
-  }
 
   .card-figure-index {
     align-items: center;
-    background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
     display: flex;
     flex-direction: column;
     gap: var(--header-height);
     height: 100%;
-    padding: var(--spacing-base);
 
     .card-caption-index {
       display: flex;
@@ -463,10 +454,6 @@ $sections: (
     max-width: calc(var(--card-image-height) * 2);
     object-fit: cover;
     width: 100%;
-
-    &.right-aligned {
-      order: unset;
-    }
   }
 }
 
@@ -478,6 +465,11 @@ $sections: (
   justify-content: start;
   padding-inline: var(--spacing-base);
   width: 100%;
+
+  &.index {
+    gap: var(--spacing-sm);
+    padding-inline: 0;
+  }
 }
 
 .footer-nav {
@@ -644,6 +636,24 @@ $sections: (
   &:last-child {
     padding-bottom: var(--header-height);
   }
+
+  &.right-aligned {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-background-hover)
+    );
+    padding-bottom: var(--header-height);
+  }
+
+  &.left-aligned {
+    background: linear-gradient(
+      270deg,
+      transparent,
+      var(--color-background-hover)
+    );
+    padding-bottom: var(--header-height);
+  }
 }
 
 .logo {
@@ -770,6 +780,14 @@ input[type='checkbox'] {
   }
 }
 
+.section {
+  &.right-aligned {
+    .card-image-index {
+      order: unset;
+    }
+  }
+}
+
 // ========================================
 // Responsive
 // ========================================
@@ -857,10 +875,6 @@ input[type='checkbox'] {
 
     .card-image-index {
       min-width: calc(var(--card-image-height));
-
-      &.right-aligned {
-        order: 2;
-      }
     }
   }
 
@@ -930,6 +944,14 @@ input[type='checkbox'] {
     line-height: var(--line-height-2xl);
     margin-inline: var(--aside-width-md);
     text-align: start;
+  }
+
+  .section {
+    &.right-aligned {
+      .card-image-index {
+        order: 2;
+      }
+    }
   }
 
   .section-title {
