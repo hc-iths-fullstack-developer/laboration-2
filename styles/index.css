@@ -337,7 +337,6 @@
 }
 
 .card-index .card-figure-index .card-caption-index {
-  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -877,10 +876,6 @@ input[type="checkbox"]:checked ~ .main-nav {
   .card-index .card-figure-index {
     flex-direction: row;
     margin-inline: calc(var(--aside-width-md) - var(--spacing-base));
-  }
-
-  .card-index .card-figure-index .card-caption-index {
-    align-items: start;
   }
 
   .card-index .card-image-index {
