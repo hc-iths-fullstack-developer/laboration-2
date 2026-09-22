@@ -20,6 +20,7 @@
   --footer-width: 100%;
   --header-height: 3.75rem;
   --header-width: 100%;
+  --hero-image-width: 25rem;
   --border-radius-base: 0;
   --border-radius-sm: 0;
   --border-width-base: 1px;
@@ -225,6 +226,7 @@ html {
   flex-direction: column;
   gap: var(--spacing-base);
   padding: var(--spacing-base);
+  width: 100%;
 }
 
 .card-group .card .card-figure {
@@ -784,9 +786,11 @@ html {
 }
 
 #body #aside {
+  background-color: var(--color-background);
   grid-area: aside;
   height: auto;
   width: var(--aside-width-sm);
+  z-index: var(--earth-index);
 }
 
 @media (width >= 61.25rem) {
@@ -887,14 +891,27 @@ html {
 }
 
 #body #main {
+  background-color: var(--color-background);
   grid-area: main;
   min-height: calc(100dvh - var(--header-height));
   width: 100%;
+  z-index: var(--earth-index);
 }
 
 @media (width >= 61.25rem) {
   #body #main {
     justify-self: start;
+  }
+
+  #body #main .container {
+    margin-right: var(--aside-width-md);
+    width: auto;
+  }
+}
+
+@media (width >= 90rem) {
+  #body #main .container {
+    margin-right: var(--aside-width-lg);
   }
 }
 
@@ -1100,7 +1117,7 @@ html {
 
 @media (width >= 61.25rem) {
   #body {
-    grid-template-areas: "header header header" "hero hero hero" "aside main ." "footer footer footer";
+    grid-template-areas: "header header header" "hero hero hero" "aside main main" "footer footer footer";
     grid-template-columns: var(--aside-width-md) auto var(--aside-width-md);
     grid-template-rows: var(--header-height) 1fr auto auto;
   }
