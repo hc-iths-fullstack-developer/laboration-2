@@ -907,11 +907,19 @@ html {
     margin-right: var(--aside-width-md);
     width: auto;
   }
+
+  #body #main .container.index {
+    margin-right: unset;
+  }
 }
 
 @media (width >= 90rem) {
   #body #main .container {
     margin-right: var(--aside-width-lg);
+  }
+
+  #body #main .container.index {
+    margin-right: unset;
   }
 }
 

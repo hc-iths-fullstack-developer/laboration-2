@@ -1007,12 +1007,20 @@ html {
       .container {
         margin-right: var(--aside-width-md);
         width: auto;
+
+        &.index {
+          margin-right: unset;
+        }
       }
     }
 
     @media (width >= $breakpoint-large) {
       .container {
         margin-right: var(--aside-width-lg);
+
+        &.index {
+          margin-right: unset;
+        }
       }
     }
   }
