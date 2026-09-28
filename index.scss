@@ -450,6 +450,18 @@ html {
     gap: var(--header-height);
     height: 100%;
 
+    .card-picture-index {
+      .card-image-index {
+        aspect-ratio: 1 / 1;
+        border-color: var(--color-surface-hover);
+        border-radius: 50%;
+        border-style: solid;
+        border-width: var(--border-width-sm);
+        max-width: calc(var(--card-image-height) * 2);
+        width: 100%;
+      }
+    }
+
     .card-caption-index {
       display: flex;
       flex-direction: column;
@@ -457,25 +469,16 @@ html {
     }
   }
 
-  .card-image-index {
-    aspect-ratio: 1 / 1;
-    border-color: var(--color-surface-hover);
-    border-radius: 50%;
-    border-style: solid;
-    border-width: var(--border-width-sm);
-    max-width: calc(var(--card-image-height) * 2);
-    object-fit: cover;
-    width: 100%;
-  }
-
   @media (width >= $breakpoint-medium) {
     .card-figure-index {
       flex-direction: row;
       margin-inline: var(--aside-width-md);
-    }
 
-    .card-image-index {
-      min-width: calc(var(--card-image-height));
+      .card-picture-index {
+        .card-image-index {
+          min-width: calc(var(--card-image-height));
+        }
+      }
     }
   }
 
@@ -535,23 +538,63 @@ html {
 }
 
 .hero-black-hole {
-  background-image: url('../images/black-hole-hero.jpg');
+  background-image: url('../images/black-hole-hero-small.webp');
+
+  @media (width >= $breakpoint-medium) {
+    background-image: url('../images/black-hole-hero-medium.webp');
+  }
+
+  @media (width >= $breakpoint-large) {
+    background-image: url('../images/black-hole-hero-large.webp');
+  }
 }
 
 .hero-exoplanet {
-  background-image: url('../images/exoplanet-hero.jpg');
+  background-image: url('../images/exoplanet-hero-small.webp');
+
+  @media (width >= $breakpoint-medium) {
+    background-image: url('../images/exoplanet-hero-medium.webp');
+  }
+
+  @media (width >= $breakpoint-large) {
+    background-image: url('../images/exoplanet-hero-large.webp');
+  }
 }
 
 .hero-galaxy {
-  background-image: url('../images/galaxy-hero.jpg');
+  background-image: url('../images/galaxy-hero-small.webp');
+
+  @media (width >= $breakpoint-medium) {
+    background-image: url('../images/galaxy-hero-medium.webp');
+  }
+
+  @media (width >= $breakpoint-large) {
+    background-image: url('../images/galaxy-hero-large.webp');
+  }
 }
 
 .hero-star {
-  background-image: url('../images/star-hero.jpg');
+  background-image: url('../images/star-hero-small.webp');
+
+  @media (width >= $breakpoint-medium) {
+    background-image: url('../images/star-hero-medium.webp');
+  }
+
+  @media (width >= $breakpoint-large) {
+    background-image: url('../images/star-hero-large.webp');
+  }
 }
 
 .hero-universe {
-  background-image: url('../images/universe-hero.jpg');
+  background-image: url('../images/universe-hero-small.webp');
+
+  @media (width >= $breakpoint-medium) {
+    background-image: url('../images/universe-hero-medium.webp');
+  }
+
+  @media (width >= $breakpoint-large) {
+    background-image: url('../images/universe-hero-large.webp');
+  }
 }
 
 .logo {
@@ -764,12 +807,12 @@ html {
     );
     padding-bottom: var(--header-height);
 
-    .card-image-index {
+    .card-picture-index {
       order: unset;
     }
 
     @media (width >= $breakpoint-medium) {
-      .card-image-index {
+      .card-picture-index {
         order: 2;
       }
     }
