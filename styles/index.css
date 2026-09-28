@@ -236,6 +236,20 @@ html {
   height: 100%;
 }
 
+.card-group .card .card-figure .card-picture {
+  flex-shrink: 0;
+}
+
+.card-group .card .card-figure .card-picture .card-image {
+  aspect-ratio: 1/1;
+  border-color: var(--color-surface-hover);
+  border-style: solid;
+  border-width: var(--border-width-sm);
+  min-height: var(--card-image-height);
+  object-fit: cover;
+  width: 100%;
+}
+
 .card-group .card .card-figure .card-caption {
   align-items: flex-start;
   display: flex;
@@ -319,16 +333,6 @@ html {
 
 .card-group .card .card-figure:has(.card-details[open]) .card-details .card-button .read-less {
   display: inline;
-}
-
-.card-group .card .card-figure .card-image {
-  aspect-ratio: 1/1;
-  border-color: var(--color-surface-hover);
-  border-style: solid;
-  border-width: var(--border-width-sm);
-  flex-shrink: 0;
-  object-fit: cover;
-  width: 100%;
 }
 
 @media (width >= 61.25rem) {

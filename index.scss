@@ -299,6 +299,20 @@ html {
       gap: var(--spacing-base);
       height: 100%;
 
+      .card-picture {
+        flex-shrink: 0;
+
+        .card-image {
+          aspect-ratio: 1 / 1;
+          border-color: var(--color-surface-hover);
+          border-style: solid;
+          border-width: var(--border-width-sm);
+          min-height: var(--card-image-height);
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
       .card-caption {
         align-items: flex-start;
         display: flex;
@@ -391,17 +405,6 @@ html {
             }
           }
         }
-      }
-
-      .card-image {
-        aspect-ratio: 1 / 1;
-        border-color: var(--color-surface-hover);
-        border-style: solid;
-        border-width: var(--border-width-sm);
-        flex-shrink: 0;
-        //height: var(--card-image-height);
-        object-fit: cover;
-        width: 100%;
       }
     }
   }
