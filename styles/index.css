@@ -322,11 +322,11 @@ html {
 }
 
 .card-group .card .card-figure .card-image {
+  aspect-ratio: 1/1;
   border-color: var(--color-surface-hover);
   border-style: solid;
   border-width: var(--border-width-sm);
   flex-shrink: 0;
-  height: var(--card-image-height);
   object-fit: cover;
   width: 100%;
 }
