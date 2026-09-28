@@ -1,836 +1,885 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+      name="description"
+      content="Discover galaxies, vast collections of stars, planets, gas, and dust bound together by gravity, and explore their different shapes, structures, and evolution."
+    >
+    <link
+      href="https://fonts.googleapis.com"
+      rel="preconnect"
+    >
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/reset.css"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/index.css"
+      rel="stylesheet"
+    >
+    <title>Galaxies</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <meta
-    name="description"
-    content="Discover galaxies, vast collections of stars, planets, gas, and dust bound together by gravity, and explore their different shapes, structures, and evolution."
-  >
-  <link
-    href="https://fonts.googleapis.com"
-    rel="preconnect"
-  >
-  <link
-    href="https://fonts.gstatic.com"
-    rel="preconnect"
-    crossorigin
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/reset.css"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/index.css"
-    rel="stylesheet"
-  >
-  <title>Galaxies</title>
-</head>
-
-<body id="body">
-  <header id="header">
-    <div class="container">
-      <div class="logo">
-        <svg
-          aria-hidden="true"
-          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-          width="100%"
-          height="100%"
-          viewBox="0 0 60 60"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          xml:space="preserve"
-        >
-          <path
-            d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
-          ></path>
-          <path
-            d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
-          ></path>
-        </svg>
+  <body id="body">
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <svg
+            aria-hidden="true"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linejoin: round;
+              stroke-miterlimit: 2;
+            "
+            width="100%"
+            height="100%"
+            viewBox="0 0 60 60"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve"
+          >
+            <path
+              d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
+            ></path>
+            <path
+              d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="main-nav-wrapper">
+          <input
+            id="main-nav-toggle"
+            type="checkbox"
+            aria-controls="main-nav"
+            aria-label="Menu"
+          >
+          <label
+            class="link main-nav-label"
+            for="main-nav-toggle"
+          >
+            Menu
+          </label>
+          <nav
+            id="main-nav"
+            class="main-nav"
+            aria-label="Main navigation"
+          >
+            <ul class="main-nav-group">
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link active"
+                  href="../pages/galaxies.html"
+                  aria-current="page"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/exoplanets.html"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="main-nav-wrapper">
-        <input
-          id="main-nav-toggle"
-          type="checkbox"
-          aria-controls="main-nav"
-          aria-label="Menu"
-        >
-        <label
-          class="link main-nav-label"
-          for="main-nav-toggle"
-        >
-          Menu
-        </label>
+    </header>
+
+    <section
+      id="hero"
+      class="hero-galaxy"
+    >
+      <div class="container">
+        <h1 class="heading page-title">Galaxies</h1>
+      </div>
+    </section>
+
+    <aside id="aside">
+      <div class="container">
         <nav
-          id="main-nav"
-          class="main-nav"
-          aria-label="Main navigation"
+          class="toc-nav"
+          aria-label="Table of contents"
         >
-          <ul class="main-nav-group">
-            <li class="main-nav-item">
+          <ul class="toc-nav-group">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../index.html"
+                class="toc-nav-link"
+                href="#evolution"
               >
-                Universe
+                Evolution
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link active"
-                href="../pages/galaxies.html"
-                aria-current="page"
+                class="toc-nav-link"
+                href="#formation"
               >
-                Galaxies
+                Formation
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/black-holes.html"
+                class="toc-nav-link"
+                href="#galaxy-bars"
               >
-                Black Holes
+                Galaxy Bars
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/stars.html"
+                class="toc-nav-link"
+                href="#collisions"
               >
-                Stars
+                Collisions
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/exoplanets.html"
+                class="toc-nav-link"
+                href="#mergers"
               >
-                Exoplanets
+                Mergers
+              </a>
+            </li>
+            <li class="toc-nav-item">
+              <a
+                class="toc-nav-link"
+                href="#cannibalism"
+              >
+                Cannibalism
+              </a>
+            </li>
+            <li class="toc-nav-item">
+              <a
+                class="toc-nav-link"
+                href="#types"
+              >
+                Types
               </a>
             </li>
           </ul>
         </nav>
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <section
-    id="hero"
-    class="hero-galaxy"
-  >
-    <div class="container">
-      <h1 class="heading page-title">
-        Galaxies
-      </h1>
-    </div>
-  </section>
+    <main id="main">
+      <div class="container">
+        <div class="section">
+          <p class="subtitle">
+            Galaxies consist of stars, planets, and vast clouds of gas and dust,
+            all bound together by gravity. The largest contain trillions of
+            stars and can be more than a million light-years across. The
+            smallest can contain a few thousand stars and span just a few
+            hundred light-years. Most large galaxies have supermassive black
+            holes at their centers, some with billions of times the Sun’s mass.
+          </p>
+        </div>
 
-  <aside id="aside">
-    <div class="container">
-      <nav
-        class="toc-nav"
-        aria-label="Table of contents"
-      >
-        <ul class="toc-nav-group">
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#evolution"
-            >
-              Evolution
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#formation"
-            >
-              Formation
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#galaxy-bars"
-            >
-              Galaxy Bars
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#collisions"
-            >
-              Collisions
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#mergers"
-            >
-              Mergers
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#cannibalism"
-            >
-              Cannibalism
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#types"
-            >
-              Types
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+        <section
+          id="evolution"
+          class="section"
+        >
+          <h2 class="heading section-title">Evolution</h2>
 
-  <main id="main">
-    <div class="container">
-      <div class="section">
-        <p class="subtitle">
-          Galaxies consist of stars, planets, and vast clouds of gas and dust, all bound together by gravity. The
-          largest contain trillions of stars and can be more than a million light-years across. The smallest can contain
-          a few thousand stars and span just a few hundred light-years. Most large galaxies have supermassive black
-          holes at their centers, some with billions of times the Sun’s mass.
-        </p>
-      </div>
+          <p class="paragraph">
+            In 2004, NASA released the Hubble Ultra Deep Field. This image of a
+            small part of the constellation Fornax contains around 10,000
+            galaxies, some of which existed 13 billion years ago, less than 800
+            million years after the big bang. Snapshots like these allow
+            scientists to study galaxies at different evolutionary stages. It’s
+            a bit like taking a picture of all the people in New York City’s
+            Times Square and using it to study human aging, since it would show
+            examples of people of all ages. But even with all our modern
+            observatories, astronomers still have many questions about exactly
+            how galaxies begin and grow.
+          </p>
+        </section>
 
-      <section
-        id="evolution"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Evolution
-        </h2>
+        <section
+          id="formation"
+          class="section"
+        >
+          <h2 class="heading section-title">Formation</h2>
+          <p class="paragraph">
+            Astronomers know that some of the oldest galaxies observed formed
+            when the universe was only about a billion years old. They think
+            those galaxies started to grow around pockets of space that were
+            slightly denser than their surroundings, an effect created by cosmic
+            inflation when the universe began. But when it comes to the exact
+            order of formation, they have a little bit of a “chicken or the egg”
+            problem.
+          </p>
 
-        <p class="paragraph">
-          In 2004, NASA released the Hubble Ultra Deep Field. This image of a small part of the constellation Fornax
-          contains around 10,000 galaxies, some of which existed 13 billion years ago, less than 800 million years after
-          the big bang. Snapshots like these allow scientists to study galaxies at different evolutionary stages. It’s a
-          bit like taking a picture of all the people in New York City’s Times Square and using it to study human aging,
-          since it would show examples of people of all ages. But even with all our modern observatories, astronomers
-          still have many questions about exactly how galaxies begin and grow.
-        </p>
-      </section>
+          <p class="paragraph">
+            Most big galaxies have supermassive black holes at their centers
+            that pack hundreds of thousands to billions of times the Sun’s mass.
+            A black hole weighing 4 million Suns sits in the center of our own
+            galaxy, the Milky Way. It’s possible that the black holes came
+            first, and galaxies grew around them. Or perhaps the galaxies came
+            first, and small black holes within them merged and fed on gas,
+            dust, and stars, eventually becoming the monsters they are today.
+            Exploring this question is a major goal for NASA’s James Webb Space
+            Telescope.
+          </p>
+        </section>
 
-      <section
-        id="formation"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Formation
-        </h2>
-        <p class="paragraph">
-          Astronomers know that some of the oldest galaxies observed formed when the universe was only about a billion
-          years old. They think those galaxies started to grow around pockets of space that were slightly denser than
-          their surroundings, an effect created by cosmic inflation when the universe began. But when it comes to the
-          exact order of formation, they have a little bit of a “chicken or the egg” problem.
-        </p>
+        <section
+          id="galaxy-bars"
+          class="section"
+        >
+          <h2 class="heading section-title">Galaxy Bars</h2>
 
-        <p class="paragraph">
-          Most big galaxies have supermassive black holes at their centers that pack hundreds of thousands to billions
-          of times the Sun’s mass. A black hole weighing 4 million Suns sits in the center of our own galaxy, the Milky
-          Way. It’s possible that the black holes came first, and galaxies grew around them. Or perhaps the galaxies
-          came first, and small black holes within them merged and fed on gas, dust, and stars, eventually becoming the
-          monsters they are today. Exploring this question is a major goal for NASA’s James Webb Space Telescope.
-        </p>
-      </section>
+          <p class="paragraph">
+            Many older spiral galaxies develop a central band-like structure of
+            stars called a bar. In these galaxies, called barred spirals, this
+            feature connects to the arms rather than the nucleus itself.
+            Scientists think stellar bars are temporary structures that form
+            when stars, gas, and dust at the base of spiral arms build up to
+            make a denser region that favors star formation.
+          </p>
+        </section>
 
-      <section
-        id="galaxy-bars"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Galaxy Bars
-        </h2>
+        <section
+          id="collisions"
+          class="section"
+        >
+          <h2 class="heading section-title">Collisions</h2>
 
-        <p class="paragraph">
-          Many older spiral galaxies develop a central band-like structure of stars called a bar. In these galaxies,
-          called barred spirals, this feature connects to the arms rather than the nucleus itself. Scientists think
-          stellar bars are temporary structures that form when stars, gas, and dust at the base of spiral arms build up
-          to make a denser region that favors star formation.
-        </p>
-      </section>
+          <p class="paragraph">
+            Sometimes, galaxies collide. This doesn’t necessarily mean their
+            stars crash – galaxies contain a lot of empty space – but collisions
+            can compress gas clouds, spurring new bouts of star formation. Each
+            galaxy deforms in reaction to the gravitational pull of its partner.
+            Astronomers think the Milky Way and its galactic neighbor Andromeda
+            are set to collide in another 4.5 billion years.
+          </p>
+        </section>
 
-      <section
-        id="collisions"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Collisions
-        </h2>
+        <section
+          id="mergers"
+          class="section"
+        >
+          <h2 class="heading section-title">Mergers</h2>
 
-        <p class="paragraph">
-          Sometimes, galaxies collide. This doesn’t necessarily mean their stars crash – galaxies contain a lot of empty
-          space – but collisions can compress gas clouds, spurring new bouts of star formation. Each galaxy deforms in
-          reaction to the gravitational pull of its partner. Astronomers think the Milky Way and its galactic neighbor
-          Andromeda are set to collide in another 4.5 billion years.
-        </p>
-      </section>
+          <p class="paragraph">
+            If colliding galaxies don’t have enough momentum to move past each
+            other, they can merge to form a single larger galaxy. A merged
+            galaxy can look very different from the two that created it. For
+            example, if a spiral and elliptical merge, the result could be an
+            irregular galaxy.
+          </p>
 
-      <section
-        id="mergers"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Mergers
-        </h2>
+          <p class="paragraph">
+            If a large galaxy merges with a smaller one, gravitational ripples
+            can disturb both, throwing gas, dust, and stars outward. The result
+            can be a ring of material at the edge of the new galaxy that is full
+            of the material needed to form new stars – a ring galaxy. While some
+            material is thrown outward, other material can stream toward the
+            core and fuel the galaxy’s central black hole, resulting in an
+            active galactic nucleus.
+          </p>
 
-        <p class="paragraph">
-          If colliding galaxies don’t have enough momentum to move past each other, they can merge to form a single
-          larger galaxy. A merged galaxy can look very different from the two that created it. For example, if a spiral
-          and elliptical merge, the result could be an irregular galaxy.
-        </p>
+          <p class="paragraph">
+            Scientists see evidence of galaxy mergers all across the cosmos, and
+            since most big galaxies contain supermassive black holes at their
+            centers, it stands to reason their black holes should merge too.
+            Astronomers don’t exactly know what that kind of event should look
+            like, but they’re actively trying to find out.
+          </p>
+        </section>
 
-        <p class="paragraph">
-          If a large galaxy merges with a smaller one, gravitational ripples can disturb both, throwing gas, dust, and
-          stars outward. The result can be a ring of material at the edge of the new galaxy that is full of the material
-          needed to form new stars – a ring galaxy. While some material is thrown outward, other material can stream
-          toward the core and fuel the galaxy’s central black hole, resulting in an active galactic nucleus.
-        </p>
+        <section
+          id="cannibalism"
+          class="section"
+        >
+          <h2 class="heading section-title">Cannibalism</h2>
 
-        <p class="paragraph">
-          Scientists see evidence of galaxy mergers all across the cosmos, and since most big galaxies contain
-          supermassive black holes at their centers, it stands to reason their black holes should merge too. Astronomers
-          don’t exactly know what that kind of event should look like, but they’re actively trying to find out.
-        </p>
-      </section>
+          <p class="paragraph">
+            Larger galaxies can also gobble up smaller ones through proximity
+            and gravitational interactions, pulling material away to fuel their
+            own growth. Researchers think the Milky Way is currently funneling
+            away a stream of hydrogen from its satellite dwarf galaxies, the
+            Large and Small Magellanic Clouds.
+          </p>
+        </section>
 
-      <section
-        id="cannibalism"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Cannibalism
-        </h2>
+        <section
+          id="types"
+          class="section"
+        >
+          <h2 class="heading section-title">Types</h2>
 
-        <p class="paragraph">
-          Larger galaxies can also gobble up smaller ones through proximity and gravitational interactions, pulling
-          material away to fuel their own growth. Researchers think the Milky Way is currently funneling away a stream
-          of hydrogen from its satellite dwarf galaxies, the Large and Small Magellanic Clouds.
-        </p>
-      </section>
+          <div class="card-group">
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/spiral-galaxy.jpeg"
+                  alt="A view of spiral galaxy M101, also known as the Pinwheel galaxy."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Spiral Galaxy</h3>
 
-      <section
-        id="types"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Types
-        </h2>
-
-        <div class="card-group">
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/spiral-galaxy.jpeg"
-                alt="A view of spiral galaxy M101, also known as the Pinwheel galaxy."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Spiral Galaxy
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Our Milky Way is one example of a broad class of galaxies defined by the presence of spiral arms.
-                  These galaxies resemble giant rotating pinwheels with a pancake-like disk of stars and a central bulge
-                  or tight concentration of stars.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Our Milky Way is one example of a broad class of galaxies defined by the presence of spiral arms.
-                    These galaxies resemble giant rotating pinwheels with a pancake-like disk of stars and a central
-                    bulge
-                    or tight concentration of stars.
-                  </p>
-
-                  <p class="paragraph">
-                    The spiral arms can be wound tightly or loosely, and some cannot be seen from Earth because we view
-                    the galaxy from the side, edge on.
-                  </p>
-
-                  <p class="paragraph">
-                    The spiral arms can be wound tightly or loosely, and some cannot be seen from Earth because we view
-                    the galaxy from the side, edge on.
-                  </p>
-
-                  <p class="paragraph">
-                    Spiral galaxies are surrounded by halos, mixtures of old stars, star clusters, and dark matter –
-                    invisible material that does not emit or reflect light but still has a gravitational pull on other
-                    matter. The youngest stars form in gas-rich arms, while older stars can be found throughout the disk
-                    and within the bulge and halo.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/elliptical-galaxy.jpeg"
-                alt="NGC 2865, an elliptical galaxy located 100 million light-years away."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Elliptical Galaxy
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Elliptical galaxies have shapes that range from completely round to oval. They are less common than
-                  spiral galaxies.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Elliptical galaxies have shapes that range from completely round to oval. They are less common than
-                    spiral galaxies.
-                  </p>
-
-                  <p class="paragraph">
-                    Unlike spirals, elliptical galaxies usually contain little gas and dust and show very little
-                    organization or structure. The stars orbit around the core in random directions and are generally
-                    older than those in spiral galaxies since little of the gas needed to form new stars remains.
-                    Scientists think elliptical galaxies originate from collisions and mergers with spirals.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/lenticular-galaxy.jpeg"
-                alt="Lenticular galaxy NGC 4886."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Lenticular Galaxy
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Lenticular galaxies are a kind of cross between spirals and ellipticals. They have the central bulge
-                  and disk common to spiral galaxies but no arms. But like ellipticals, lenticular galaxies have older
-                  stellar populations and little ongoing star formation.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Lenticular galaxies are a kind of cross between spirals and ellipticals. They have the central bulge
-                    and disk common to spiral galaxies but no arms. But like ellipticals, lenticular galaxies have older
-                    stellar populations and little ongoing star formation.
-                  </p>
-
-                  <p class="paragraph">
-                    Scientists have a few theories about how lenticular galaxies evolved. One idea suggests these
-                    galaxies
-                    are older spirals whose arms have faded. Another proposes that lenticulars formed from mergers of
-                    spiral galaxies.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/irregular-galaxy.jpeg"
-                alt="An image of NGC 5264, an irregular dwarf galaxy."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Irregular Galaxy
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Irregular galaxies have unusual shapes, like toothpicks, rings, or even little groupings of stars.
-                  They range from dwarf irregular galaxies with 100 million times the Sun’s mass to large ones weighing
-                  10 billion solar masses.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Irregular galaxies have unusual shapes, like toothpicks, rings, or even little groupings of stars.
-                    They range from dwarf irregular galaxies with 100 million times the Sun’s mass to large ones
-                    weighing 10 billion solar masses.
-                  </p>
-
-                  <p class="paragraph">
-                    Astronomers think these galaxies’ odd shapes are sometimes the result of interactions with others.
-                    For example, one spiral galaxy passing another with a stronger gravitational pull could lose some of
-                    its material, become distorted, and morph into a new shape. Some, like gas-rich dwarf galaxies, may
-                    be new, formed by material pulled from such encounters. Or perhaps when galaxies collide, they
-                    create a larger, oddly shaped mashup. Some scientists theorize that some large irregular galaxies
-                    could represent an intermediate step between spiral and elliptical galaxies.
-                  </p>
-
-                  <p class="paragraph">
-                    Irregular galaxies born from galaxy interactions or collisions typically host a mix of older and
-                    younger stars, depending on the characteristics and composition of the original galaxies. Irregular
-                    galaxies may also hold significant amounts of gas and dust – essential ingredients for making new
+                  <p class="paragraph card-preview">
+                    Our Milky Way is one example of a broad class of galaxies
+                    defined by the presence of spiral arms. These galaxies
+                    resemble giant rotating pinwheels with a pancake-like disk
+                    of stars and a central bulge or tight concentration of
                     stars.
                   </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
 
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/seyfert-galaxy.jpeg"
-                alt="A spiral galaxy NCG 5728."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Seyfert Galaxy
-                </h3>
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
 
-                <p class="paragraph card-preview">
-                  Seyfert galaxies, first identified in 1943 by American astronomer Carl Seyfert, are the most common
-                  active galaxies and also exhibit the lowest energies. All Seyferts look like normal galaxies in
-                  visible light, but they emit considerable infrared radiation. When observed in the infrared, some
-                  reveal bright emission from the donut-shaped torus. Some also emit X-rays. Seyfert galaxies tend to
-                  have lower radio luminosities, although some produce radio jets.
-                </p>
+                    <p class="paragraph">
+                      Our Milky Way is one example of a broad class of galaxies
+                      defined by the presence of spiral arms. These galaxies
+                      resemble giant rotating pinwheels with a pancake-like disk
+                      of stars and a central bulge or tight concentration of
+                      stars.
+                    </p>
 
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
+                    <p class="paragraph">
+                      The spiral arms can be wound tightly or loosely, and some
+                      cannot be seen from Earth because we view the galaxy from
+                      the side, edge on.
+                    </p>
 
-                  <p class="paragraph">
-                    Seyfert galaxies, first identified in 1943 by American astronomer Carl Seyfert, are the most common
-                    active galaxies and also exhibit the lowest energies. All Seyferts look like normal galaxies in
-                    visible light, but they emit considerable infrared radiation. When observed in the infrared, some
-                    reveal bright emission from the donut-shaped torus. Some also emit X-rays. Seyfert galaxies tend to
-                    have lower radio luminosities, although some produce radio jets.
+                    <p class="paragraph">
+                      The spiral arms can be wound tightly or loosely, and some
+                      cannot be seen from Earth because we view the galaxy from
+                      the side, edge on.
+                    </p>
+
+                    <p class="paragraph">
+                      Spiral galaxies are surrounded by halos, mixtures of old
+                      stars, star clusters, and dark matter – invisible material
+                      that does not emit or reflect light but still has a
+                      gravitational pull on other matter. The youngest stars
+                      form in gas-rich arms, while older stars can be found
+                      throughout the disk and within the bulge and halo.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/elliptical-galaxy.jpeg"
+                  alt="NGC 2865, an elliptical galaxy located 100 million light-years away."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Elliptical Galaxy</h3>
+
+                  <p class="paragraph card-preview">
+                    Elliptical galaxies have shapes that range from completely
+                    round to oval. They are less common than spiral galaxies.
                   </p>
 
-                  <p class="paragraph">
-                    Scientists divide Seyferts into two classes. Type I Seyfert galaxies display unusual features in
-                    their visible light that imply rapid motion near the accretion disk. Type II Seyferts show features
-                    that imply much slower motion. However, this distinction may result from different viewing angles
-                    into the centers of these galaxies.
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Elliptical galaxies have shapes that range from completely
+                      round to oval. They are less common than spiral galaxies.
+                    </p>
+
+                    <p class="paragraph">
+                      Unlike spirals, elliptical galaxies usually contain little
+                      gas and dust and show very little organization or
+                      structure. The stars orbit around the core in random
+                      directions and are generally older than those in spiral
+                      galaxies since little of the gas needed to form new stars
+                      remains. Scientists think elliptical galaxies originate
+                      from collisions and mergers with spirals.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/lenticular-galaxy.jpeg"
+                  alt="Lenticular galaxy NGC 4886."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Lenticular Galaxy</h3>
+
+                  <p class="paragraph card-preview">
+                    Lenticular galaxies are a kind of cross between spirals and
+                    ellipticals. They have the central bulge and disk common to
+                    spiral galaxies but no arms. But like ellipticals,
+                    lenticular galaxies have older stellar populations and
+                    little ongoing star formation.
                   </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
 
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/quasar.jpeg"
-                alt="A bright starlike glow in the center of active galaxy Markarian 231."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Quasar
-                </h3>
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
 
-                <p class="paragraph card-preview">
-                  Quasars are the most luminous type of active galaxy. They emit light across the electromagnetic
-                  spectrum, produce powerful particle jets, and can radiate thousands of times the energy emitted by a
-                  galaxy like the Milky Way. The nearest quasar, called Markarian 231, is located some 600 million
-                  light-years away, but we see many more quasars the farther we look.
-                </p>
+                    <p class="paragraph">
+                      Lenticular galaxies are a kind of cross between spirals
+                      and ellipticals. They have the central bulge and disk
+                      common to spiral galaxies but no arms. But like
+                      ellipticals, lenticular galaxies have older stellar
+                      populations and little ongoing star formation.
+                    </p>
 
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
+                    <p class="paragraph">
+                      Scientists have a few theories about how lenticular
+                      galaxies evolved. One idea suggests these galaxies are
+                      older spirals whose arms have faded. Another proposes that
+                      lenticulars formed from mergers of spiral galaxies.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
 
-                  <p class="paragraph">
-                    Quasars are the most luminous type of active galaxy. They emit light across the electromagnetic
-                    spectrum, produce powerful particle jets, and can radiate thousands of times the energy emitted by a
-                    galaxy like the Milky Way. The nearest quasar, called Markarian 231, is located some 600 million
-                    light-years away, but we see many more quasars the farther we look.
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/irregular-galaxy.jpeg"
+                  alt="An image of NGC 5264, an irregular dwarf galaxy."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Irregular Galaxy</h3>
+
+                  <p class="paragraph card-preview">
+                    Irregular galaxies have unusual shapes, like toothpicks,
+                    rings, or even little groupings of stars. They range from
+                    dwarf irregular galaxies with 100 million times the Sun’s
+                    mass to large ones weighing 10 billion solar masses.
                   </p>
 
-                  <p class="paragraph">
-                    Scientists have identified over 1 million quasars, with the farthest one currently known lying about
-                    13 billion light-years away. Since light takes time to travel, scientists can use light from these
-                    galaxies as a way to peer back in time to study black hole growth and galaxy evolution. Merging
-                    galaxies in the young universe may provide the fuel to power the enormous energy output of quasars,
-                    but when the feeding frenzy ends, the black hole cannot maintain it. It’s thought that quasar
-                    activity may be episodic and that this entire phase may last only about 10 million years.
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Irregular galaxies have unusual shapes, like toothpicks,
+                      rings, or even little groupings of stars. They range from
+                      dwarf irregular galaxies with 100 million times the Sun’s
+                      mass to large ones weighing 10 billion solar masses.
+                    </p>
+
+                    <p class="paragraph">
+                      Astronomers think these galaxies’ odd shapes are sometimes
+                      the result of interactions with others. For example, one
+                      spiral galaxy passing another with a stronger
+                      gravitational pull could lose some of its material, become
+                      distorted, and morph into a new shape. Some, like gas-rich
+                      dwarf galaxies, may be new, formed by material pulled from
+                      such encounters. Or perhaps when galaxies collide, they
+                      create a larger, oddly shaped mashup. Some scientists
+                      theorize that some large irregular galaxies could
+                      represent an intermediate step between spiral and
+                      elliptical galaxies.
+                    </p>
+
+                    <p class="paragraph">
+                      Irregular galaxies born from galaxy interactions or
+                      collisions typically host a mix of older and younger
+                      stars, depending on the characteristics and composition of
+                      the original galaxies. Irregular galaxies may also hold
+                      significant amounts of gas and dust – essential
+                      ingredients for making new stars.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/seyfert-galaxy.jpeg"
+                  alt="A spiral galaxy NCG 5728."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Seyfert Galaxy</h3>
+
+                  <p class="paragraph card-preview">
+                    Seyfert galaxies, first identified in 1943 by American
+                    astronomer Carl Seyfert, are the most common active galaxies
+                    and also exhibit the lowest energies. All Seyferts look like
+                    normal galaxies in visible light, but they emit considerable
+                    infrared radiation. When observed in the infrared, some
+                    reveal bright emission from the donut-shaped torus. Some
+                    also emit X-rays. Seyfert galaxies tend to have lower radio
+                    luminosities, although some produce radio jets.
                   </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
 
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/blazar.jpeg"
-                alt="Markarian 421, one of the closest blazars to Earth."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Blazar
-                </h3>
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
 
-                <p class="paragraph card-preview">
-                  Blazars produce light across the electromagnetic spectrum. Their powerful jets point almost directly
-                  at Earth, so they appear brighter than other active galaxies. Observatories on Earth can sometimes
-                  detect high-energy particles – like neutrinos – produced within the jets and trace them back to their
-                  home galaxy. This information gives scientists a glimpse into the environment around the blazar’s
-                  supermassive black hole.
-                </p>
+                    <p class="paragraph">
+                      Seyfert galaxies, first identified in 1943 by American
+                      astronomer Carl Seyfert, are the most common active
+                      galaxies and also exhibit the lowest energies. All
+                      Seyferts look like normal galaxies in visible light, but
+                      they emit considerable infrared radiation. When observed
+                      in the infrared, some reveal bright emission from the
+                      donut-shaped torus. Some also emit X-rays. Seyfert
+                      galaxies tend to have lower radio luminosities, although
+                      some produce radio jets.
+                    </p>
 
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
+                    <p class="paragraph">
+                      Scientists divide Seyferts into two classes. Type I
+                      Seyfert galaxies display unusual features in their visible
+                      light that imply rapid motion near the accretion disk.
+                      Type II Seyferts show features that imply much slower
+                      motion. However, this distinction may result from
+                      different viewing angles into the centers of these
+                      galaxies.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
 
-                  <p class="paragraph">
-                    Blazars produce light across the electromagnetic spectrum. Their powerful jets point almost directly
-                    at Earth, so they appear brighter than other active galaxies. Observatories on Earth can sometimes
-                    detect high-energy particles – like neutrinos – produced within the jets and trace them back to
-                    their home galaxy. This information gives scientists a glimpse into the environment around the
-                    blazar’s supermassive black hole.
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/quasar.jpeg"
+                  alt="A bright starlike glow in the center of active galaxy Markarian 231."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Quasar</h3>
+
+                  <p class="paragraph card-preview">
+                    Quasars are the most luminous type of active galaxy. They
+                    emit light across the electromagnetic spectrum, produce
+                    powerful particle jets, and can radiate thousands of times
+                    the energy emitted by a galaxy like the Milky Way. The
+                    nearest quasar, called Markarian 231, is located some 600
+                    million light-years away, but we see many more quasars the
+                    farther we look.
                   </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
 
-  <footer id="footer">
-    <div class="container">
-      <nav
-        class="footer-nav"
-        aria-label="Footer navigation"
-      >
-        <section class="section">
-          <h3 class="heading footer-title">Site Map</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../index.html"
-              >
-                Universe
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/galaxies.html"
-              >
-                Galaxies
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/black-holes.html"
-              >
-                Black Holes
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/stars.html"
-              >
-                Stars
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/exoplanets.html"
-              >
-                Exoplanets
-              </a>
-            </li>
-          </ul>
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Quasars are the most luminous type of active galaxy. They
+                      emit light across the electromagnetic spectrum, produce
+                      powerful particle jets, and can radiate thousands of times
+                      the energy emitted by a galaxy like the Milky Way. The
+                      nearest quasar, called Markarian 231, is located some 600
+                      million light-years away, but we see many more quasars the
+                      farther we look.
+                    </p>
+
+                    <p class="paragraph">
+                      Scientists have identified over 1 million quasars, with
+                      the farthest one currently known lying about 13 billion
+                      light-years away. Since light takes time to travel,
+                      scientists can use light from these galaxies as a way to
+                      peer back in time to study black hole growth and galaxy
+                      evolution. Merging galaxies in the young universe may
+                      provide the fuel to power the enormous energy output of
+                      quasars, but when the feeding frenzy ends, the black hole
+                      cannot maintain it. It’s thought that quasar activity may
+                      be episodic and that this entire phase may last only about
+                      10 million years.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/blazar.jpeg"
+                  alt="Markarian 421, one of the closest blazars to Earth."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Blazar</h3>
+
+                  <p class="paragraph card-preview">
+                    Blazars produce light across the electromagnetic spectrum.
+                    Their powerful jets point almost directly at Earth, so they
+                    appear brighter than other active galaxies. Observatories on
+                    Earth can sometimes detect high-energy particles – like
+                    neutrinos – produced within the jets and trace them back to
+                    their home galaxy. This information gives scientists a
+                    glimpse into the environment around the blazar’s
+                    supermassive black hole.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Blazars produce light across the electromagnetic spectrum.
+                      Their powerful jets point almost directly at Earth, so
+                      they appear brighter than other active galaxies.
+                      Observatories on Earth can sometimes detect high-energy
+                      particles – like neutrinos – produced within the jets and
+                      trace them back to their home galaxy. This information
+                      gives scientists a glimpse into the environment around the
+                      blazar’s supermassive black hole.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
         </section>
-        <section class="section">
-          <h3 class="heading footer-title">Sources</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://science.nasa.gov/universe/"
-                target="_blank"
-                rel="noopener"
-              >Text and Images</a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://coolors.co/"
-                target="_blank"
-                rel="noopener"
-              >
-                Color Palette
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://fonts.google.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Fonts
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://precise-type.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Type Scale
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://thenounproject.com/icon/black-hole-7977857/"
-                target="_blank"
-                rel="noopener"
-              >
-                Icon
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">CSS</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Reset
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Only Collapsible Menu
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.w3schools.com/howto/howto_css_parallax.asp"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Parallax
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">Author</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://github.com/HalloweenCreature?tab=repositories"
-                target="_blank"
-                rel="noopener"
-              >
-                Github
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.behance.net/annakouprieva"
-                target="_blank"
-                rel="noopener"
-              >
-                Behance
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.linkedin.com/in/annakouprieva/"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-  </footer>
+      </div>
+    </main>
 
-</body>
-
+    <footer id="footer">
+      <div class="container">
+        <nav
+          class="footer-nav"
+          aria-label="Footer navigation"
+        >
+          <section class="section">
+            <h3 class="heading footer-title">Site Map</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/galaxies.html"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/exoplanets.html"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Sources</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://science.nasa.gov/universe/"
+                  target="_blank"
+                  rel="noopener"
+                  >Text and Images</a
+                >
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://coolors.co/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Color Palette
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://fonts.google.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Fonts
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://precise-type.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Type Scale
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://thenounproject.com/icon/black-hole-7977857/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Icon
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">CSS</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Reset
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Only Collapsible Menu
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.w3schools.com/howto/howto_css_parallax.asp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Parallax
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Author</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://github.com/HalloweenCreature?tab=repositories"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Github
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.behance.net/annakouprieva"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Behance
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.linkedin.com/in/annakouprieva/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

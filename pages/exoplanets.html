@@ -1,702 +1,777 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+      name="description"
+      content="Discover exoplanets, worlds beyond our solar system, and explore their remarkable variety, how astronomers find them, and what they reveal about planetary systems."
+    >
+    <link
+      href="https://fonts.googleapis.com"
+      rel="preconnect"
+    >
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/reset.css"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/index.css"
+      rel="stylesheet"
+    >
+    <title>Exoplanets</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <meta
-    name="description"
-    content="Discover exoplanets, worlds beyond our solar system, and explore their remarkable variety, how astronomers find them, and what they reveal about planetary systems."
-  >
-  <link
-    href="https://fonts.googleapis.com"
-    rel="preconnect"
-  >
-  <link
-    href="https://fonts.gstatic.com"
-    rel="preconnect"
-    crossorigin
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/reset.css"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/index.css"
-    rel="stylesheet"
-  >
-  <title>Exoplanets</title>
-</head>
-
-<body id="body">
-  <header id="header">
-    <div class="container">
-      <div class="logo">
-        <svg
-          aria-hidden="true"
-          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-          width="100%"
-          height="100%"
-          viewBox="0 0 60 60"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          xml:space="preserve"
-        >
-          <path
-            d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
-          ></path>
-          <path
-            d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
-          ></path>
-        </svg>
+  <body id="body">
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <svg
+            aria-hidden="true"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linejoin: round;
+              stroke-miterlimit: 2;
+            "
+            width="100%"
+            height="100%"
+            viewBox="0 0 60 60"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve"
+          >
+            <path
+              d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
+            ></path>
+            <path
+              d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="main-nav-wrapper">
+          <input
+            id="main-nav-toggle"
+            type="checkbox"
+            aria-controls="main-nav"
+            aria-label="Menu"
+          >
+          <label
+            class="main-nav-label"
+            for="main-nav-toggle"
+          >
+            Menu
+          </label>
+          <nav
+            id="main-nav"
+            class="main-nav"
+            aria-label="Main navigation"
+          >
+            <ul class="main-nav-group">
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/galaxies.html"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link active"
+                  href="../pages/exoplanets.html"
+                  aria-current="page"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="main-nav-wrapper">
-        <input
-          id="main-nav-toggle"
-          type="checkbox"
-          aria-controls="main-nav"
-          aria-label="Menu"
-        >
-        <label
-          class="main-nav-label"
-          for="main-nav-toggle"
-        >
-          Menu
-        </label>
+    </header>
+
+    <section
+      id="hero"
+      class="hero-exoplanet exoplanet-hero"
+    >
+      <div class="container">
+        <h1 class="heading page-title">Exoplanets</h1>
+      </div>
+    </section>
+
+    <aside id="aside">
+      <div class="container">
         <nav
-          id="main-nav"
-          class="main-nav"
-          aria-label="Main navigation"
+          class="toc-nav"
+          aria-label="Table of contents"
         >
-          <ul class="main-nav-group">
-            <li class="main-nav-item">
+          <ul class="toc-nav-group">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../index.html"
+                class="toc-nav-link"
+                href="#our-galaxy"
               >
-                Universe
+                Our galaxy
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/galaxies.html"
+                class="toc-nav-link"
+                href="#discovery"
               >
-                Galaxies
+                Discovery
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/black-holes.html"
+                class="toc-nav-link"
+                href="#types"
               >
-                Black Holes
-              </a>
-            </li>
-            <li class="main-nav-item">
-              <a
-                class="main-nav-link"
-                href="../pages/stars.html"
-              >
-                Stars
-              </a>
-            </li>
-            <li class="main-nav-item">
-              <a
-                class="main-nav-link active"
-                href="../pages/exoplanets.html"
-                aria-current="page"
-              >
-                Exoplanets
+                Types
               </a>
             </li>
           </ul>
         </nav>
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <section
-    id="hero"
-    class="hero-exoplanet exoplanet-hero"
-  >
-    <div class="container">
-      <h1 class="heading page-title">
-        Exoplanets
-      </h1>
-    </div>
-  </section>
+    <main id="main">
+      <div class="container">
+        <div class="section">
+          <p class="subtitle">
+            The planets beyond our solar system are called “exoplanets,” and
+            they come in a wide variety of sizes, from gas giants larger than
+            Jupiter to small, rocky planets about as big around as Earth or
+            Mars. They can be hot enough to boil metal or locked in deep freeze.
+            They can orbit their stars so tightly that a “year” lasts only a few
+            days; they can orbit two suns at once. Some exoplanets are even
+            sunless rogues, wandering solo through the galaxy in permanent
+            darkness.
+          </p>
+        </div>
 
-  <aside id="aside">
-    <div class="container">
-      <nav
-        class="toc-nav"
-        aria-label="Table of contents"
-      >
-        <ul class="toc-nav-group">
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#our-galaxy"
-            >
-              Our galaxy
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#discovery"
-            >
-              Discovery
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#types"
-            >
-              Types
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+        <section
+          id="our-galaxy"
+          class="section"
+        >
+          <h2 class="heading section-title">Our Galaxy</h2>
 
-  <main id="main">
-    <div class="container">
-      <div class="section">
-        <p class="subtitle">
-          The planets beyond our solar system are called “exoplanets,” and they come in a wide variety of sizes, from
-          gas giants larger than Jupiter to small, rocky planets about as big around as Earth or Mars. They can be hot
-          enough to boil metal or locked in deep freeze. They can orbit their stars so tightly that a “year” lasts only
-          a few days; they can orbit two suns at once. Some exoplanets are even sunless rogues, wandering solo through
-          the galaxy in permanent darkness.
-        </p>
-      </div>
+          <p class="paragraph">
+            Our galaxy, the Milky Way, is the thick stream of stars that cuts
+            across the sky on the darkest, clearest nights. Its spiraling
+            expanse contains at least 100 billion stars, our Sun among them. And
+            if each of those stars has not just one planet, but, like ours, a
+            whole system of them, then the number of planets in the galaxy is
+            truly astronomical: We’re already heading into the trillions.
+          </p>
 
-      <section
-        id="our-galaxy"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Our Galaxy
-        </h2>
+          <p class="paragraph">
+            We humans have been speculating about such possibilities for
+            thousands of years, but ours is the first generation to know, with
+            certainty, that exoplanets are really out there. In fact, way out
+            there. Our nearest neighboring star, Proxima Centauri, was found to
+            possess at least one planet – probably a rocky one. It’s about 4
+            light-years away – more than 25 trillion miles (40 trillion
+            kilometers). The bulk of exoplanets found so far are hundreds or
+            thousands of light-years away.
+          </p>
 
-        <p class="paragraph">
-          Our galaxy, the Milky Way, is the thick stream of stars that cuts across the sky on the darkest, clearest
-          nights. Its spiraling expanse contains at least 100 billion stars, our Sun among them. And if each of those
-          stars has not just one planet, but, like ours, a whole system of them, then the number of planets in the
-          galaxy is truly astronomical: We’re already heading into the trillions.
-        </p>
+          <p class="paragraph">
+            The bad news: As yet we have no way to reach them, and won’t be
+            leaving footprints on them anytime soon. The good news: We can look
+            in on them, take their temperatures, taste their atmospheres and,
+            perhaps one day soon, detect signs of life that might be hidden in
+            pixels of light captured from these dim, distant worlds.
+          </p>
+        </section>
 
-        <p class="paragraph">
-          We humans have been speculating about such possibilities for thousands of years, but ours is the first
-          generation to know, with certainty, that exoplanets are really out there. In fact, way out there. Our nearest
-          neighboring star, Proxima Centauri, was found to possess at least one planet – probably a rocky one. It’s
-          about 4 light-years away – more than 25 trillion miles (40 trillion kilometers). The bulk of exoplanets found
-          so far are hundreds or thousands of light-years away.
-        </p>
+        <section
+          id="discovery"
+          class="section"
+        >
+          <h2 class="heading section-title">Discovery</h2>
+          <p class="paragraph">
+            The first exoplanets were discovered in the early 1990s, but the
+            first exoplanet to burst upon the world stage was 51 Pegasi b, a
+            “hot Jupiter” orbiting a Sun-like star 50 light-years away. The
+            watershed year was 1995. Since then we’ve discovered thousands more.
+          </p>
 
-        <p class="paragraph">
-          The bad news: As yet we have no way to reach them, and won’t be leaving footprints on them anytime soon. The
-          good news: We can look in on them, take their temperatures, taste their atmospheres and, perhaps one day soon,
-          detect signs of life that might be hidden in pixels of light captured from these dim, distant worlds.
-        </p>
-      </section>
+          <p class="paragraph">
+            Size and mass play a crucial role in determining planet types. There
+            are also varieties within the size/mass classifications. Scientists
+            also have noted what seems to be a strange gap in planet sizes. It’s
+            been dubbed the “radius valley,” or the Fulton gap, after Benjamin
+            Fulton, lead author on a paper describing it. Data from NASA’s
+            Kepler spacecraft showed that planets of a certain size-range are
+            rare – those between 1.5 and 2 times the size (diameter) of Earth,
+            which would place them among the super-Earths. It’s possible that
+            this represents a critical size in planet formation: Planets that
+            reach this size quickly attract thick atmospheres of hydrogen and
+            helium gas, and balloon up into gaseous planets, while planets
+            smaller than this limit are not large enough to hold such an
+            atmosphere and remain primarily rocky, terrestrial bodies. On the
+            other hand, the smaller planets that orbit close to their stars
+            could be the cores of Neptune-like worlds that had their atmospheres
+            stripped away.
+          </p>
 
-      <section
-        id="discovery"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Discovery
-        </h2>
-        <p class="paragraph">
-          The first exoplanets were discovered in the early 1990s, but the first exoplanet to burst upon the world stage
-          was 51 Pegasi b, a “hot Jupiter” orbiting a Sun-like star 50 light-years away. The watershed year was 1995.
-          Since then we’ve discovered thousands more.
-        </p>
+          <p class="paragraph">
+            Explaining the Fulton gap will require a far better understanding of
+            how planetary systems form.
+          </p>
+        </section>
 
-        <p class="paragraph">
-          Size and mass play a crucial role in determining planet types. There are also varieties within the size/mass
-          classifications. Scientists also have noted what seems to be a strange gap in planet sizes. It’s been dubbed
-          the “radius valley,” or the Fulton gap, after Benjamin Fulton, lead author on a paper describing it. Data from
-          NASA’s Kepler spacecraft showed that planets of a certain size-range are rare – those between 1.5 and 2 times
-          the size (diameter) of Earth, which would place them among the super-Earths. It’s possible that this
-          represents a critical size in planet formation: Planets that reach this size quickly attract thick atmospheres
-          of hydrogen and helium gas, and balloon up into gaseous planets, while planets smaller than this limit are not
-          large enough to hold such an atmosphere and remain primarily rocky, terrestrial bodies. On the other hand, the
-          smaller planets that orbit close to their stars could be the cores of Neptune-like worlds that had their
-          atmospheres stripped away.
-        </p>
+        <section
+          id="types"
+          class="section"
+        >
+          <h2 class="heading section-title">Types</h2>
 
-        <p class="paragraph">
-          Explaining the Fulton gap will require a far better understanding of how planetary systems form.
-        </p>
-      </section>
+          <div class="card-group">
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/gas-giant.jpg"
+                  alt="Hot Jupiter orbiting close to it's star."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Gas giant</h3>
 
-      <section
-        id="types"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Types
-        </h2>
-
-        <div class="card-group">
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/gas-giant.jpg"
-                alt="Hot Jupiter orbiting close to it's star."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Gas giant
-                </h3>
-
-                <p class="paragraph card-preview">
-                  A gas giant is a large planet mostly composed of helium and/or hydrogen. These planets, like Jupiter
-                  and Saturn in our solar system, don’t have hard surfaces and instead have swirling gases above a solid
-                  core. Gas giant exoplanets can be much larger than Jupiter, and much closer to their stars than
-                  anything found in our solar system.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    A gas giant is a large planet mostly composed of helium and/or hydrogen. These planets, like Jupiter
-                    and Saturn in our solar system, don’t have hard surfaces and instead have swirling gases above a
-                    solid core. Gas giant exoplanets can be much larger than Jupiter, and much closer to their stars
+                  <p class="paragraph card-preview">
+                    A gas giant is a large planet mostly composed of helium
+                    and/or hydrogen. These planets, like Jupiter and Saturn in
+                    our solar system, don’t have hard surfaces and instead have
+                    swirling gases above a solid core. Gas giant exoplanets can
+                    be much larger than Jupiter, and much closer to their stars
                     than anything found in our solar system.
                   </p>
 
-                  <p class="paragraph">
-                    For most of human history our understanding of how planets form and evolve was based on the eight
-                    planets in our solar system. But over the last 25 years, the discovery of more than 5,600
-                    exoplanets,
-                    or planets outside our solar system, changed all that.
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      A gas giant is a large planet mostly composed of helium
+                      and/or hydrogen. These planets, like Jupiter and Saturn in
+                      our solar system, don’t have hard surfaces and instead
+                      have swirling gases above a solid core. Gas giant
+                      exoplanets can be much larger than Jupiter, and much
+                      closer to their stars than anything found in our solar
+                      system.
+                    </p>
+
+                    <p class="paragraph">
+                      For most of human history our understanding of how planets
+                      form and evolve was based on the eight planets in our
+                      solar system. But over the last 25 years, the discovery of
+                      more than 5,600 exoplanets, or planets outside our solar
+                      system, changed all that.
+                    </p>
+
+                    <p class="paragraph">
+                      Gas giants, like Jupiter or Saturn in our solar system,
+                      are composed mostly of helium and/or hydrogen. Gas giants
+                      nearer to their stars are often called “hot Jupiters.”
+                      More variety is hidden within these broad categories. Hot
+                      Jupiters, for instance, were among the first exoplanet
+                      types found – gas giants like Jupiter, yes, but orbiting
+                      so close to their stars that their temperatures soar into
+                      the thousands of degrees (Fahrenheit or Celsius). These
+                      large planets make such tight orbits that they cause a
+                      pronounced “wobble” in their stars, tugging their stellar
+                      hosts this way and that, and causing a measurable shift in
+                      the spectrum of light from the stars. That made hot
+                      Jupiters easier to detect in the early days of planet
+                      hunting using the radial velocity method.
+                    </p>
+
+                    <p class="paragraph">
+                      Similar in size to Jupiter, these gas-dominated planets
+                      orbit extremely close to their parent stars, circling them
+                      in as few as 18 hours. We have nothing like them in our
+                      own solar system, where the closest planets to the Sun are
+                      rocky and orbiting much farther away. The questions about
+                      hot Jupiters are as big as the planets themselves: Do they
+                      form close to their stars or farther away before migrating
+                      inward? And if these giants do migrate, what would that
+                      reveal about the history of the planets in our own solar
+                      system?
+                    </p>
+
+                    <p class="paragraph">
+                      To answer those questions, scientists will need to observe
+                      many of these hot giants very early in their formation.
+                      The detection of the exoplanet HIP 67522 b, thought to be
+                      the youngest hot Jupiter ever found (in June 2020), could
+                      expand our understanding. It orbits a well-studied star
+                      that is about 17 million years old, meaning the hot
+                      Jupiter is likely only a few million years younger,
+                      whereas most known hot Jupiters are more than a billion
+                      years old. The planet takes about seven days to orbit its
+                      star, which has a mass similar to the Sun's. Located only
+                      about 490 light-years from Earth, HIP 67522 b is about 10
+                      times the diameter of Earth, or close to that of Jupiter.
+                      Its size strongly indicates that it is a gas-dominated
+                      planet.
+                    </p>
+
+                    <p class="paragraph">
+                      The discovery offers hope for finding more young hot
+                      Jupiters and learning more about how planets form
+                      throughout the universe.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/neptuninan.jpg"
+                  alt="Neptune with an asteroid nearby."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Neptunian planet</h3>
+
+                  <p class="paragraph card-preview">
+                    Neptunian exoplanets are similar in size to Neptune or
+                    Uranus in our solar system. Neptunian planets typically have
+                    hydrogen and helium-dominated atmospheres with cores of rock
+                    and heavier metals.
                   </p>
 
-                  <p class="paragraph">
-                    Gas giants, like Jupiter or Saturn in our solar system, are composed mostly of helium and/or
-                    hydrogen. Gas giants nearer to their stars are often called “hot Jupiters.” More variety is hidden
-                    within these broad categories. Hot Jupiters, for instance, were among the first exoplanet types
-                    found – gas giants like Jupiter, yes, but orbiting so close to their stars that their temperatures
-                    soar into the thousands of degrees (Fahrenheit or Celsius). These large planets make such tight
-                    orbits that they cause a pronounced “wobble” in their stars, tugging their stellar hosts this way
-                    and that, and causing a measurable shift in the spectrum of light from the stars. That made hot
-                    Jupiters easier to detect in the early days of planet hunting using the radial velocity method.
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Neptunian exoplanets are similar in size to Neptune or
+                      Uranus in our solar system. Neptunian planets typically
+                      have hydrogen and helium-dominated atmospheres with cores
+                      of rock and heavier metals.
+                    </p>
+
+                    <p class="paragraph">
+                      Neptunian exoplanets are similar in size to Neptune or
+                      Uranus in our solar system. (Neptune is about four times
+                      the size, or radius, of Earth and almost 17 times its
+                      mass, or weight.) Neptunian exoplanets may have a mixture
+                      of interiors though all would be rocky with heavier metals
+                      at their cores. Neptunian planets typically have hydrogen-
+                      and helium-dominated atmospheres. We’re also discovering
+                      mini-Neptunes, planets smaller than Neptune and bigger
+                      than Earth. No planets like these exist in our solar
+                      system.
+                    </p>
+
+                    <p class="paragraph">
+                      While Uranus and Neptune are mostly composed of hydrogen
+                      and helium, both also contain water, ammonia, and methane.
+                      Since these three chemicals are typically found frozen as
+                      ices in the cold outer solar system, Uranus and Neptune
+                      are often referred to as "ice giants" (though their
+                      interiors are warm enough that the "ices" inside them are
+                      not frozen). Researchers discovered an ice giant exoplanet
+                      25,000 light-years away in 2014. We don’t know much about
+                      its composition, what it’s made of, or what elements are
+                      present in its atmosphere, but it’s in a similar orbit to
+                      its star as Uranus is to our Sun.
+                    </p>
+
+                    <p class="paragraph">
+                      It can be hard to tell a lot about distant planets’
+                      compositions. Space telescopes like NASA’s Hubble (and
+                      formerly Spitzer) glean information about planet
+                      atmospheres by analyzing starlight. As starlight passes
+                      through a planet's atmosphere, atoms and molecules absorb
+                      light at certain wavelengths, blocking it from the
+                      telescope's view. The more light a planet blocks, the
+                      larger the planet appears. By analyzing the amount of
+                      light blocked by the planet at different wavelengths,
+                      called spectroscopy, researchers can determine which
+                      molecules make up the atmosphere. NASA’s Transiting
+                      Exoplanet Survey Satellite (TESS) is designed to discover
+                      planets smaller than Neptune that transit stars bright
+                      enough to enable follow-up spectroscopic observations that
+                      can provide atmospheric compositions.
+                    </p>
+
+                    <p class="paragraph">
+                      Neptunian exoplanets often have thick clouds that block
+                      any light from coming through, hiding the signature of the
+                      molecules in the atmosphere. The James Webb Space
+                      Telescope, launched in 2021, is getting our best looks yet
+                      at exoplanet atmospheres.
+                    </p>
+
+                    <p class="paragraph">
+                      Astronomers were elated to find clear skies on a
+                      Neptune-size planet called HAT-P-11b in 2017. Without
+                      clouds to block the view, they were able to identify water
+                      vapor molecules in the exoplanet's atmosphere. HAT-P-11b
+                      is gaseous with a rocky core, much like our own Neptune.
+                      Its atmosphere may have clouds deeper down, but the
+                      combined observations from Hubble, Spitzer, and Kepler
+                      showed that the upper region is cloud-free. This good
+                      visibility enabled scientists to detect water vapor
+                      molecules in the planet's atmosphere.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/super-earth.jpg"
+                  alt="A massive rocky planet."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Super-Earth</h3>
+
+                  <p class="paragraph card-preview">
+                    Super-Earths – a class of planets unlike any in our solar
+                    system – are more massive than Earth yet lighter than ice
+                    giants like Neptune and Uranus, and can be made of gas, rock
+                    or a combination of both. They are between twice the size of
+                    Earth and up to 10 times its mass.
                   </p>
 
-                  <p class="paragraph">
-                    Similar in size to Jupiter, these gas-dominated planets orbit extremely close to their parent stars,
-                    circling them in as few as 18 hours. We have nothing like them in our own solar system, where the
-                    closest planets to the Sun are rocky and orbiting much farther away. The questions about hot
-                    Jupiters are as big as the planets themselves: Do they form close to their stars or farther away
-                    before migrating inward? And if these giants do migrate, what would that reveal about the history of
-                    the planets in our own solar system?
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Super-Earths – a class of planets unlike any in our solar
+                      system – are more massive than Earth yet lighter than ice
+                      giants like Neptune and Uranus, and can be made of gas,
+                      rock or a combination of both. They are between twice the
+                      size of Earth and up to 10 times its mass.
+                    </p>
+
+                    <p class="paragraph">
+                      Super-Earth is a reference only to an exoplanet’s size –
+                      larger than Earth and smaller than Neptune – but not
+                      suggesting they are necessarily similar to our home
+                      planet. The true nature of these planets remains shrouded
+                      in uncertainty because we have nothing like them in our
+                      own solar system – and yet, they are common among planets
+                      found so far in our galaxy.
+                    </p>
+
+                    <p class="paragraph">
+                      Over the last three decades, we have discovered all kinds
+                      of strange planets we never knew existed and that have no
+                      analog in our solar system. Super-Earths can be up to 10
+                      times more massive than Earth. We don’t yet know enough
+                      about these planets to tell at what point they might lose
+                      a rocky surface. But in the range of 3-10 times the mass
+                      of Earth, there might be a wide variety of planetary
+                      compositions, including water worlds, snowball planets, or
+                      planets that, like Neptune, are composed largely of dense
+                      gas. Exoplanets at the upper limits of the super-Earth
+                      size limit can also be referred to as sub-Neptunes, or
+                      mini-Neptunes.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  src="../images/terrestrial.jpg"
+                  alt="A close-up of an Earth-like planet."
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Terrestrial planet</h3>
+
+                  <p class="paragraph card-preview">
+                    In our solar system, Earth, Mars, Mercury and Venus are
+                    terrestrial, or rocky, planets. For planets outside our
+                    solar system, those between half of Earth’s size to twice
+                    its radius are considered terrestrial and others may be even
+                    smaller.
                   </p>
 
-                  <p class="paragraph">
-                    To answer those questions, scientists will need to observe many of these hot giants very early in
-                    their formation. The detection of the exoplanet HIP 67522 b, thought to be the youngest hot Jupiter
-                    ever found (in June 2020), could expand our understanding. It orbits a well-studied star that is
-                    about 17 million years old, meaning the hot Jupiter is likely only a few million years younger,
-                    whereas most known hot Jupiters are more than a billion years old. The planet takes about seven days
-                    to orbit its star, which has a mass similar to the Sun's. Located only about 490 light-years from
-                    Earth, HIP 67522 b is about 10 times the diameter of Earth, or close to that of Jupiter. Its size
-                    strongly indicates that it is a gas-dominated planet.
-                  </p>
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
 
-                  <p class="paragraph">
-                    The discovery offers hope for finding more young hot Jupiters and learning more about how planets
-                    form throughout the universe.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
+                    <p class="paragraph">
+                      In our solar system, Earth, Mars, Mercury and Venus are
+                      terrestrial, or rocky, planets. For planets outside our
+                      solar system, those between half of Earth’s size to twice
+                      its radius are considered terrestrial and others may be
+                      even smaller.
+                    </p>
 
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/neptuninan.jpg"
-                alt="Neptune with an asteroid nearby."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Neptunian planet
-                </h3>
+                    <p class="paragraph">
+                      Terrestrial planets (Earth sized and smaller) are rocky
+                      worlds, composed of rock, silicate, water and/or carbon.
+                      To determine if some of these worlds have atmospheres,
+                      oceans or other signs of habitability, it takes more
+                      investigation. Larger terrestrial exoplanets (those at
+                      least twice as massive as Earth) are classified as
+                      super-Earths.
+                    </p>
 
-                <p class="paragraph card-preview">
-                  Neptunian exoplanets are similar in size to Neptune or Uranus in our solar system. Neptunian planets
-                  typically have hydrogen and helium-dominated atmospheres with cores of rock and heavier metals.
-                </p>
+                    <p class="paragraph">
+                      In general, terrestrial planets have a bulk composition
+                      that is dominated by rock or iron, and a solid or liquid
+                      surface. These faraway worlds may have gaseous
+                      atmospheres, but that’s not a defining feature.
+                    </p>
 
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Neptunian exoplanets are similar in size to Neptune or Uranus in our solar system. Neptunian planets
-                    typically have hydrogen and helium-dominated atmospheres with cores of rock and heavier metals.
-                  </p>
-
-                  <p class="paragraph">
-                    Neptunian exoplanets are similar in size to Neptune or Uranus in our solar system. (Neptune is about
-                    four times the size, or radius, of Earth and almost 17 times its mass, or weight.) Neptunian
-                    exoplanets may have a mixture of interiors though all would be rocky with heavier metals at their
-                    cores. Neptunian planets typically have hydrogen- and helium-dominated atmospheres. We’re also
-                    discovering mini-Neptunes, planets smaller than Neptune and bigger than Earth. No planets like these
-                    exist in our solar system.
-                  </p>
-
-                  <p class="paragraph">
-                    While Uranus and Neptune are mostly composed of hydrogen and helium, both also contain water,
-                    ammonia, and methane. Since these three chemicals are typically found frozen as ices in the cold
-                    outer solar system, Uranus and Neptune are often referred to as "ice giants" (though their interiors
-                    are warm enough that the "ices" inside them are not frozen). Researchers discovered an ice giant
-                    exoplanet 25,000 light-years away in 2014. We don’t know much about its composition, what it’s made
-                    of, or what elements are present in its atmosphere, but it’s in a similar orbit to its star as
-                    Uranus is to our Sun.
-                  </p>
-
-                  <p class="paragraph">
-                    It can be hard to tell a lot about distant planets’ compositions. Space telescopes like NASA’s
-                    Hubble (and formerly Spitzer) glean information about planet atmospheres by analyzing starlight. As
-                    starlight passes through a planet's atmosphere, atoms and molecules absorb light at certain
-                    wavelengths, blocking it from the telescope's view. The more light a planet blocks, the larger the
-                    planet appears. By analyzing the amount of light blocked by the planet at different wavelengths,
-                    called spectroscopy, researchers can determine which molecules make up the atmosphere. NASA’s
-                    Transiting Exoplanet Survey Satellite (TESS) is designed to discover planets smaller than Neptune
-                    that transit stars bright enough to enable follow-up spectroscopic observations that can provide
-                    atmospheric compositions.
-                  </p>
-
-                  <p class="paragraph">
-                    Neptunian exoplanets often have thick clouds that block any light from coming through, hiding the
-                    signature of the molecules in the atmosphere. The James Webb Space Telescope, launched in 2021, is
-                    getting our best looks yet at exoplanet atmospheres.
-                  </p>
-
-                  <p class="paragraph">
-                    Astronomers were elated to find clear skies on a Neptune-size planet called HAT-P-11b in 2017.
-                    Without clouds to block the view, they were able to identify water vapor molecules in the
-                    exoplanet's atmosphere. HAT-P-11b is gaseous with a rocky core, much like our own Neptune. Its
-                    atmosphere may have clouds deeper down, but the combined observations from Hubble, Spitzer, and
-                    Kepler showed that the upper region is cloud-free. This good visibility enabled scientists to detect
-                    water vapor molecules in the planet's atmosphere.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/super-earth.jpg"
-                alt="A massive rocky planet."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Super-Earth
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Super-Earths – a class of planets unlike any in our solar system – are more massive than Earth yet
-                  lighter than ice giants like Neptune and Uranus, and can be made of gas, rock or a combination of
-                  both. They are between twice the size of Earth and up to 10 times its mass.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Super-Earths – a class of planets unlike any in our solar system – are more massive than Earth yet
-                    lighter than ice giants like Neptune and Uranus, and can be made of gas, rock or a combination of
-                    both. They are between twice the size of Earth and up to 10 times its mass.
-                  </p>
-
-                  <p class="paragraph">
-                    Super-Earth is a reference only to an exoplanet’s size – larger than Earth and smaller than Neptune
-                    – but not suggesting they are necessarily similar to our home planet. The true nature of these
-                    planets remains shrouded in uncertainty because we have nothing like them in our own solar system –
-                    and yet, they are common among planets found so far in our galaxy.
-                  </p>
-
-                  <p class="paragraph">
-                    Over the last three decades, we have discovered all kinds of strange planets we never knew existed
-                    and that have no analog in our solar system. Super-Earths can be up to 10 times more massive than
-                    Earth. We don’t yet know enough about these planets to tell at what point they might lose a rocky
-                    surface. But in the range of 3-10 times the mass of Earth, there might be a wide variety of
-                    planetary compositions, including water worlds, snowball planets, or planets that, like Neptune, are
-                    composed largely of dense gas. Exoplanets at the upper limits of the super-Earth size limit can also
-                    be referred to as sub-Neptunes, or mini-Neptunes.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/terrestrial.jpg"
-                alt="A close-up of an Earth-like planet."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Terrestrial planet
-                </h3>
-
-                <p class="paragraph card-preview">
-                  In our solar system, Earth, Mars, Mercury and Venus are terrestrial, or rocky, planets. For planets
-                  outside our solar system, those between half of Earth’s size to twice its radius are considered
-                  terrestrial and others may be even smaller.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    In our solar system, Earth, Mars, Mercury and Venus are terrestrial, or rocky, planets. For planets
-                    outside our solar system, those between half of Earth’s size to twice its radius are considered
-                    terrestrial and others may be even smaller.
-                  </p>
-
-                  <p class="paragraph">
-                    Terrestrial planets (Earth sized and smaller) are rocky worlds, composed of rock, silicate, water
-                    and/or carbon. To determine if some of these worlds have atmospheres, oceans or other signs of
-                    habitability, it takes more investigation. Larger terrestrial exoplanets (those at least twice as
-                    massive as Earth) are classified as super-Earths.
-                  </p>
-
-                  <p class="paragraph">
-                    In general, terrestrial planets have a bulk composition that is dominated by rock or iron, and a
-                    solid or liquid surface. These faraway worlds may have gaseous atmospheres, but that’s not a
-                    defining feature.
-                  </p>
-
-                  <p class="paragraph">
-                    We've found rocky planets in Earth's size range, at the right distance from their parent stars to
-                    harbor liquid water (this is known as the habitable zone). While these characteristics don't
-                    guarantee a habitable world – we can't quite tell yet if these planets really do possess atmospheres
-                    or oceans – they can help point us in the right direction.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer id="footer">
-    <div class="container">
-      <nav
-        class="footer-nav"
-        aria-label="Footer navigation"
-      >
-        <section class="section">
-          <h3 class="heading footer-title">Site Map</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../index.html"
-              >
-                Universe
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/galaxies.html"
-              >
-                Galaxies
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/black-holes.html"
-              >
-                Black Holes
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/stars.html"
-              >
-                Stars
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/exoplanets.html"
-              >
-                Exoplanets
-              </a>
-            </li>
-          </ul>
+                    <p class="paragraph">
+                      We've found rocky planets in Earth's size range, at the
+                      right distance from their parent stars to harbor liquid
+                      water (this is known as the habitable zone). While these
+                      characteristics don't guarantee a habitable world – we
+                      can't quite tell yet if these planets really do possess
+                      atmospheres or oceans – they can help point us in the
+                      right direction.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
         </section>
-        <section class="section">
-          <h3 class="heading footer-title">Sources</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://science.nasa.gov/universe/"
-                target="_blank"
-                rel="noopener"
-              >Text and Images</a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://coolors.co/"
-                target="_blank"
-                rel="noopener"
-              >
-                Color Palette
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://fonts.google.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Fonts
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://precise-type.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Type Scale
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://thenounproject.com/icon/black-hole-7977857/"
-                target="_blank"
-                rel="noopener"
-              >
-                Icon
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">CSS</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Reset
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Only Collapsible Menu
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.w3schools.com/howto/howto_css_parallax.asp"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Parallax
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">Author</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://github.com/HalloweenCreature?tab=repositories"
-                target="_blank"
-                rel="noopener"
-              >
-                Github
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.behance.net/annakouprieva"
-                target="_blank"
-                rel="noopener"
-              >
-                Behance
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.linkedin.com/in/annakouprieva/"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-  </footer>
+      </div>
+    </main>
 
-</body>
-
+    <footer id="footer">
+      <div class="container">
+        <nav
+          class="footer-nav"
+          aria-label="Footer navigation"
+        >
+          <section class="section">
+            <h3 class="heading footer-title">Site Map</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/galaxies.html"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/exoplanets.html"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Sources</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://science.nasa.gov/universe/"
+                  target="_blank"
+                  rel="noopener"
+                  >Text and Images</a
+                >
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://coolors.co/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Color Palette
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://fonts.google.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Fonts
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://precise-type.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Type Scale
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://thenounproject.com/icon/black-hole-7977857/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Icon
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">CSS</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Reset
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Only Collapsible Menu
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.w3schools.com/howto/howto_css_parallax.asp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CSS Parallax
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Author</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://github.com/HalloweenCreature?tab=repositories"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Github
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.behance.net/annakouprieva"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Behance
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.linkedin.com/in/annakouprieva/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,758 +1,834 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    >
+    <meta
+      content="Explore the life of stars, from their formation and different types to the ways they evolve and eventually reach the end of their lives."
+      name="description"
+    >
+    <link
+      href="https://fonts.googleapis.com"
+      rel="preconnect"
+    >
+    <link
+      crossorigin
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/reset.css"
+      rel="stylesheet"
+    >
+    <link
+      href="../styles/index.css"
+      rel="stylesheet"
+    >
+    <title>Stars</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <meta
-    name="description"
-    content="Explore the life of stars, from their formation and different types to the ways they evolve and eventually reach the end of their lives."
-  >
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/reset.css"
-    rel="stylesheet"
-  >
-  <link
-    href="../styles/index.css"
-    rel="stylesheet"
-  >
-  <title>Stars</title>
-</head>
-
-<body id="body">
-  <header id="header">
-    <div class="container">
-      <div class="logo">
-        <svg
-          aria-hidden="true"
-          width="100%"
-          height="100%"
-          viewBox="0 0 60 60"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          xml:space="preserve"
-          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-        >
-          <path
-            d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
-          />
-          <path
-            d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
-          />
-        </svg>
+  <body id="body">
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <svg
+            aria-hidden="true"
+            height="100%"
+            xml:space="preserve"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linejoin: round;
+              stroke-miterlimit: 2;
+            "
+            version="1.1"
+            viewBox="0 0 60 60"
+            width="100%"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M53.947,30c0,0.836 -2.993,2.421 -11.224,3.372c-3.82,0.441 -8.215,0.675 -12.723,0.675c-4.588,0 -9.041,-0.242 -12.908,-0.698c-8.086,-0.953 -11.039,-2.519 -11.039,-3.349c0.002,-0.562 1.678,-1.898 8.027,-2.931c2.055,-0.334 3.841,-1.583 4.903,-3.424c0.765,-1.325 1.762,-2.5 2.965,-3.491c4.665,-3.84 11.438,-3.84 16.103,0c1.202,0.989 2.2,2.163 2.965,3.491c1.063,1.841 2.849,3.09 4.903,3.424c6.349,1.033 8.027,2.37 8.027,2.931Zm-30.487,-6.54c-0.558,0.558 -1.038,1.177 -1.43,1.84c-0.677,1.145 -1.102,2.457 -1.23,3.791c-0.061,0.602 -0.061,1.214 0,1.817c0.027,0.279 0.253,0.497 0.532,0.518c2.785,0.203 5.702,0.305 8.667,0.303c2.965,0.001 5.88,-0.102 8.667,-0.303c0.143,-0.01 0.271,-0.073 0.367,-0.169c0.091,-0.091 0.153,-0.213 0.166,-0.351c0.062,-0.603 0.062,-1.214 0.001,-1.814c-0.127,-1.337 -0.553,-2.65 -1.231,-3.796c-0.391,-0.663 -0.871,-1.282 -1.429,-1.84c-3.606,-3.606 -9.474,-3.606 -13.081,0l0,0.002l-0,0Z"
+            ></path>
+            <path
+              d="M38.051,39.846c-4.665,3.84 -11.438,3.84 -16.103,0c-1.704,-1.402 -3.002,-3.191 -3.791,-5.214c1.295,0.134 2.651,0.243 4.044,0.33c0.358,0.563 0.777,1.097 1.26,1.579c3.606,3.606 9.474,3.606 13.081,0c0.484,-0.484 0.91,-1.014 1.268,-1.579c1.392,-0.088 2.742,-0.197 4.035,-0.332c-0.789,2.023 -2.087,3.813 -3.792,5.217l-0.001,-0.001l0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="main-nav-wrapper">
+          <input
+            id="main-nav-toggle"
+            aria-controls="main-nav"
+            aria-label="Menu"
+            type="checkbox"
+          >
+          <label
+            class="main-nav-label"
+            for="main-nav-toggle"
+          >
+            Menu
+          </label>
+          <nav
+            id="main-nav"
+            class="main-nav"
+            aria-label="Main navigation"
+          >
+            <ul class="main-nav-group">
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/galaxies.html"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link active"
+                  aria-current="page"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="main-nav-item">
+                <a
+                  class="main-nav-link"
+                  href="../pages/exoplanets.html"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="main-nav-wrapper">
-        <input
-          id="main-nav-toggle"
-          type="checkbox"
-          aria-controls="main-nav"
-          aria-label="Menu"
-        >
-        <label
-          class="main-nav-label"
-          for="main-nav-toggle"
-        >
-          Menu
-        </label>
+    </header>
+
+    <section
+      id="hero"
+      class="hero-star"
+    >
+      <div class="container">
+        <h1 class="heading page-title">Stars</h1>
+      </div>
+    </section>
+
+    <aside id="aside">
+      <div class="container">
         <nav
-          id="main-nav"
-          class="main-nav"
-          aria-label="Main navigation"
+          class="toc-nav"
+          aria-label="Table of contents"
         >
-          <ul class="main-nav-group">
-            <li class="main-nav-item">
+          <ul class="toc-nav-group">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../index.html"
+                class="toc-nav-link"
+                href="#birth"
               >
-                Universe
+                Birth
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/galaxies.html"
+                class="toc-nav-link"
+                href="#life"
               >
-                Galaxies
+                Life
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link"
-                href="../pages/black-holes.html"
+                class="toc-nav-link"
+                href="#death"
               >
-                Black Holes
+                Death
               </a>
             </li>
-            <li class="main-nav-item">
+            <li class="toc-nav-item">
               <a
-                class="main-nav-link active"
-                href="../pages/stars.html"
-                aria-current="page"
+                class="toc-nav-link"
+                href="#types"
               >
-                Stars
-              </a>
-            </li>
-            <li class="main-nav-item">
-              <a
-                class="main-nav-link"
-                href="../pages/exoplanets.html"
-              >
-                Exoplanets
+                Types
               </a>
             </li>
           </ul>
         </nav>
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <section
-    id="hero"
-    class="hero-star"
-  >
-    <div class="container">
-      <h1 class="heading page-title">
-        Stars
-      </h1>
-    </div>
-  </section>
-
-  <aside id="aside">
-    <div class="container">
-      <nav
-        class="toc-nav"
-        aria-label="Table of contents"
-      >
-        <ul class="toc-nav-group">
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#birth"
-            >
-              Birth
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#life"
-            >
-              Life
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#death"
-            >
-              Death
-            </a>
-          </li>
-          <li class="toc-nav-item">
-            <a
-              class="toc-nav-link"
-              href="#types"
-            >
-              Types
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
-
-  <main id="main">
-    <div class="container">
-      <div class="section">
-        <p class="subtitle">
-          Stars are giant balls of hot gas – mostly hydrogen, with some helium and small amounts of other elements.
-          Every star has its own life cycle, ranging from a few million to trillions of years, and its properties change
-          as it ages.
-        </p>
-      </div>
-
-      <section
-        id="birth"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Birth
-        </h2>
-
-        <p class="paragraph">
-          Stars form in large clouds of gas and dust called molecular clouds. Molecular clouds range from 1,000 to 10
-          million times the mass of the Sun and can span as much as hundreds of light-years. Molecular clouds are cold
-          which causes gas to clump, creating high-density pockets. Some of these clumps can collide with each other or
-          collect more matter, strengthening their gravitational force as their mass grows. Eventually, gravity causes
-          some of these clumps to collapse. When this happens, friction causes the material to heat up, which eventually
-          leads to the development of a protostar – a baby star. Batches of stars that have recently formed from
-          molecular clouds are often called stellar clusters, and molecular clouds full of stellar clusters are called
-          stellar nurseries.
-        </p>
-      </section>
-
-      <section
-        id="life"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Life
-        </h2>
-
-        <p class="paragraph">
-          At first, most of the protostar’s energy comes from heat released by its initial collapse. After millions of
-          years, immense pressures and temperatures in the star’s core squeeze the nuclei of hydrogen atoms together to
-          form helium, a process called nuclear fusion. Nuclear fusion releases energy, which heats the star and
-          prevents it from further collapsing under the force of gravity.
-        </p>
-
-        <p class="paragraph">
-          A star’s gas provides its fuel, and its mass determines how rapidly it runs through its supply, with
-          lower-mass stars burning longer, dimmer, and cooler than very massive stars. More massive stars must burn fuel
-          at a higher rate to generate the energy that keeps them from collapsing under their own weight. Some low-mass
-          stars will shine for trillions of years – longer than the universe has currently existed – while some massive
-          stars will live for only a few million years.
-        </p>
-
-        <p class="paragraph">
-          Explaining the Fulton gap will require a far better understanding of how planetary systems form.
-        </p>
-      </section>
-
-      <section
-        id="death"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Death
-        </h2>
-
-        <p class="paragraph">
-          At the beginning of the end of a star’s life, its core runs out of hydrogen to convert into helium. The energy
-          produced by fusion creates pressure inside the star that balances gravity’s tendency to pull matter together,
-          so the core starts to collapse. But squeezing the core also increases its temperature and pressure, making the
-          star slowly puff up. However, the details of the late stages of the star’s death depend strongly on its mass.
-        </p>
-
-        <p class="paragraph">
-          A low-mass star’s atmosphere will keep expanding until it becomes a subgiant or giant star while fusion
-          converts helium into carbon in the core. (This will be the fate of our Sun, in several billion years.) Some
-          giants become unstable and pulsate, periodically inflating and ejecting some of their atmospheres. Eventually,
-          all the star’s outer layers blow away, creating an expanding cloud of dust and gas called a planetary nebula.
-        </p>
-
-        <p class="paragraph">
-          All that’s left of the star is its core, now called a white dwarf, a roughly Earth-sized stellar cinder that
-          gradually cools over billions of years.
-        </p>
-
-        <p class="paragraph">
-          All that’s left of the star is its core, now called a white dwarf, a roughly Earth-sized stellar cinder that
-          gradually cools over billions of years.
-        </p>
-
-        <p class="paragraph">
-          A high-mass star goes further. Fusion converts carbon into heavier elements like oxygen, neon, and magnesium,
-          which will become future fuel for the core. For the largest stars, this chain continues until silicon fuses
-          into iron. These processes produce energy that keeps the core from collapsing, but each new fuel buys it less
-          and less time. The whole process takes just a few million years. By the time silicon fuses into iron, the star
-          runs out of fuel in a matter of days. The next step would be fusing iron into some heavier element but doing
-          so requires energy instead of releasing it.
-        </p>
-
-        <p class="paragraph">
-          The star’s iron core collapses until forces between the nuclei push the brakes, then it rebounds. This change
-          creates a shock wave that travels outward through the star. The result is a huge explosion called a supernova.
-          The core survives as an incredibly dense remnant, either a neutron star or a black hole. </p>
-
-        <p class="paragraph">
-          Material cast into the cosmos by supernovae and other stellar events will enrich future molecular clouds and
-          become incorporated into the next generation of stars.
-        </p>
-      </section>
-
-      <section
-        id="types"
-        class="section"
-      >
-        <h2 class="heading section-title">
-          Types
-        </h2>
-
-        <div class="card-group">
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/main-sequence.jpeg"
-                alt="Up-close image of our sun."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Main Sequence Star
-                </h3>
-
-                <p class="paragraph card-preview">
-                  A normal star forms from a clump of dust and gas in a stellar nursery. Over hundreds of thousands of
-                  years, the clump gains mass, starts to spin, and heats up. When the clump's core heats up to millions
-                  of degrees, nuclear fusion starts. This process occurs when two protons, the nuclei of hydrogen atoms,
-                  merge to form one helium nucleus. Fusion releases energy that heats the star, creating pressure that
-                  pushes against the force of its gravity. A star is born. Scientists call a star that is fusing
-                  hydrogen to helium in its core a main sequence star. Main sequence stars make up around 90% of the
-                  universe’s stellar population. They range in luminosity, color, and size – from a tenth to 200 times
-                  the Sun’s mass – and live for millions to billions of years.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    A normal star forms from a clump of dust and gas in a stellar nursery. Over hundreds of thousands of
-                    years, the clump gains mass, starts to spin, and heats up. When the clump's core heats up to
-                    millions of degrees, nuclear fusion starts. This process occurs when two protons, the nuclei of
-                    hydrogen atoms, merge to form one helium nucleus. Fusion releases energy that heats the star,
-                    creating pressure that pushes against the force of its gravity. A star is born. Scientists call a
-                    star that is fusing hydrogen to helium in its core a main sequence star. Main sequence stars make up
-                    around 90% of the universe’s stellar population. They range in luminosity, color, and size – from a
-                    tenth to 200 times the Sun’s mass – and live for millions to billions of years.
-                  </p>
-
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/red-giant.jpeg"
-                alt="A red giant star, like Betelgeuse or Antares."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Red Giant
-                </h3>
-
-                <p class="paragraph card-preview">
-                  When a main sequence star less than eight times the Sun’s mass runs out of hydrogen in its core, it
-                  starts to collapse because the energy produced by fusion is the only force fighting gravity’s tendency
-                  to pull matter together. But squeezing the core also increases its temperature and pressure, so much
-                  so that its helium starts to fuse into carbon, which also releases energy. Hydrogen fusion begins
-                  moving into the star’s outer layers, causing them to expand. The result is a red giant, which would
-                  appear more orange than red. Eventually, the red giant becomes unstable and begins pulsating,
-                  periodically expanding and ejecting some of its atmosphere. Eventually, all of its outer layers blow
-                  away, creating an expanding cloud of dust and gas called a planetary nebula. The Sun will become a red
-                  giant in about 5 billion years.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    When a main sequence star less than eight times the Sun’s mass runs out of hydrogen in its core, it
-                    starts to collapse because the energy produced by fusion is the only force fighting gravity’s
-                    tendency to pull matter together. But squeezing the core also increases its temperature and
-                    pressure, so much so that its helium starts to fuse into carbon, which also releases energy.
-                    Hydrogen fusion begins moving into the star’s outer layers, causing them to expand. The result is a
-                    red giant, which would appear more orange than red. Eventually, the red giant becomes unstable and
-                    begins pulsating, periodically expanding and ejecting some of its atmosphere. Eventually, all of its
-                    outer layers blow away, creating an expanding cloud of dust and gas called a planetary nebula. The
-                    Sun will become a red giant in about 5 billion years.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/white-dwarf.jpeg"
-                alt="A cold white dwarf surrounded by a ring of dusty debris."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  White Dwarf
-                </h3>
-
-                <p class="paragraph card-preview">
-                  After a red giant has shed all its atmosphere, only the core remains. Scientists call this kind of
-                  stellar remnant a white dwarf. A white dwarf is usually Earth-size but hundreds of thousands of times
-                  more massive. A teaspoon of its material would weigh more than a pickup truck. A white dwarf produces
-                  no new heat of its own, so it gradually cools over billions of years. Despite the name, white dwarfs
-                  can emit visible light that ranges from blue white to red. Scientists sometimes find that white dwarfs
-                  are surrounded by dusty disks of material, debris, and even planets – leftovers from the original
-                  star’s red giant phase. In about 10 billion years, after its time as a red giant, the Sun will become
-                  a white dwarf.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    After a red giant has shed all its atmosphere, only the core remains. Scientists call this kind of
-                    stellar remnant a white dwarf. A white dwarf is usually Earth-size but hundreds of thousands of
-                    times more massive. A teaspoon of its material would weigh more than a pickup truck. A white dwarf
-                    produces no new heat of its own, so it gradually cools over billions of years. Despite the name,
-                    white dwarfs can emit visible light that ranges from blue white to red. Scientists sometimes find
-                    that white dwarfs are surrounded by dusty disks of material, debris, and even planets – leftovers
-                    from the original star’s red giant phase. In about 10 billion years, after its time as a red giant,
-                    the Sun will become a white dwarf.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/neutron-star.jpeg"
-                alt="The Vela pulsar located in the circular white dot."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Neutron Star
-                </h3>
-
-                <p class="paragraph card-preview">
-                  A neutron star forms when a main sequence star with between about eight and 20 times the Sun’s mass
-                  runs out of hydrogen in its core. (Heavier stars produce stellar-mass black holes.) The star starts
-                  fusing helium to carbon, like lower-mass stars. But then, when the core runs out of helium, it
-                  shrinks, heats up, and starts converting its carbon into neon, which releases energy. This process
-                  continues as the star converts neon into oxygen, oxygen into silicon, and finally silicon into iron.
-                  These processes produce energy that keep the core from collapsing, but each new fuel buys it less and
-                  less time. By the time silicon fuses into iron, the star runs out of fuel in a matter of days. The
-                  next step would be fusing iron into some heavier element, but doing so requires energy instead of
-                  releasing it. The core collapses and then rebounds back to its original size, creating a shock wave
-                  that travels through the star’s outer layers. The result is a huge explosion called a supernova. The
-                  remnant core is a superdense neutron star.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    A neutron star forms when a main sequence star with between about eight and 20 times the Sun’s mass
-                    runs out of hydrogen in its core. (Heavier stars produce stellar-mass black holes.) The star starts
-                    fusing helium to carbon, like lower-mass stars. But then, when the core runs out of helium, it
-                    shrinks, heats up, and starts converting its carbon into neon, which releases energy. This process
-                    continues as the star converts neon into oxygen, oxygen into silicon, and finally silicon into iron.
-                    These processes produce energy that keep the core from collapsing, but each new fuel buys it less
-                    and less time. By the time silicon fuses into iron, the star runs out of fuel in a matter of days.
-                    The next step would be fusing iron into some heavier element, but doing so requires energy instead
-                    of releasing it. The core collapses and then rebounds back to its original size, creating a shock
-                    wave that travels through the star’s outer layers. The result is a huge explosion called a
-                    supernova. The remnant core is a superdense neutron star.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/red-dwarf.jpeg"
-                alt="The red dwarf Proxima Centauri."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Red Dwarf
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Red dwarfs are the smallest main sequence stars – just a fraction of the Sun’s size and mass. They’re
-                  also the coolest, and appear more orange in color than red. When a red dwarf produces helium via
-                  fusion in its core, the released energy brings material to the star’s surface, where it cools and
-                  sinks back down, taking along a fresh supply of hydrogen to the core. Because of this constant
-                  churning, red dwarfs can steadily burn through their entire supply of hydrogen over trillions of years
-                  without changing their internal structures, unlike other stars. Scientists think some low-mass red
-                  dwarfs, those with just a third of the Sun’s mass, have life spans longer than the current age of the
-                  universe, up to about 14 trillion years. Red dwarfs are also born in much greater numbers than more
-                  massive stars. Because of that, and because they live so long, red dwarfs make up around 75% of the
-                  Milky Way galaxy’s stellar population.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Red dwarfs are the smallest main sequence stars – just a fraction of the Sun’s size and mass.
-                    They’re also the coolest, and appear more orange in color than red. When a red dwarf produces helium
-                    via fusion in its core, the released energy brings material to the star’s surface, where it cools
-                    and sinks back down, taking along a fresh supply of hydrogen to the core. Because of this constant
-                    churning, red dwarfs can steadily burn through their entire supply of hydrogen over trillions of
-                    years without changing their internal structures, unlike other stars. Scientists think some low-mass
-                    red dwarfs, those with just a third of the Sun’s mass, have life spans longer than the current age
-                    of the universe, up to about 14 trillion years. Red dwarfs are also born in much greater numbers
-                    than more massive stars. Because of that, and because they live so long, red dwarfs make up around
-                    75% of the Milky Way galaxy’s stellar population.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="card">
-            <figure class="card-figure">
-              <img
-                class="card-image"
-                src="../images/brown-dwarf.jpeg"
-                alt="An illustration of the brown dwarf LSRJ1835+3259."
-              >
-              <figcaption class="card-caption">
-                <h3 class="heading card-title">
-                  Brown Dwarf
-                </h3>
-
-                <p class="paragraph card-preview">
-                  Brown dwarfs aren’t technically stars. They’re more massive than planets but not quite as massive as
-                  stars. Generally, they have between 13 and 80 times the mass of Jupiter. They emit almost no visible
-                  light, but scientists have seen a few in infrared light. Some brown dwarfs form the same way as main
-                  sequence stars, from gas and dust clumps in nebulae, but they never gain enough mass to do fusion on
-                  the scale of a main sequence star. Others may form like planets, from disks of gas and dust around
-                  stars.
-                </p>
-
-                <details class="card-details">
-                  <summary class="card-button">
-                    <span class="button-text read-more">Read More ↓</span>
-                    <span class="button-text read-less">Read Less ↑</span>
-                  </summary>
-
-                  <p class="paragraph">
-                    Brown dwarfs aren’t technically stars. They’re more massive than planets but not quite as massive as
-                    stars. Generally, they have between 13 and 80 times the mass of Jupiter. They emit almost no visible
-                    light, but scientists have seen a few in infrared light. Some brown dwarfs form the same way as main
-                    sequence stars, from gas and dust clumps in nebulae, but they never gain enough mass to do fusion on
-                    the scale of a main sequence star. Others may form like planets, from disks of gas and dust around
-                    stars.
-                  </p>
-                </details>
-              </figcaption>
-            </figure>
-          </article>
+    <main id="main">
+      <div class="container">
+        <div class="section">
+          <p class="subtitle">
+            Stars are giant balls of hot gas – mostly hydrogen, with some helium
+            and small amounts of other elements. Every star has its own life
+            cycle, ranging from a few million to trillions of years, and its
+            properties change as it ages.
+          </p>
         </div>
-      </section>
-    </div>
-  </main>
 
-  <footer id="footer">
-    <div class="container">
-      <nav
-        class="footer-nav"
-        aria-label="Footer navigation"
-      >
-        <section class="section">
-          <h3 class="heading footer-title">Site Map</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../index.html"
-              >
-                Universe
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/galaxies.html"
-              >
-                Galaxies
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/black-holes.html"
-              >
-                Black Holes
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/stars.html"
-              >
-                Stars
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link"
-                href="../pages/exoplanets.html"
-              >
-                Exoplanets
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">Sources</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://science.nasa.gov/universe/"
-                target="_blank"
-                rel="noopener"
-              >Text and Images</a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://coolors.co/"
-                target="_blank"
-                rel="noopener"
-              >
-                Color Palette
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://fonts.google.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Fonts
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://precise-type.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                Type Scale
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://thenounproject.com/icon/black-hole-7977857/"
-                target="_blank"
-                rel="noopener"
-              >
-                Icon
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">CSS</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Reset
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Only Collapsible Menu
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.w3schools.com/howto/howto_css_parallax.asp"
-                target="_blank"
-                rel="noopener"
-              >
-                CSS Parallax
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3 class="heading footer-title">Author</h3>
-          <ul class="footer-nav-group">
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://github.com/HalloweenCreature?tab=repositories"
-                target="_blank"
-                rel="noopener"
-              >
-                Github
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.behance.net/annakouprieva"
-                target="_blank"
-                rel="noopener"
-              >
-                Behance
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a
-                class="link link-external"
-                href="https://www.linkedin.com/in/annakouprieva/"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-  </footer>
+        <section
+          id="birth"
+          class="section"
+        >
+          <h2 class="heading section-title">Birth</h2>
 
-</body>
+          <p class="paragraph">
+            Stars form in large clouds of gas and dust called molecular clouds.
+            Molecular clouds range from 1,000 to 10 million times the mass of
+            the Sun and can span as much as hundreds of light-years. Molecular
+            clouds are cold which causes gas to clump, creating high-density
+            pockets. Some of these clumps can collide with each other or collect
+            more matter, strengthening their gravitational force as their mass
+            grows. Eventually, gravity causes some of these clumps to collapse.
+            When this happens, friction causes the material to heat up, which
+            eventually leads to the development of a protostar – a baby star.
+            Batches of stars that have recently formed from molecular clouds are
+            often called stellar clusters, and molecular clouds full of stellar
+            clusters are called stellar nurseries.
+          </p>
+        </section>
 
+        <section
+          id="life"
+          class="section"
+        >
+          <h2 class="heading section-title">Life</h2>
+
+          <p class="paragraph">
+            At first, most of the protostar’s energy comes from heat released by
+            its initial collapse. After millions of years, immense pressures and
+            temperatures in the star’s core squeeze the nuclei of hydrogen atoms
+            together to form helium, a process called nuclear fusion. Nuclear
+            fusion releases energy, which heats the star and prevents it from
+            further collapsing under the force of gravity.
+          </p>
+
+          <p class="paragraph">
+            A star’s gas provides its fuel, and its mass determines how rapidly
+            it runs through its supply, with lower-mass stars burning longer,
+            dimmer, and cooler than very massive stars. More massive stars must
+            burn fuel at a higher rate to generate the energy that keeps them
+            from collapsing under their own weight. Some low-mass stars will
+            shine for trillions of years – longer than the universe has
+            currently existed – while some massive stars will live for only a
+            few million years.
+          </p>
+
+          <p class="paragraph">
+            Explaining the Fulton gap will require a far better understanding of
+            how planetary systems form.
+          </p>
+        </section>
+
+        <section
+          id="death"
+          class="section"
+        >
+          <h2 class="heading section-title">Death</h2>
+
+          <p class="paragraph">
+            At the beginning of the end of a star’s life, its core runs out of
+            hydrogen to convert into helium. The energy produced by fusion
+            creates pressure inside the star that balances gravity’s tendency to
+            pull matter together, so the core starts to collapse. But squeezing
+            the core also increases its temperature and pressure, making the
+            star slowly puff up. However, the details of the late stages of the
+            star’s death depend strongly on its mass.
+          </p>
+
+          <p class="paragraph">
+            A low-mass star’s atmosphere will keep expanding until it becomes a
+            subgiant or giant star while fusion converts helium into carbon in
+            the core. (This will be the fate of our Sun, in several billion
+            years.) Some giants become unstable and pulsate, periodically
+            inflating and ejecting some of their atmospheres. Eventually, all
+            the star’s outer layers blow away, creating an expanding cloud of
+            dust and gas called a planetary nebula.
+          </p>
+
+          <p class="paragraph">
+            All that’s left of the star is its core, now called a white dwarf, a
+            roughly Earth-sized stellar cinder that gradually cools over
+            billions of years.
+          </p>
+
+          <p class="paragraph">
+            All that’s left of the star is its core, now called a white dwarf, a
+            roughly Earth-sized stellar cinder that gradually cools over
+            billions of years.
+          </p>
+
+          <p class="paragraph">
+            A high-mass star goes further. Fusion converts carbon into heavier
+            elements like oxygen, neon, and magnesium, which will become future
+            fuel for the core. For the largest stars, this chain continues until
+            silicon fuses into iron. These processes produce energy that keeps
+            the core from collapsing, but each new fuel buys it less and less
+            time. The whole process takes just a few million years. By the time
+            silicon fuses into iron, the star runs out of fuel in a matter of
+            days. The next step would be fusing iron into some heavier element
+            but doing so requires energy instead of releasing it.
+          </p>
+
+          <p class="paragraph">
+            The star’s iron core collapses until forces between the nuclei push
+            the brakes, then it rebounds. This change creates a shock wave that
+            travels outward through the star. The result is a huge explosion
+            called a supernova. The core survives as an incredibly dense
+            remnant, either a neutron star or a black hole.
+          </p>
+
+          <p class="paragraph">
+            Material cast into the cosmos by supernovae and other stellar events
+            will enrich future molecular clouds and become incorporated into the
+            next generation of stars.
+          </p>
+        </section>
+
+        <section
+          id="types"
+          class="section"
+        >
+          <h2 class="heading section-title">Types</h2>
+
+          <div class="card-group">
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="Up-close image of our sun."
+                  src="../images/main-sequence.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Main Sequence Star</h3>
+
+                  <p class="paragraph card-preview">
+                    A normal star forms from a clump of dust and gas in a
+                    stellar nursery. Over hundreds of thousands of years, the
+                    clump gains mass, starts to spin, and heats up. When the
+                    clump's core heats up to millions of degrees, nuclear fusion
+                    starts. This process occurs when two protons, the nuclei of
+                    hydrogen atoms, merge to form one helium nucleus. Fusion
+                    releases energy that heats the star, creating pressure that
+                    pushes against the force of its gravity. A star is born.
+                    Scientists call a star that is fusing hydrogen to helium in
+                    its core a main sequence star. Main sequence stars make up
+                    around 90% of the universe’s stellar population. They range
+                    in luminosity, color, and size – from a tenth to 200 times
+                    the Sun’s mass – and live for millions to billions of years.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      A normal star forms from a clump of dust and gas in a
+                      stellar nursery. Over hundreds of thousands of years, the
+                      clump gains mass, starts to spin, and heats up. When the
+                      clump's core heats up to millions of degrees, nuclear
+                      fusion starts. This process occurs when two protons, the
+                      nuclei of hydrogen atoms, merge to form one helium
+                      nucleus. Fusion releases energy that heats the star,
+                      creating pressure that pushes against the force of its
+                      gravity. A star is born. Scientists call a star that is
+                      fusing hydrogen to helium in its core a main sequence
+                      star. Main sequence stars make up around 90% of the
+                      universe’s stellar population. They range in luminosity,
+                      color, and size – from a tenth to 200 times the Sun’s mass
+                      – and live for millions to billions of years.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="A red giant star, like Betelgeuse or Antares."
+                  src="../images/red-giant.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Red Giant</h3>
+
+                  <p class="paragraph card-preview">
+                    When a main sequence star less than eight times the Sun’s
+                    mass runs out of hydrogen in its core, it starts to collapse
+                    because the energy produced by fusion is the only force
+                    fighting gravity’s tendency to pull matter together. But
+                    squeezing the core also increases its temperature and
+                    pressure, so much so that its helium starts to fuse into
+                    carbon, which also releases energy. Hydrogen fusion begins
+                    moving into the star’s outer layers, causing them to expand.
+                    The result is a red giant, which would appear more orange
+                    than red. Eventually, the red giant becomes unstable and
+                    begins pulsating, periodically expanding and ejecting some
+                    of its atmosphere. Eventually, all of its outer layers blow
+                    away, creating an expanding cloud of dust and gas called a
+                    planetary nebula. The Sun will become a red giant in about 5
+                    billion years.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      When a main sequence star less than eight times the Sun’s
+                      mass runs out of hydrogen in its core, it starts to
+                      collapse because the energy produced by fusion is the only
+                      force fighting gravity’s tendency to pull matter together.
+                      But squeezing the core also increases its temperature and
+                      pressure, so much so that its helium starts to fuse into
+                      carbon, which also releases energy. Hydrogen fusion begins
+                      moving into the star’s outer layers, causing them to
+                      expand. The result is a red giant, which would appear more
+                      orange than red. Eventually, the red giant becomes
+                      unstable and begins pulsating, periodically expanding and
+                      ejecting some of its atmosphere. Eventually, all of its
+                      outer layers blow away, creating an expanding cloud of
+                      dust and gas called a planetary nebula. The Sun will
+                      become a red giant in about 5 billion years.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="A cold white dwarf surrounded by a ring of dusty debris."
+                  src="../images/white-dwarf.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">White Dwarf</h3>
+
+                  <p class="paragraph card-preview">
+                    After a red giant has shed all its atmosphere, only the core
+                    remains. Scientists call this kind of stellar remnant a
+                    white dwarf. A white dwarf is usually Earth-size but
+                    hundreds of thousands of times more massive. A teaspoon of
+                    its material would weigh more than a pickup truck. A white
+                    dwarf produces no new heat of its own, so it gradually cools
+                    over billions of years. Despite the name, white dwarfs can
+                    emit visible light that ranges from blue white to red.
+                    Scientists sometimes find that white dwarfs are surrounded
+                    by dusty disks of material, debris, and even planets –
+                    leftovers from the original star’s red giant phase. In about
+                    10 billion years, after its time as a red giant, the Sun
+                    will become a white dwarf.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      After a red giant has shed all its atmosphere, only the
+                      core remains. Scientists call this kind of stellar remnant
+                      a white dwarf. A white dwarf is usually Earth-size but
+                      hundreds of thousands of times more massive. A teaspoon of
+                      its material would weigh more than a pickup truck. A white
+                      dwarf produces no new heat of its own, so it gradually
+                      cools over billions of years. Despite the name, white
+                      dwarfs can emit visible light that ranges from blue white
+                      to red. Scientists sometimes find that white dwarfs are
+                      surrounded by dusty disks of material, debris, and even
+                      planets – leftovers from the original star’s red giant
+                      phase. In about 10 billion years, after its time as a red
+                      giant, the Sun will become a white dwarf.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="The Vela pulsar located in the circular white dot."
+                  src="../images/neutron-star.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Neutron Star</h3>
+
+                  <p class="paragraph card-preview">
+                    A neutron star forms when a main sequence star with between
+                    about eight and 20 times the Sun’s mass runs out of hydrogen
+                    in its core. (Heavier stars produce stellar-mass black
+                    holes.) The star starts fusing helium to carbon, like
+                    lower-mass stars. But then, when the core runs out of
+                    helium, it shrinks, heats up, and starts converting its
+                    carbon into neon, which releases energy. This process
+                    continues as the star converts neon into oxygen, oxygen into
+                    silicon, and finally silicon into iron. These processes
+                    produce energy that keep the core from collapsing, but each
+                    new fuel buys it less and less time. By the time silicon
+                    fuses into iron, the star runs out of fuel in a matter of
+                    days. The next step would be fusing iron into some heavier
+                    element, but doing so requires energy instead of releasing
+                    it. The core collapses and then rebounds back to its
+                    original size, creating a shock wave that travels through
+                    the star’s outer layers. The result is a huge explosion
+                    called a supernova. The remnant core is a superdense neutron
+                    star.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      A neutron star forms when a main sequence star with
+                      between about eight and 20 times the Sun’s mass runs out
+                      of hydrogen in its core. (Heavier stars produce
+                      stellar-mass black holes.) The star starts fusing helium
+                      to carbon, like lower-mass stars. But then, when the core
+                      runs out of helium, it shrinks, heats up, and starts
+                      converting its carbon into neon, which releases energy.
+                      This process continues as the star converts neon into
+                      oxygen, oxygen into silicon, and finally silicon into
+                      iron. These processes produce energy that keep the core
+                      from collapsing, but each new fuel buys it less and less
+                      time. By the time silicon fuses into iron, the star runs
+                      out of fuel in a matter of days. The next step would be
+                      fusing iron into some heavier element, but doing so
+                      requires energy instead of releasing it. The core
+                      collapses and then rebounds back to its original size,
+                      creating a shock wave that travels through the star’s
+                      outer layers. The result is a huge explosion called a
+                      supernova. The remnant core is a superdense neutron star.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="The red dwarf Proxima Centauri."
+                  src="../images/red-dwarf.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Red Dwarf</h3>
+
+                  <p class="paragraph card-preview">
+                    Red dwarfs are the smallest main sequence stars – just a
+                    fraction of the Sun’s size and mass. They’re also the
+                    coolest, and appear more orange in color than red. When a
+                    red dwarf produces helium via fusion in its core, the
+                    released energy brings material to the star’s surface, where
+                    it cools and sinks back down, taking along a fresh supply of
+                    hydrogen to the core. Because of this constant churning, red
+                    dwarfs can steadily burn through their entire supply of
+                    hydrogen over trillions of years without changing their
+                    internal structures, unlike other stars. Scientists think
+                    some low-mass red dwarfs, those with just a third of the
+                    Sun’s mass, have life spans longer than the current age of
+                    the universe, up to about 14 trillion years. Red dwarfs are
+                    also born in much greater numbers than more massive stars.
+                    Because of that, and because they live so long, red dwarfs
+                    make up around 75% of the Milky Way galaxy’s stellar
+                    population.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Red dwarfs are the smallest main sequence stars – just a
+                      fraction of the Sun’s size and mass. They’re also the
+                      coolest, and appear more orange in color than red. When a
+                      red dwarf produces helium via fusion in its core, the
+                      released energy brings material to the star’s surface,
+                      where it cools and sinks back down, taking along a fresh
+                      supply of hydrogen to the core. Because of this constant
+                      churning, red dwarfs can steadily burn through their
+                      entire supply of hydrogen over trillions of years without
+                      changing their internal structures, unlike other stars.
+                      Scientists think some low-mass red dwarfs, those with just
+                      a third of the Sun’s mass, have life spans longer than the
+                      current age of the universe, up to about 14 trillion
+                      years. Red dwarfs are also born in much greater numbers
+                      than more massive stars. Because of that, and because they
+                      live so long, red dwarfs make up around 75% of the Milky
+                      Way galaxy’s stellar population.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="card">
+              <figure class="card-figure">
+                <img
+                  class="card-image"
+                  alt="An illustration of the brown dwarf LSRJ1835+3259."
+                  src="../images/brown-dwarf.jpeg"
+                >
+                <figcaption class="card-caption">
+                  <h3 class="heading card-title">Brown Dwarf</h3>
+
+                  <p class="paragraph card-preview">
+                    Brown dwarfs aren’t technically stars. They’re more massive
+                    than planets but not quite as massive as stars. Generally,
+                    they have between 13 and 80 times the mass of Jupiter. They
+                    emit almost no visible light, but scientists have seen a few
+                    in infrared light. Some brown dwarfs form the same way as
+                    main sequence stars, from gas and dust clumps in nebulae,
+                    but they never gain enough mass to do fusion on the scale of
+                    a main sequence star. Others may form like planets, from
+                    disks of gas and dust around stars.
+                  </p>
+
+                  <details class="card-details">
+                    <summary class="card-button">
+                      <span class="button-text read-more">Read More ↓</span>
+                      <span class="button-text read-less">Read Less ↑</span>
+                    </summary>
+
+                    <p class="paragraph">
+                      Brown dwarfs aren’t technically stars. They’re more
+                      massive than planets but not quite as massive as stars.
+                      Generally, they have between 13 and 80 times the mass of
+                      Jupiter. They emit almost no visible light, but scientists
+                      have seen a few in infrared light. Some brown dwarfs form
+                      the same way as main sequence stars, from gas and dust
+                      clumps in nebulae, but they never gain enough mass to do
+                      fusion on the scale of a main sequence star. Others may
+                      form like planets, from disks of gas and dust around
+                      stars.
+                    </p>
+                  </details>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <nav
+          class="footer-nav"
+          aria-label="Footer navigation"
+        >
+          <section class="section">
+            <h3 class="heading footer-title">Site Map</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../index.html"
+                >
+                  Universe
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/galaxies.html"
+                >
+                  Galaxies
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/black-holes.html"
+                >
+                  Black Holes
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/stars.html"
+                >
+                  Stars
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link"
+                  href="../pages/exoplanets.html"
+                >
+                  Exoplanets
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Sources</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://science.nasa.gov/universe/"
+                  rel="noopener"
+                  target="_blank"
+                  >Text and Images</a
+                >
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://coolors.co/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Color Palette
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://fonts.google.com/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Fonts
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://precise-type.com/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Type Scale
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://thenounproject.com/icon/black-hole-7977857/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Icon
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">CSS</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://gist.github.com/mindplay-dk/62243f634cdcce4f43d943c36378137d"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  CSS Reset
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  CSS Only Collapsible Menu
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.w3schools.com/howto/howto_css_parallax.asp"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  CSS Parallax
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h3 class="heading footer-title">Author</h3>
+            <ul class="footer-nav-group">
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://github.com/HalloweenCreature?tab=repositories"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Github
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.behance.net/annakouprieva"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Behance
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a
+                  class="link link-external"
+                  href="https://www.linkedin.com/in/annakouprieva/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
