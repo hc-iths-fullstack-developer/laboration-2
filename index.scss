@@ -542,50 +542,50 @@ html {
 }
 
 .hero-black-hole {
-  background-image: url('../images/black-hole-hero-small.webp');
+  background-image: url('../images/black-holes-hero-small.webp');
 
   @media (width >= $breakpoint-medium) {
-    background-image: url('../images/black-hole-hero-medium.webp');
+    background-image: url('../images/black-holes-hero-medium.webp');
   }
 
   @media (width >= $breakpoint-large) {
-    background-image: url('../images/black-hole-hero-large.webp');
+    background-image: url('../images/black-holes-hero-large.webp');
   }
 }
 
 .hero-exoplanet {
-  background-image: url('../images/exoplanet-hero-small.webp');
+  background-image: url('../images/exoplanets-hero-small.webp');
 
   @media (width >= $breakpoint-medium) {
-    background-image: url('../images/exoplanet-hero-medium.webp');
+    background-image: url('../images/exoplanets-hero-medium.webp');
   }
 
   @media (width >= $breakpoint-large) {
-    background-image: url('../images/exoplanet-hero-large.webp');
+    background-image: url('../images/exoplanets-hero-large.webp');
   }
 }
 
 .hero-galaxy {
-  background-image: url('../images/galaxy-hero-small.webp');
+  background-image: url('../images/galaxies-hero-small.webp');
 
   @media (width >= $breakpoint-medium) {
-    background-image: url('../images/galaxy-hero-medium.webp');
+    background-image: url('../images/galaxies-hero-medium.webp');
   }
 
   @media (width >= $breakpoint-large) {
-    background-image: url('../images/galaxy-hero-large.webp');
+    background-image: url('../images/galaxies-hero-large.webp');
   }
 }
 
 .hero-star {
-  background-image: url('../images/star-hero-small.webp');
+  background-image: url('../images/stars-hero-small.webp');
 
   @media (width >= $breakpoint-medium) {
-    background-image: url('../images/star-hero-medium.webp');
+    background-image: url('../images/stars-hero-medium.webp');
   }
 
   @media (width >= $breakpoint-large) {
-    background-image: url('../images/star-hero-large.webp');
+    background-image: url('../images/stars-hero-large.webp');
   }
 }
 
