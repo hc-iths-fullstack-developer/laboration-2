@@ -16,11 +16,15 @@
 
 ### Bilder
 
+#### Hero
+
 + [Index hero](https://www.esa.int/ESA_Multimedia/Images/2023/11/Euclid_s_view_of_the_Horsehead_Nebula)
 + [Galaxies hero](https://science.nasa.gov/asset/hubble/out-of-this-whirl-the-whirlpool-galaxy-m51-and-companion-galaxy/)
 + [Black-holes hero](https://svs.gsfc.nasa.gov/13326/)
 + [Stars hero](https://www.esa.int/ESA_Multimedia/Images/2022/03/The_Sun_in_high_resolution?lang=en)
 + [Exoplanets hero](https://pixabay.com/illustrations/exoplanet-planet-space-astronomy-7852132/)
+
+#### Galaxies
 
 + [Spiral galaxy card](https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-101/)
 + [Elliptical galaxy card](https://science.nasa.gov/missions/hubble/hubble-peers-through-giant-ellipticals-layers/)
@@ -30,10 +34,14 @@
 + [Quasar galaxy card](https://science.nasa.gov/asset/webb/quasar-outflow-illustration/)
 + [Blazar galaxy card](https://www.esa.int/ESA_Multimedia/Images/2007/10/Artist_s_impression_of_a_blazar/)
 
+#### Black-holes
+
 + [Stellar black-hole card](https://science.nasa.gov/asset/webb/black-hole-cygnus-x-1-illustration/)
 + [Supermassive black-hole card](https://svs.gsfc.nasa.gov/13086#media_group_325333/)
 + [Intermediate black-hole card](https://science.nasa.gov/asset/hubble/illustration-of-black-hole-system/)
 + [Primordial black-hole card](https://svs.gsfc.nasa.gov/14524/#media_group_374082/)
+
+#### Stars
 
 + [Main Sequence star card](https://svs.gsfc.nasa.gov/11211/#media_group_346680)
 + [Red Giant star card](https://science.nasa.gov/asset/hubble/cw-leonis/)
@@ -41,6 +49,8 @@
 + [Neutron star card](https://www.nasa.gov/missions/chandra/vela-pulsar/)
 + [Red Dwarf star card](https://science.nasa.gov/asset/hubble/artists-view-of-planets-transiting-red-dwarf-star-in-trappist-1-system/)
 + [Brown Dwarf star card](https://science.nasa.gov/asset/webb/brown-dwarf-w1935-artist-concept/)
+
+#### Exoplanets
 
 + [Gas giant exoplanet card](https://esahubble.org/images/heic1312a/)
 + [Neptunian exoplanet card](https://science.nasa.gov/universe/exoplanets/discovery-alert-2-planet-system-is-close-and-weird/)
