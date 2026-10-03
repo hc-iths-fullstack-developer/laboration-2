@@ -300,15 +300,15 @@ html {
       height: 100%;
 
       .card-picture {
+        align-self: start;
+        border-color: var(--color-surface-hover);
+        border-style: solid;
+        border-width: var(--border-width-sm);
         flex-shrink: 0;
+        min-height: var(--card-image-height);
+        width: 100%;
 
         .card-image {
-          aspect-ratio: 1 / 1;
-          border-color: var(--color-surface-hover);
-          border-style: solid;
-          border-width: var(--border-width-sm);
-          min-height: var(--card-image-height);
-          object-fit: cover;
           width: 100%;
         }
       }
@@ -319,6 +319,7 @@ html {
         flex-direction: column;
         gap: var(--spacing-base);
         height: 100%;
+        width: 100%;
 
         .card-preview {
           -webkit-box-orient: vertical;
@@ -414,7 +415,7 @@ html {
       .card-figure {
         flex-direction: row;
 
-        .card-image {
+        .card-picture {
           max-width: var(--card-image-max-width);
         }
       }
@@ -433,7 +434,7 @@ html {
       .card-figure {
         flex-direction: column;
 
-        .card-image {
+        .card-picture {
           max-width: none;
           width: 100%;
         }

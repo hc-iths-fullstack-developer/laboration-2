@@ -237,16 +237,16 @@ html {
 }
 
 .card-group .card .card-figure .card-picture {
-  flex-shrink: 0;
-}
-
-.card-group .card .card-figure .card-picture .card-image {
-  aspect-ratio: 1/1;
+  align-self: start;
   border-color: var(--color-surface-hover);
   border-style: solid;
   border-width: var(--border-width-sm);
+  flex-shrink: 0;
   min-height: var(--card-image-height);
-  object-fit: cover;
+  width: 100%;
+}
+
+.card-group .card .card-figure .card-picture .card-image {
   width: 100%;
 }
 
@@ -256,6 +256,7 @@ html {
   flex-direction: column;
   gap: var(--spacing-base);
   height: 100%;
+  width: 100%;
 }
 
 .card-group .card .card-figure .card-caption .card-preview {
@@ -340,7 +341,7 @@ html {
     flex-direction: row;
   }
 
-  .card-group .card .card-figure .card-image {
+  .card-group .card .card-figure .card-picture {
     max-width: var(--card-image-max-width);
   }
 }
@@ -361,7 +362,7 @@ html {
     flex-direction: column;
   }
 
-  .card-group .card .card-figure .card-image {
+  .card-group .card .card-figure .card-picture {
     max-width: none;
     width: 100%;
   }
