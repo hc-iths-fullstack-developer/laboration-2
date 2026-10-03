@@ -2,6 +2,7 @@
 // Variables
 // ========================================
 $breakpoint-small: 22.5rem; //360px
+$breakpoint-sm: 40rem; //640
 $breakpoint-medium: 80rem; // 1280px
 $breakpoint-large: 100rem; // 1600px
 $sections: (
@@ -410,19 +411,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
-    .card {
-      .card-figure {
-        flex-direction: row;
-
-        .card-picture {
-          max-width: var(--card-image-max-width);
-        }
-      }
-    }
-  }
-
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-sm) {
     display: grid;
     gap: var(--spacing-base);
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
