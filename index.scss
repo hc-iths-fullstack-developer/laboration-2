@@ -2,8 +2,8 @@
 // Variables
 // ========================================
 $breakpoint-small: 22.5rem; //360px
-$breakpoint-medium: 61.25rem; // 980px
-$breakpoint-large: 90rem; // 1440px
+$breakpoint-medium: 80rem; // 1280px
+$breakpoint-large: 100rem; // 1600px
 $sections: (
   accretion-disk,
   birth,
@@ -452,18 +452,14 @@ html {
     display: flex;
     flex-direction: column;
     gap: var(--header-height);
-    height: 100%;
 
     .card-picture-index {
-      .card-image-index {
-        aspect-ratio: 1 / 1;
-        border-color: var(--color-surface-hover);
-        border-radius: 50%;
-        border-style: solid;
-        border-width: var(--border-width-sm);
-        max-width: calc(var(--card-image-height) * 2);
-        width: 100%;
-      }
+      border-color: var(--color-surface-hover);
+      border-radius: 50%;
+      border-style: solid;
+      border-width: var(--border-width-sm);
+      max-width: calc(var(--card-image-height) * 2);
+      overflow: hidden;
     }
 
     .card-caption-index {
@@ -479,9 +475,7 @@ html {
       margin-inline: var(--aside-width-md);
 
       .card-picture-index {
-        .card-image-index {
-          min-width: calc(var(--card-image-height));
-        }
+        min-width: calc(var(--card-image-height));
       }
     }
   }
