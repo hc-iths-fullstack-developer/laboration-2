@@ -27,9 +27,9 @@
   --border-width-sm: 2px;
   --spacing-base: 1rem;
   --spacing-sm: 2.25rem;
-  --viewport-width-sm: $breakpoint-small;
-  --viewport-width-md: $breakpoint-medium;
-  --viewport-width-lg: $breakpoint-large;
+  --viewport-width-sm: $breakpoint-xs;
+  --viewport-width-md: $breakpoint-md;
+  --viewport-width-lg: $breakpoint-lg;
   --hover-background-color-effect: background-color 0.3s ease;
   --hover-border-color-effect: border-color 0.3s ease;
   --hover-color-effect: color 0.3s ease;

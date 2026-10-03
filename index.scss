@@ -1,10 +1,10 @@
 // ========================================
 // Variables
 // ========================================
-$breakpoint-small: 22.5rem; //360px
-$breakpoint-sm: 40rem; //640
-$breakpoint-medium: 80rem; // 1280px
-$breakpoint-large: 100rem; // 1600px
+$breakpoint-xs: 22.5rem; // 360px
+$breakpoint-sm: 40rem; // 640 px
+$breakpoint-md: 80rem; // 1280 px
+$breakpoint-lg: 100rem; // 1600 px
 $sections: (
   accretion-disk,
   birth,
@@ -64,9 +64,9 @@ $sections: (
   --spacing-sm: 2.25rem;
 
   // Breakpoints
-  --viewport-width-sm: $breakpoint-small;
-  --viewport-width-md: $breakpoint-medium;
-  --viewport-width-lg: $breakpoint-large;
+  --viewport-width-sm: $breakpoint-xs;
+  --viewport-width-md: $breakpoint-md;
+  --viewport-width-lg: $breakpoint-lg;
 
   // Effects
   --hover-background-color-effect: background-color 0.3s ease;
@@ -197,13 +197,13 @@ html {
   text-shadow: 0 1px 4px var(--color-background);
   z-index: var(--earth-index);
 
-  @media (width >= $breakpoint-small) {
+  @media (width >= $breakpoint-xs) {
     font-size: var(--font-size-xl);
     letter-spacing: var(--letter-space-xl);
     line-height: var(--line-height-xl);
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
@@ -211,7 +211,7 @@ html {
     text-align: start;
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
     line-height: var(--line-height-3xl);
@@ -228,19 +228,19 @@ html {
   line-height: var(--line-height-md);
   padding-left: var(--spacing-sm);
 
-  @media (width >= $breakpoint-small) {
+  @media (width >= $breakpoint-xs) {
     font-size: var(--font-size-lg);
     letter-spacing: var(--letter-space-lg);
     line-height: var(--line-height-lg);
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     font-size: var(--font-size-xl);
     letter-spacing: var(--letter-space-xl);
     line-height: var(--line-height-xl);
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
@@ -459,7 +459,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     .card-figure-index {
       flex-direction: row;
       margin-inline: var(--aside-width-md);
@@ -470,7 +470,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     .card-figure-index {
       margin-inline: var(--aside-width-lg);
 
@@ -517,7 +517,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: var(--spacing-base);
@@ -528,11 +528,11 @@ html {
 .hero-black-hole {
   background-image: url('../images/black-holes-hero-small.webp');
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     background-image: url('../images/black-holes-hero-medium.webp');
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     background-image: url('../images/black-holes-hero-large.webp');
   }
 }
@@ -540,11 +540,11 @@ html {
 .hero-exoplanet {
   background-image: url('../images/exoplanets-hero-small.webp');
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     background-image: url('../images/exoplanets-hero-medium.webp');
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     background-image: url('../images/exoplanets-hero-large.webp');
   }
 }
@@ -552,11 +552,11 @@ html {
 .hero-galaxy {
   background-image: url('../images/galaxies-hero-small.webp');
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     background-image: url('../images/galaxies-hero-medium.webp');
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     background-image: url('../images/galaxies-hero-large.webp');
   }
 }
@@ -564,11 +564,11 @@ html {
 .hero-star {
   background-image: url('../images/stars-hero-small.webp');
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     background-image: url('../images/stars-hero-medium.webp');
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     background-image: url('../images/stars-hero-large.webp');
   }
 }
@@ -576,11 +576,11 @@ html {
 .hero-universe {
   background-image: url('../images/universe-hero-small.webp');
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     background-image: url('../images/universe-hero-medium.webp');
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     background-image: url('../images/universe-hero-large.webp');
   }
 }
@@ -595,13 +595,13 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     margin-left: calc(
       var(--aside-width-md) - var(--header-height) - var(--spacing-base) * 3
     );
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     margin-left: calc(
       var(--aside-width-lg) - var(--header-height) - var(--spacing-base) * 3
     );
@@ -729,7 +729,7 @@ html {
     &:checked ~ .main-nav {
       display: block;
 
-      @media (width >= $breakpoint-medium) {
+      @media (width >= $breakpoint-md) {
         @include main-nav-reset;
 
         .main-nav-group {
@@ -740,7 +740,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     .main-nav {
       @include main-nav-reset;
 
@@ -799,7 +799,7 @@ html {
       order: unset;
     }
 
-    @media (width >= $breakpoint-medium) {
+    @media (width >= $breakpoint-md) {
       .card-picture-index {
         order: 2;
       }
@@ -885,7 +885,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     display: block;
     padding-top: var(--header-height);
   }
@@ -933,7 +933,7 @@ html {
     width: var(--aside-width-sm);
     z-index: var(--earth-index);
 
-    @media (width >= $breakpoint-medium) {
+    @media (width >= $breakpoint-md) {
       align-content: start;
       justify-self: end;
       width: var(--aside-width-md);
@@ -944,7 +944,7 @@ html {
       }
     }
 
-    @media (width >= $breakpoint-large) {
+    @media (width >= $breakpoint-lg) {
       width: var(--aside-width-lg);
     }
   }
@@ -968,13 +968,13 @@ html {
       }
     }
 
-    @media (width >= $breakpoint-medium) {
+    @media (width >= $breakpoint-md) {
       .container {
         margin-inline: var(--aside-width-md);
       }
     }
 
-    @media (width >= $breakpoint-large) {
+    @media (width >= $breakpoint-lg) {
       .container {
         margin-inline: var(--aside-width-lg);
       }
@@ -998,7 +998,7 @@ html {
       flex-direction: row;
     }
 
-    @media (width >= $breakpoint-medium) {
+    @media (width >= $breakpoint-md) {
       .container {
         gap: calc(var(--spacing-base) * 2);
       }
@@ -1020,7 +1020,7 @@ html {
       justify-content: start;
     }
 
-    @media only screen and (max-device-width: $breakpoint-large) {
+    @media only screen and (max-device-width: $breakpoint-lg) {
       background-attachment: scroll;
     }
   }
@@ -1032,7 +1032,7 @@ html {
     width: 100%;
     z-index: var(--earth-index);
 
-    @media (width >= $breakpoint-medium) {
+    @media (width >= $breakpoint-md) {
       justify-self: start;
 
       .container {
@@ -1045,7 +1045,7 @@ html {
       }
     }
 
-    @media (width >= $breakpoint-large) {
+    @media (width >= $breakpoint-lg) {
       .container {
         margin-right: var(--aside-width-lg);
 
@@ -1066,7 +1066,7 @@ html {
     }
   }
 
-  @media (width >= $breakpoint-medium) {
+  @media (width >= $breakpoint-md) {
     grid-template-areas:
       'header header header'
       'hero hero hero'
@@ -1080,7 +1080,7 @@ html {
       auto;
   }
 
-  @media (width >= $breakpoint-large) {
+  @media (width >= $breakpoint-lg) {
     grid-template-columns: var(--aside-width-lg) auto var(--aside-width-lg);
   }
 }
