@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://iths-fullstack-developer.github.io/laboration-2/#website",
+      "url": "https://iths-fullstack-developer.github.io/laboration-2/",
+      "name": "Welcome to the Universe",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://iths-fullstack-developer.github.io/laboration-2/index.html#webpage",
+      "url": "https://iths-fullstack-developer.github.io/laboration-2/index.html",
+      "name": "Welcome to the Universe",
+      "description": "Explore galaxies, black holes, stars, and exoplanets.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://iths-fullstack-developer.github.io/laboration-2/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Galaxies"
+        },
+        {
+          "@type": "Thing",
+          "name": "Black holes"
+        },
+        {
+          "@type": "Thing",
+          "name": "Stars"
+        },
+        {
+          "@type": "Thing",
+          "name": "Exoplanets"
+        }
+      ],
+      "citation": "https://science.nasa.gov/universe/"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://iths-fullstack-developer.github.io/laboration-2/pages/black-holes.html#article",
+  "url": "https://iths-fullstack-developer.github.io/laboration-2/pages/black-holes.html",
+  "headline": "Black Holes",
+  "description": "An introduction to black hole anatomy such as event horizon, accretion disk, singularity and different types.",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Thing",
+    "name": "Black Holes"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://iths-fullstack-developer.github.io/laboration-2/#website",
+    "name": "Welcome to the Universe",
+    "url": "https://iths-fullstack-developer.github.io/laboration-2/"
+  },
+  "citation": "https://science.nasa.gov/universe/"
+}
