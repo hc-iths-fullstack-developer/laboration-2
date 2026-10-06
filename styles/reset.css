@@ -36,7 +36,10 @@
       Allows CSS transitions to/from intrinsic keyword sizes (auto, min-content, etc.).
       Only meaningful for users who haven't requested reduced motion.
     */
-    interpolate-size: allow-keywords;
+
+    /*
+      interpolate-size: allow-keywords;
+    */
   }
 }
 
@@ -44,7 +47,10 @@ html {
   /*
     Prevent adjustments of font size after orientation changes in iOS.
   */
-  text-size-adjust: 100%;
+
+  /*
+    text-size-adjust: 100%;
+  */
 
   /*
     Reserves space for the scrollbar, when the scrollbar is not showing.
@@ -73,9 +79,13 @@ body {
     sharper, so this is slightly lossy on older monitors.
     Enable kerning and ligatures at small font-sizes by default.
   */
+
+  /*
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
+  */
+
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
   text-rendering: optimizelegibility;
 
   /*
@@ -132,7 +142,10 @@ p {
     'pretty' avoids widows (lone words on the last line of a paragraph).
     Harmless in browsers that don't support them.
   */
-  text-wrap: pretty;
+
+  /*
+    text-wrap: pretty;
+  */
 }
 
 img,

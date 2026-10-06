@@ -263,7 +263,6 @@ html {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   display: -webkit-box;
-  line-clamp: 4;
   margin: 0;
   min-height: var(--card-preview-text-min-height);
   overflow: hidden;
