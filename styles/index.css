@@ -320,6 +320,22 @@ html {
   color: var(--color-text);
 }
 
+.card-group .card .card-figure .card-caption .card-details::details-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease, content-visibility 400ms allow-discrete;
+}
+
+.card-group .card .card-figure .card-caption .card-details[open]::details-content {
+  max-height: 5000px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-group .card .card-figure .card-caption .card-details::details-content {
+    transition: none;
+  }
+}
+
 .card-group .card .card-figure:has(.card-details[open]) .card-preview {
   display: none;
 }

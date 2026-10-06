@@ -384,6 +384,24 @@ html {
               }
             }
           }
+
+          &::details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition:
+              max-height 400ms ease,
+              content-visibility 400ms allow-discrete;
+          }
+
+          &[open]::details-content {
+            max-height: 5000px;
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            &::details-content {
+              transition: none;
+            }
+          }
         }
       }
 
