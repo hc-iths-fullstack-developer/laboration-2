@@ -83,7 +83,7 @@ Använd minst **en väljare utöver type selector, class selector och ID selecto
 
 **Namnge klasser, ID-värden och filer på ett beskrivande sätt**. Det är till exempel inte acceptabelt att skapa en klass som heter “my-class”, eller en bild till “my-image”, eftersom detta namn inte kommunicerar tillräckligt mycket om vad objektet i fråga representerar. Beskrivande namn bidrar till kod som är enklare att underhålla och vidareutveckla.
 
-Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimeringsförbättringar utöver kraven som nämns ovan. Se <https://www.digg.se/webbriktlinjer> för riktlinjer kring tillgänglighet, och [Googles SEO-rekommendationer](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv) för tips kring sökmotoroptimeringar. Test
+Gör gärna, om tid finns, ytterligare tillgänglighets- och sökmotorsoptimeringsförbättringar utöver kraven som nämns ovan. Se <https://www.digg.se/webbriktlinjer> för riktlinjer kring tillgänglighet, och [Googles SEO-rekommendationer](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=sv) för tips kring sökmotoroptimeringar.
 
 ## Källor
 
