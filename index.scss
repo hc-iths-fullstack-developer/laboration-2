@@ -277,9 +277,10 @@ html {
 // ========================================
 .card-group {
   align-items: start;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--spacing-base);
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
 
   .card {
     background-color: var(--color-surface);
@@ -322,19 +323,11 @@ html {
         height: 100%;
         width: 100%;
 
-        .card-preview {
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 4;
-          display: -webkit-box;
-          //line-clamp: 4;
-          margin: 0;
-          min-height: var(--card-preview-text-min-height);
-          overflow: hidden;
-        }
-
         .card-details {
+          --preview-height: calc(var(--line-height-base) * 4 * 1rem);
           display: flex;
           flex-direction: column;
+          gap: var(--spacing-base);
           width: 100%;
 
           .card-button {
@@ -367,14 +360,6 @@ html {
               text-transform: uppercase;
             }
 
-            .read-more {
-              display: inline;
-            }
-
-            .read-less {
-              display: none;
-            }
-
             &:hover {
               background-color: var(--color-surface-hover);
               border-color: var(--color-accent);
@@ -385,16 +370,64 @@ html {
             }
           }
 
-          &::details-content {
-            max-height: 0;
+          .card-details-text {
+            min-height: 0;
             overflow: hidden;
-            transition:
-              max-height 400ms ease,
-              content-visibility 400ms allow-discrete;
+
+            > .paragraph {
+              margin: 0;
+
+              & + .paragraph {
+                margin-top: var(--spacing-base);
+              }
+            }
           }
 
-          &[open]::details-content {
-            max-height: 5000px;
+          &::details-content {
+            content-visibility: visible;
+            display: grid;
+            transition: grid-template-rows 400ms ease;
+          }
+
+          &[open] {
+            &::details-content {
+              grid-template-rows: minmax(var(--preview-height), 1fr);
+            }
+
+            .card-button {
+              .read-more {
+                display: none;
+              }
+
+              .read-less {
+                display: inline;
+              }
+            }
+          }
+
+          &:not([open]) {
+            &::details-content {
+              grid-template-rows: minmax(var(--preview-height), 0fr);
+            }
+
+            .card-button {
+              .read-more {
+                display: inline;
+              }
+
+              .read-less {
+                display: none;
+              }
+            }
+
+            .card-details-text {
+              > .paragraph:first-child {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+              }
+            }
           }
 
           @media (prefers-reduced-motion: reduce) {
@@ -404,50 +437,10 @@ html {
           }
         }
       }
-
-      &:has(.card-details[open]) {
-        .card-preview {
-          display: none;
-        }
-
-        .card-details {
-          .paragraph:first-of-type {
-            margin-top: 0;
-          }
-
-          .card-button {
-            .read-more {
-              display: none;
-            }
-
-            .read-less {
-              display: inline;
-            }
-          }
-        }
-      }
     }
   }
 
-  @media (width >= $breakpoint-sm) {
-    display: grid;
-    gap: var(--spacing-base);
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
-    .card {
-      display: flex;
-      flex-direction: column;
-
-      .card-figure {
-        flex-direction: column;
-
-        .card-picture {
-          max-width: none;
-          width: 100%;
-        }
-      }
-    }
-  }
 }
 
 .card-index {
