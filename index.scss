@@ -279,8 +279,7 @@ html {
   align-items: start;
   display: grid;
   gap: var(--spacing-base);
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
   .card {
     background-color: var(--color-surface);
@@ -427,6 +426,10 @@ html {
                 -webkit-line-clamp: 4;
                 overflow: hidden;
               }
+
+              > .paragraph ~ .paragraph {
+                visibility: hidden;
+              }
             }
           }
 
@@ -439,8 +442,6 @@ html {
       }
     }
   }
-
-
 }
 
 .card-index {

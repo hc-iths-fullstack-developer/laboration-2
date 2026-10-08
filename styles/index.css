@@ -355,6 +355,10 @@ html {
   overflow: hidden;
 }
 
+.card-group .card .card-figure .card-caption .card-details:not([open]) .card-details-text > .paragraph ~ .paragraph {
+  visibility: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card-group .card .card-figure .card-caption .card-details::details-content {
     transition: none;
