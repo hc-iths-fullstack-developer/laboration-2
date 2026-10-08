@@ -169,11 +169,11 @@ html {
   &:hover {
     color: var(--color-text);
   }
-}
 
-.link-external {
-  &::after {
-    content: ' ↗';
+  &[target='_blank'] {
+    &::after {
+      content: ' ↗';
+    }
   }
 }
 

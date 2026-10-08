@@ -97,7 +97,7 @@ html {
   color: var(--color-text);
 }
 
-.link-external::after {
+.link[target="_blank"]::after {
   content: " ↗";
 }
 
