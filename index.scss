@@ -39,6 +39,7 @@ $sections: (
   --color-surface-hover: #b9b9b80e;
   --color-text: #fafaf8;
   --color-text-subtle: #b9b9b8;
+  --color-wrapper: #0a0a0ad7;
 
   // Sizes
   --aside-width-sm: 100%;
@@ -108,6 +109,8 @@ $sections: (
   --letter-space-xl: -0.0096em;
   --letter-space-2xl: -0.0147em;
   --letter-space-3xl: -0.0186em;
+
+  --text-max-width: 80ch;
 
   // Layers
   --heaven-index: 100;
@@ -197,15 +200,14 @@ html {
   letter-spacing: var(--letter-space-base);
   line-height: var(--line-height-base);
   margin-block: var(--spacing-base) var(--spacing-base);
-  max-width: 80ch;
+  max-width: var(--text-max-width);
 }
 
 .page-title {
   font-size: var(--font-size-lg);
   letter-spacing: var(--letter-space-lg);
   line-height: var(--line-height-lg);
-  margin-inline: auto;
-  text-align: center;
+  margin-bottom: 0;
   text-shadow: 0 1px 4px var(--color-background);
   z-index: var(--earth-index);
 
@@ -219,15 +221,12 @@ html {
     font-size: var(--font-size-2xl);
     letter-spacing: var(--letter-space-2xl);
     line-height: var(--line-height-2xl);
-    margin-inline: var(--aside-width-md);
-    text-align: start;
   }
 
   @media (width >= $breakpoint-lg) {
     font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-space-3xl);
     line-height: var(--line-height-3xl);
-    margin-inline: var(--aside-width-lg);
   }
 }
 
@@ -280,8 +279,13 @@ html {
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
   margin-block: var(--spacing-sm) var(--spacing-base);
-  max-width: 100ch;
+  max-width: var(--text-max-width);
+  text-shadow: 0 1px 4px var(--color-background);
   text-transform: uppercase;
+
+  @media (width >= $breakpoint-md) {
+    text-align: start;
+  }
 }
 
 // ========================================
@@ -465,51 +469,49 @@ html {
   }
 }
 
-.card-index {
+.panel-figure {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  gap: var(--header-height);
   height: 100%;
-  padding-inline: var(--spacing-base);
 
-  .card-figure-index {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--header-height);
-    height: 100%;
-    justify-content: center;
-
-    .card-picture-index {
-      aspect-ratio: 1 / 1;
-      border-color: var(--color-surface-hover);
-      border-radius: 50%;
-      border-style: solid;
-      border-width: var(--border-width-sm);
-      max-width: var(--card-image-height);
-      overflow: hidden;
-
-      @media (width >= $breakpoint-md) {
-        max-width: calc(var(--card-image-height) * 2);
-      }
-    }
-
-    .card-caption-index {
-      align-items: start;
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (width >= $breakpoint-sm) {
-      flex-direction: row;
-    }
+  .panel-picture {
+    aspect-ratio: 1 / 1;
+    border-color: var(--color-surface-hover);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: var(--border-width-sm);
+    max-width: var(--card-image-height);
+    overflow: hidden;
 
     @media (width >= $breakpoint-md) {
-      margin-inline: var(--aside-width-md);
+      max-width: calc(var(--card-image-height) * 2);
     }
+  }
 
-    @media (width >= $breakpoint-lg) {
-      justify-content: start;
-      margin-inline: var(--aside-width-lg);
+  .panel-caption {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (width >= $breakpoint-sm) {
+    flex-direction: row;
+  }
+
+  @media (width >= $breakpoint-lg) {
+    justify-content: start;
+  }
+}
+
+.logo {
+  svg {
+    height: var(--header-height);
+    width: var(--header-height);
+
+    path {
+      fill: var(--color-accent);
     }
   }
 }
@@ -521,13 +523,70 @@ html {
   height: 100%;
   justify-content: start;
   padding-inline: var(--spacing-base);
-  width: 100%;
 
-  &.index {
-    gap: var(--spacing-sm);
-    padding-inline: 0;
+  @media (width >= $breakpoint-md) {
+    margin-inline: var(--aside-width-md);
+  }
+
+  @media (width >= $breakpoint-lg) {
+    margin-inline: var(--aside-width-lg);
   }
 }
+
+.section {
+  padding-top: var(--header-height);
+
+  &.right-aligned {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-background-hover)
+    );
+
+    .panel-picture {
+      order: unset;
+    }
+
+    @media (width >= $breakpoint-sm) {
+      .panel-picture {
+        order: 2;
+      }
+    }
+  }
+
+  &.left-aligned {
+    background: linear-gradient(
+      270deg,
+      transparent,
+      var(--color-background-hover)
+    );
+  }
+
+  &.index {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(50dvh - var(--header-height) / 2);
+    padding-bottom: var(--header-height);
+
+    > .container {
+      flex: 1;
+      height: auto;
+
+      > .panel-figure {
+        flex: 1;
+        height: auto;
+      }
+    }
+  }
+
+  &:last-child {
+    padding-bottom: var(--header-height);
+  }
+}
+
+// ========================================
+// Navigation
+// ========================================
 
 .footer-nav {
   display: grid;
@@ -546,89 +605,6 @@ html {
         line-height: var(--line-height-base);
       }
     }
-  }
-}
-
-.hero-black-hole {
-  background-image: url('../images/black-holes-hero-small.webp');
-
-  @media (width >= $breakpoint-md) {
-    background-image: url('../images/black-holes-hero-medium.webp');
-  }
-
-  @media (width >= $breakpoint-lg) {
-    background-image: url('../images/black-holes-hero-large.webp');
-  }
-}
-
-.hero-exoplanet {
-  background-image: url('../images/exoplanets-hero-small.webp');
-
-  @media (width >= $breakpoint-md) {
-    background-image: url('../images/exoplanets-hero-medium.webp');
-  }
-
-  @media (width >= $breakpoint-lg) {
-    background-image: url('../images/exoplanets-hero-large.webp');
-  }
-}
-
-.hero-galaxy {
-  background-image: url('../images/galaxies-hero-small.webp');
-
-  @media (width >= $breakpoint-md) {
-    background-image: url('../images/galaxies-hero-medium.webp');
-  }
-
-  @media (width >= $breakpoint-lg) {
-    background-image: url('../images/galaxies-hero-large.webp');
-  }
-}
-
-.hero-star {
-  background-image: url('../images/stars-hero-small.webp');
-
-  @media (width >= $breakpoint-md) {
-    background-image: url('../images/stars-hero-medium.webp');
-  }
-
-  @media (width >= $breakpoint-lg) {
-    background-image: url('../images/stars-hero-large.webp');
-  }
-}
-
-.hero-universe {
-  background-image: url('../images/universe-hero-small.webp');
-
-  @media (width >= $breakpoint-md) {
-    background-image: url('../images/universe-hero-medium.webp');
-  }
-
-  @media (width >= $breakpoint-lg) {
-    background-image: url('../images/universe-hero-large.webp');
-  }
-}
-
-.logo {
-  svg {
-    height: var(--header-height);
-    width: var(--header-height);
-
-    path {
-      fill: var(--color-accent);
-    }
-  }
-
-  @media (width >= $breakpoint-md) {
-    margin-left: calc(
-      var(--aside-width-md) - var(--header-height) - var(--spacing-base) * 3
-    );
-  }
-
-  @media (width >= $breakpoint-lg) {
-    margin-left: calc(
-      var(--aside-width-lg) - var(--header-height) - var(--spacing-base) * 3
-    );
   }
 }
 
@@ -836,45 +812,6 @@ html {
   }
 }
 
-.section {
-  padding-top: var(--header-height);
-
-  &.right-aligned {
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--color-background-hover)
-    );
-
-    .card-picture-index {
-      order: unset;
-    }
-
-    @media (width >= $breakpoint-sm) {
-      .card-picture-index {
-        order: 2;
-      }
-    }
-  }
-
-  &.left-aligned {
-    background: linear-gradient(
-      270deg,
-      transparent,
-      var(--color-background-hover)
-    );
-  }
-
-  &.index {
-    min-height: calc(50dvh - var(--spacing-sm) / 2 - var(--header-height) / 2);
-    padding-bottom: var(--header-height);
-  }
-
-  &:last-child {
-    padding-bottom: var(--header-height);
-  }
-}
-
 .toc-nav {
   display: none;
   max-height: calc(100dvh - var(--header-height) - var(--spacing-base));
@@ -959,7 +896,7 @@ html {
 // ========================================
 // Layout
 // ========================================
-#body {
+.body {
   background-color: var(--color-background);
   display: grid;
   grid-template-areas:
@@ -991,22 +928,23 @@ html {
       auto;
   }
 
-  #aside {
+  .aside {
     background-color: var(--color-background);
     grid-area: aside;
     height: auto;
     width: var(--aside-width-sm);
     z-index: var(--earth-index);
 
+    .container {
+      align-items: end;
+      justify-content: start;
+      margin-inline: unset;
+    }
+
     @media (width >= $breakpoint-md) {
       align-content: start;
       justify-self: end;
       width: var(--aside-width-md);
-
-      .container {
-        align-items: end;
-        justify-content: start;
-      }
     }
 
     @media (width >= $breakpoint-lg) {
@@ -1014,7 +952,7 @@ html {
     }
   }
 
-  #footer {
+  .footer {
     background-color: var(--color-surface);
     border-top-color: var(--color-surface-hover);
     border-top-style: solid;
@@ -1024,29 +962,12 @@ html {
     width: var(--footer-width);
     z-index: var(--hell-index);
 
-    .container {
-      margin-inline: auto;
-      width: auto;
-
-      .section {
-        padding-block: unset;
-      }
-    }
-
-    @media (width >= $breakpoint-md) {
-      .container {
-        margin-inline: var(--aside-width-md);
-      }
-    }
-
-    @media (width >= $breakpoint-lg) {
-      .container {
-        margin-inline: var(--aside-width-lg);
-      }
+    .section {
+      padding-block: unset;
     }
   }
 
-  #header {
+  .header {
     background-color: var(--color-surface);
     border-bottom-color: var(--color-surface-hover);
     border-bottom-style: solid;
@@ -1061,28 +982,96 @@ html {
     .container {
       align-items: center;
       flex-direction: row;
-    }
 
-    @media (width >= $breakpoint-md) {
-      .container {
+      @media (width >= $breakpoint-md) {
         gap: calc(var(--spacing-base) * 2);
       }
     }
   }
 
-  #hero {
+  .hero {
     background-attachment: fixed;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
     grid-area: hero;
-    height: calc(50dvh - var(--header-height) / 2 + var(--spacing-sm) / 2);
+    height: calc(100dvh - var(--header-height));
     width: 100%;
 
-    .container {
-      align-items: center;
-      flex-direction: row;
-      justify-content: start;
+    .heading-wrapper {
+      background-color: var(--color-wrapper);
+      padding-block: var(--header-height);
+      width: 100%;
+
+      .container {
+        justify-content: center;
+
+        @media (width >= $breakpoint-md) {
+          align-items: start;
+        }
+      }
+    }
+
+    &.hero-black-holes {
+      background-image: url('../images/black-holes-hero-small.webp');
+
+      @media (width >= $breakpoint-md) {
+        background-image: url('../images/black-holes-hero-medium.webp');
+      }
+
+      @media (width >= $breakpoint-lg) {
+        background-image: url('../images/black-holes-hero-large.webp');
+      }
+    }
+
+    &.hero-exoplanets {
+      background-image: url('../images/exoplanets-hero-small.webp');
+
+      @media (width >= $breakpoint-md) {
+        background-image: url('../images/exoplanets-hero-medium.webp');
+      }
+
+      @media (width >= $breakpoint-lg) {
+        background-image: url('../images/exoplanets-hero-large.webp');
+      }
+    }
+
+    &.hero-galaxies {
+      background-image: url('../images/galaxies-hero-small.webp');
+
+      @media (width >= $breakpoint-md) {
+        background-image: url('../images/galaxies-hero-medium.webp');
+      }
+
+      @media (width >= $breakpoint-lg) {
+        background-image: url('../images/galaxies-hero-large.webp');
+      }
+    }
+
+    &.hero-stars {
+      background-image: url('../images/stars-hero-small.webp');
+
+      @media (width >= $breakpoint-md) {
+        background-image: url('../images/stars-hero-medium.webp');
+      }
+
+      @media (width >= $breakpoint-lg) {
+        background-image: url('../images/stars-hero-large.webp');
+      }
+    }
+
+    &.hero-universe {
+      background-image: url('../images/universe-hero-small.webp');
+
+      @media (width >= $breakpoint-md) {
+        background-image: url('../images/universe-hero-medium.webp');
+      }
+
+      @media (width >= $breakpoint-lg) {
+        background-image: url('../images/universe-hero-large.webp');
+      }
     }
 
     @media only screen and (max-device-width: $breakpoint-lg) {
@@ -1090,33 +1079,16 @@ html {
     }
   }
 
-  #main {
+  .main {
     background-color: var(--color-background);
     grid-area: main;
     min-height: calc(100dvh - var(--header-height));
     width: 100%;
     z-index: var(--earth-index);
 
-    @media (width >= $breakpoint-md) {
-      justify-self: start;
-
-      .container {
-        margin-right: var(--aside-width-md);
-        width: auto;
-
-        &.index {
-          margin-right: unset;
-        }
-      }
-    }
-
-    @media (width >= $breakpoint-lg) {
-      .container {
-        margin-right: var(--aside-width-lg);
-
-        &.index {
-          margin-right: unset;
-        }
+    .container {
+      &:not(.index) {
+        margin-inline: unset;
       }
     }
   }
@@ -1135,7 +1107,7 @@ html {
     grid-template-areas:
       'header header header'
       'hero hero hero'
-      'aside main main'
+      'aside main .'
       'footer footer footer';
     grid-template-columns: var(--aside-width-md) auto var(--aside-width-md);
     grid-template-rows:
