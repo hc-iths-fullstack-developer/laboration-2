@@ -55,7 +55,7 @@ $sections: (
 
   // Borders
   --border-radius-base: 0;
-  --border-radius-sm: 0;
+  --border-radius-sm: 2px;
   --border-width-base: 1px;
   --border-width-sm: 2px;
 
@@ -125,7 +125,6 @@ $sections: (
   border-right-width: var(--border-width-sm);
   color: var(--color-text);
   font-weight: var(--font-weight-text-active);
-  margin-right: calc(-1 * var(--border-width-sm));
 }
 
 @mixin main-nav-reset {
@@ -137,6 +136,12 @@ $sections: (
   position: relative;
   top: unset;
   width: unset;
+}
+
+@mixin keyboard-focus {
+  color: var(--color-text);
+  outline: var(--border-width-sm) solid var(--color-focus, var(--color-accent));
+  border-radius: var(--border-radius-sm);
 }
 
 // ========================================
@@ -162,12 +167,19 @@ html {
 
 .link {
   color: var(--color-accent);
+  display: inline-block;
   font-family: 'Inter', sans-serif;
   text-decoration: underline dotted;
+  text-underline-offset: 0.25rem;
   transition: var(--hover-color-effect);
 
   &:hover {
     color: var(--color-text);
+  }
+
+  &:focus-visible {
+    @include keyboard-focus;
+    outline-offset: calc(var(--border-width-sm) * -1);
   }
 
   &[target='_blank'] {
@@ -334,13 +346,14 @@ html {
             align-self: flex-end;
             background-color: var(--color-surface-hover);
             border-color: var(--color-surface-hover);
-            border-radius: var(--border-radius-base);
+            border-radius: var(--border-radius-sm);
             border-style: solid;
             border-width: var(--border-width-sm);
             cursor: pointer;
             display: flex;
             flex-direction: column;
             order: 2;
+            outline-offset: calc(var(--border-width-sm) * -1);
             padding: calc(var(--spacing-base) - var(--border-width-sm))
               var(--spacing-sm);
             transition:
@@ -362,6 +375,14 @@ html {
             &:hover {
               background-color: var(--color-surface-hover);
               border-color: var(--color-accent);
+
+              .button-text {
+                color: var(--color-text);
+              }
+            }
+
+            &:focus-visible {
+              @include keyboard-focus;
 
               .button-text {
                 color: var(--color-text);
@@ -473,6 +494,7 @@ html {
     }
 
     .card-caption-index {
+      align-items: start;
       display: flex;
       flex-direction: column;
     }
@@ -642,6 +664,7 @@ html {
           isolation: isolate;
           letter-spacing: var(--letter-space-2xs);
           line-height: calc(var(--header-height) - var(--spacing-base) * 2);
+          margin-bottom: unset;
           padding: var(--spacing-base);
           position: relative;
           text-align: start;
@@ -685,7 +708,15 @@ html {
             border-left-style: solid;
             border-left-width: var(--border-width-sm);
             font-weight: var(--font-weight-text-active);
-            margin-bottom: unset;
+          }
+
+          &:focus-visible {
+            @include keyboard-focus;
+            outline-offset: calc(var(--border-width-sm) * -1);
+
+            &::before {
+              opacity: 1;
+            }
           }
         }
       }
@@ -727,18 +758,37 @@ html {
     }
   }
 
-  input[type='checkbox'] {
-    &:checked ~ .main-nav {
-      display: block;
+  .main-nav-toggle {
+    &:focus-visible {
+      outline: none;
 
-      @media (width >= $breakpoint-md) {
-        @include main-nav-reset;
+      + .main-nav-label {
+        @include keyboard-focus;
+        outline-offset: calc(var(--border-width-sm) * -1);
 
-        .main-nav-group {
-          flex-direction: row;
-          justify-content: start;
+        &::before {
+          opacity: 1;
         }
       }
+    }
+
+    &:checked {
+      ~ .main-nav {
+        display: block;
+
+        @media (width >= $breakpoint-md) {
+          @include main-nav-reset;
+
+          .main-nav-group {
+            flex-direction: row;
+            justify-content: start;
+          }
+        }
+      }
+    }
+
+    @media (width >= $breakpoint-md) {
+      display: none;
     }
   }
 
@@ -752,6 +802,7 @@ html {
 
         .main-nav-item {
           .main-nav-link {
+            margin-bottom: calc(-1 * var(--border-width-sm));
             text-align: center;
 
             &::before {
@@ -773,7 +824,6 @@ html {
               border-left-color: unset;
               border-left-style: unset;
               border-left-width: unset;
-              margin-bottom: calc(-1 * var(--border-width-sm));
             }
           }
         }
@@ -856,6 +906,7 @@ html {
         isolation: isolate;
         letter-spacing: var(--letter-space-2xs);
         line-height: var(--line-height-base);
+        margin-right: calc(-1 * var(--border-width-sm));
         padding: var(--spacing-base);
         position: relative;
         text-align: end;
@@ -881,6 +932,15 @@ html {
 
         &:hover {
           color: var(--color-text);
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &:focus-visible {
+          @include keyboard-focus;
+          outline-offset: calc(var(--border-width-sm) * -1);
 
           &::before {
             opacity: 1;
