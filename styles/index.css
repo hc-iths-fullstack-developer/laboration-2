@@ -1,5 +1,52 @@
 @charset "UTF-8";
 
+/* --- Font Sizes --- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
+
+/* --- Line Heights --- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
+
+/* --- Letter Spacings --- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
+
+/* --- Font Sizes --- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
+
+/* -- Line Heights -- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
+
+/* -- Letter Spacings -- */
+
+/* below the base */
+
+/* the base */
+
+/* above the base */
 :root {
   --color-accent: #ff7de9;
   --color-accent-hover: #ffa4f0;
@@ -28,43 +75,43 @@
   --border-width-sm: 2px;
   --spacing-base: 1rem;
   --spacing-sm: 2.25rem;
-  --viewport-width-sm: $breakpoint-xs;
-  --viewport-width-md: $breakpoint-md;
-  --viewport-width-lg: $breakpoint-lg;
+  --viewport-width-sm: 22.5rem;
+  --viewport-width-md: 80rem;
+  --viewport-width-lg: 100rem;
   --hover-background-color-effect: background-color 0.3s ease;
   --hover-border-color-effect: border-color 0.3s ease;
   --hover-color-effect: color 0.3s ease;
   --hover-opacity-effect: opacity 0.3s ease;
-  --font-size-2xs: 0.5625rem;
-  --font-size-xs: 0.75rem;
+  --font-size-2xs: 0.4375rem;
+  --font-size-xs: 0.6875rem;
   --font-size-base: 1rem;
-  --font-size-sm: 1.3125rem;
-  --font-size-md: 1.8125rem;
-  --font-size-lg: 2.375rem;
-  --font-size-xl: 3.1875rem;
-  --font-size-2xl: 4.25rem;
-  --font-size-3xl: 5.6875rem;
+  --font-size-sm: 1.5rem;
+  --font-size-md: 2.25rem;
+  --font-size-lg: 3.375rem;
+  --font-size-xl: 5.0625rem;
+  --font-size-2xl: 7.5625rem;
+  --font-size-3xl: 11.3125rem;
   --font-weight-heading: 700;
   --font-weight-text: 400;
   --font-weight-text-active: 700;
-  --line-height-2xs: 1.7778;
-  --line-height-xs: 1.6667;
+  --letter-space-2xs: 0.1186em;
+  --letter-space-xs: 0.0645em;
+  --letter-space-base: 0.035em;
+  --letter-space-sm: 1.3333;
+  --letter-space-md: 1.2222;
+  --letter-space-lg: 1.1852;
+  --letter-space-xl: 1.0864;
+  --letter-space-2xl: 1.0579;
+  --letter-space-3xl: 1.0387;
+  --line-height-2xs: 2.2857;
+  --line-height-xs: 1.8182;
   --line-height-base: 1.5;
   --line-height-sm: 1.3333;
-  --line-height-md: 1.2414;
-  --line-height-lg: 1.2632;
-  --line-height-xl: 1.1765;
-  --line-height-2xl: 1.1176;
-  --line-height-3xl: 1.0989;
-  --letter-space-2xs: 0.0856em;
-  --letter-space-xs: 0.0567em;
-  --letter-space-base: 0.035em;
-  --letter-space-sm: 0.0195em;
-  --letter-space-md: 0.0059em;
-  --letter-space-lg: -0.0026em;
-  --letter-space-xl: -0.0096em;
-  --letter-space-2xl: -0.0147em;
-  --letter-space-3xl: -0.0186em;
+  --line-height-md: 1.2222;
+  --line-height-lg: 1.1852;
+  --line-height-xl: 1.0864;
+  --line-height-2xl: 1.0579;
+  --line-height-3xl: 1.0387;
   --text-max-width: 80ch;
   --heaven-index: 100;
   --earth-index: 50;
@@ -127,8 +174,9 @@ html {
   font-size: var(--font-size-lg);
   letter-spacing: var(--letter-space-lg);
   line-height: var(--line-height-lg);
-  margin-bottom: 0;
-  text-shadow: 0 1px 4px var(--color-background);
+  margin-block: 0;
+  text-shadow: 1px 1px var(--color-accent), 2px 2px var(--color-accent), 3px 3px var(--color-accent), 4px 4px var(--color-accent), 5px 5px var(--color-accent), 6px 6px 6px var(--color-background);
+  text-transform: uppercase;
   z-index: var(--earth-index);
 }
 
@@ -204,15 +252,12 @@ html {
 }
 
 .subtitle {
-  color: var(--color-text-subtle);
+  color: var(--color-text);
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-text);
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
-  margin-block: var(--spacing-sm) var(--spacing-base);
-  max-width: var(--text-max-width);
-  text-shadow: 0 1px 4px var(--color-background);
   text-transform: uppercase;
 }
 
@@ -445,7 +490,6 @@ html {
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: start;
   padding-inline: var(--spacing-base);
 }
@@ -493,12 +537,10 @@ html {
 
 .section.index > .container {
   flex: 1;
-  height: auto;
 }
 
 .section.index > .container > .panel-figure {
   flex: 1;
-  height: auto;
 }
 
 .section:last-child {
@@ -838,6 +880,7 @@ html {
   align-items: end;
   justify-content: start;
   margin-inline: unset;
+  height: 100%;
 }
 
 @media (width >= 80rem) {
@@ -894,14 +937,22 @@ html {
 }
 
 .body .hero {
+  align-items: center;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   grid-area: hero;
+  justify-content: center;
   height: calc(100dvh - var(--header-height));
+  width: 100%;
+}
+
+.body .hero .subtitle-wrapper {
+  background-color: var(--color-surface);
+  padding-block: var(--header-height);
   width: 100%;
 }
 
@@ -910,12 +961,12 @@ html {
   width: 100%;
 }
 
-.body .hero .heading-wrapper .container {
+.body .hero .container {
   justify-content: center;
 }
 
 @media (width >= 80rem) {
-  .body .hero .heading-wrapper .container {
+  .body .hero .container {
     align-items: start;
   }
 }

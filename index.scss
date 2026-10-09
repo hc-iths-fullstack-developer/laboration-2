@@ -8,6 +8,110 @@ $breakpoint-lg: 100rem; // 1600 px
 
 // Perfect Fourth
 
+/* --- Font Sizes --- */
+
+/* below the base */
+$p4-font-size-2b: 0.5625rem;
+$p4-font-size-1b: 0.75rem;
+
+/* the base */
+$p4-font-size: 1rem;
+
+/* above the base */
+$p4-font-size-1: 1.3125rem;
+$p4-font-size-2: 1.8125rem;
+$p4-font-size-3: 2.375rem;
+$p4-font-size-4: 3.1875rem;
+$p4-font-size-5: 4.25rem;
+$p4-font-size-6: 5.6875rem;
+
+/* --- Line Heights --- */
+
+/* below the base */
+$p4-line-height-2b: 1.7778;
+$p4-line-height-1b: 1.6667;
+
+/* the base */
+$p4-line-height: 1.5;
+
+/* above the base */
+$p4-line-height-1: 1.3333;
+$p4-line-height-2: 1.2414;
+$p4-line-height-3: 1.2632;
+$p4-line-height-4: 1.1765;
+$p4-line-height-5: 1.1176;
+$p4-line-height-6: 1.0989;
+
+/* --- Letter Spacings --- */
+
+/* below the base */
+$p4-letter-space-2b: 0.0856em;
+$p4-letter-space-1b: 0.0567em;
+
+/* the base */
+$p4-letter-space: 0.035em;
+
+/* above the base */
+$p4-letter-space-1: 0.0195em;
+$p4-letter-space-2: 0.0059em;
+$p4-letter-space-3: -0.0026em;
+$p4-letter-space-4: -0.0096em;
+$p4-letter-space-5: -0.0147em;
+$p4-letter-space-6: -0.0186em;
+
+// Perfect Fifth
+
+/* --- Font Sizes --- */
+
+/* below the base */
+$p5-font-size-2b: 0.4375rem;
+$p5-font-size-1b: 0.6875rem;
+
+/* the base */
+$p5-font-size: 1rem;
+
+/* above the base */
+$p5-font-size-1: 1.5rem;
+$p5-font-size-2: 2.25rem;
+$p5-font-size-3: 3.375rem;
+$p5-font-size-4: 5.0625rem;
+$p5-font-size-5: 7.5625rem;
+$p5-font-size-6: 11.3125rem;
+
+/* -- Line Heights -- */
+
+/* below the base */
+$p5-line-height-2b: 2.2857;
+$p5-line-height-1b: 1.8182;
+
+/* the base */
+$p5-line-height: 1.5;
+
+/* above the base */
+$p5-line-height-1: 1.3333;
+$p5-line-height-2: 1.2222;
+$p5-line-height-3: 1.1852;
+$p5-line-height-4: 1.0864;
+$p5-line-height-5: 1.0579;
+$p5-line-height-6: 1.0387;
+
+/* -- Letter Spacings -- */
+
+/* below the base */
+$p5-letter-space-2b: 0.1186em;
+$p5-letter-space-1b: 0.0645em;
+
+/* the base */
+$p5-letter-space: 0.035em;
+
+/* above the base */
+$p5-letter-space-1: 0.0133em;
+$p5-letter-space-2: -0.0011em;
+$p5-letter-space-3: -0.0107em;
+$p5-letter-space-4: -0.0172em;
+$p5-letter-space-5: -0.0214em;
+$p5-letter-space-6: -0.0243em;
+
 $sections: (
   accretion-disk,
   birth,
@@ -68,9 +172,9 @@ $sections: (
   --spacing-sm: 2.25rem;
 
   // Breakpoints
-  --viewport-width-sm: $breakpoint-xs;
-  --viewport-width-md: $breakpoint-md;
-  --viewport-width-lg: $breakpoint-lg;
+  --viewport-width-sm: #{$breakpoint-xs};
+  --viewport-width-md: #{$breakpoint-md};
+  --viewport-width-lg: #{$breakpoint-lg};
 
   // Effects
   --hover-background-color-effect: background-color 0.3s ease;
@@ -79,39 +183,39 @@ $sections: (
   --hover-opacity-effect: opacity 0.3s ease;
 
   // Typography
-  --font-size-2xs: 0.5625rem;
-  --font-size-xs: 0.75rem;
-  --font-size-base: 1rem;
-  --font-size-sm: 1.3125rem;
-  --font-size-md: 1.8125rem;
-  --font-size-lg: 2.375rem;
-  --font-size-xl: 3.1875rem;
-  --font-size-2xl: 4.25rem;
-  --font-size-3xl: 5.6875rem;
+  --font-size-2xs: #{$p5-font-size-2b};
+  --font-size-xs: #{$p5-font-size-1b};
+  --font-size-base: #{$p5-font-size};
+  --font-size-sm: #{$p5-font-size-1};
+  --font-size-md: #{$p5-font-size-2};
+  --font-size-lg: #{$p5-font-size-3};
+  --font-size-xl: #{$p5-font-size-4};
+  --font-size-2xl: #{$p5-font-size-5};
+  --font-size-3xl: #{$p5-font-size-6};
 
   --font-weight-heading: 700;
   --font-weight-text: 400;
   --font-weight-text-active: 700;
 
-  --line-height-2xs: 1.7778;
-  --line-height-xs: 1.6667;
-  --line-height-base: 1.5;
-  --line-height-sm: 1.3333;
-  --line-height-md: 1.2414;
-  --line-height-lg: 1.2632;
-  --line-height-xl: 1.1765;
-  --line-height-2xl: 1.1176;
-  --line-height-3xl: 1.0989;
+  --letter-space-2xs: #{$p5-letter-space-2b};
+  --letter-space-xs: #{$p5-letter-space-1b};
+  --letter-space-base: #{$p5-letter-space};
+  --letter-space-sm: #{$p5-line-height-1};
+  --letter-space-md: #{$p5-line-height-2};
+  --letter-space-lg: #{$p5-line-height-3};
+  --letter-space-xl: #{$p5-line-height-4};
+  --letter-space-2xl: #{$p5-line-height-5};
+  --letter-space-3xl: #{$p5-line-height-6};
 
-  --letter-space-2xs: 0.0856em;
-  --letter-space-xs: 0.0567em;
-  --letter-space-base: 0.035em;
-  --letter-space-sm: 0.0195em;
-  --letter-space-md: 0.0059em;
-  --letter-space-lg: -0.0026em;
-  --letter-space-xl: -0.0096em;
-  --letter-space-2xl: -0.0147em;
-  --letter-space-3xl: -0.0186em;
+  --line-height-2xs: #{$p5-line-height-2b};
+  --line-height-xs: #{$p5-line-height-1b};
+  --line-height-base: #{$p5-line-height};
+  --line-height-sm: #{$p5-line-height-1};
+  --line-height-md: #{$p5-line-height-2};
+  --line-height-lg: #{$p5-line-height-3};
+  --line-height-xl: #{$p5-line-height-4};
+  --line-height-2xl: #{$p5-line-height-5};
+  --line-height-3xl: #{$p5-line-height-6};
 
   --text-max-width: 80ch;
 
@@ -210,8 +314,15 @@ html {
   font-size: var(--font-size-lg);
   letter-spacing: var(--letter-space-lg);
   line-height: var(--line-height-lg);
-  margin-bottom: 0;
-  text-shadow: 0 1px 4px var(--color-background);
+  margin-block: 0;
+  text-shadow:
+    1px 1px var(--color-accent),
+    2px 2px var(--color-accent),
+    3px 3px var(--color-accent),
+    4px 4px var(--color-accent),
+    5px 5px var(--color-accent),
+    6px 6px 6px var(--color-background);
+  text-transform: uppercase;
   z-index: var(--earth-index);
 
   @media (width >= $breakpoint-xs) {
@@ -275,15 +386,14 @@ html {
 }
 
 .subtitle {
-  color: var(--color-text-subtle);
+  color: var(--color-text);
   font-family: 'Inter', sans-serif;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-text);
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
-  margin-block: var(--spacing-sm) var(--spacing-base);
-  max-width: var(--text-max-width);
-  text-shadow: 0 1px 4px var(--color-background);
+  //margin-block: var(--spacing-sm) var(--spacing-base);
+  //max-width: var(--text-max-width);
   text-transform: uppercase;
 
   @media (width >= $breakpoint-md) {
@@ -523,7 +633,6 @@ html {
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: start;
   padding-inline: var(--spacing-base);
 
@@ -573,11 +682,9 @@ html {
 
     > .container {
       flex: 1;
-      height: auto;
 
       > .panel-figure {
         flex: 1;
-        height: auto;
       }
     }
   }
@@ -942,6 +1049,7 @@ html {
       align-items: end;
       justify-content: start;
       margin-inline: unset;
+      height: 100%; // needed for sticky toc
     }
 
     @media (width >= $breakpoint-md) {
@@ -993,27 +1101,34 @@ html {
   }
 
   .hero {
+    align-items: center;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     grid-area: hero;
+    justify-content: center;
     height: calc(100dvh - var(--header-height));
     width: 100%;
 
-    .heading-wrapper {
-      //background-color: var(--color-wrapper);
+    .subtitle-wrapper {
+      background-color: var(--color-surface);
       padding-block: var(--header-height);
       width: 100%;
+    }
 
-      .container {
-        justify-content: center;
+    .heading-wrapper {
+      padding-block: var(--header-height);
+      width: 100%;
+    }
 
-        @media (width >= $breakpoint-md) {
-          align-items: start;
-        }
+    .container {
+      justify-content: center;
+
+      @media (width >= $breakpoint-md) {
+        align-items: start;
       }
     }
 
