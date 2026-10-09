@@ -254,10 +254,11 @@ html {
 .subtitle {
   color: var(--color-text);
   font-family: "Inter", sans-serif;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-text);
   letter-spacing: var(--letter-space-2xs);
   line-height: var(--line-height-2xs);
+  text-shadow: 1px 1px var(--color-surface), 2px 2px 2px var(--color-background);
   text-transform: uppercase;
 }
 
@@ -508,6 +509,7 @@ html {
 
 .section {
   padding-top: var(--header-height);
+  height: calc(100dvh - var(--header-height));
 }
 
 .section.right-aligned {
@@ -531,6 +533,7 @@ html {
 .section.index {
   display: flex;
   flex-direction: column;
+  height: auto;
   min-height: calc(50dvh - var(--header-height) / 2);
   padding-bottom: var(--header-height);
 }
@@ -950,15 +953,31 @@ html {
   width: 100%;
 }
 
+.body .hero::after {
+  background: linear-gradient(180deg, transparent, var(--color-background));
+  content: "";
+  height: 50%;
+  inset: auto 0 0;
+  pointer-events: none;
+  position: absolute;
+  transition: var(--hover-opacity-effect);
+}
+
 .body .hero .subtitle-wrapper {
-  background-color: var(--color-surface);
+  align-self: flex-end;
+  border-top-color: var(--color-accent);
+  border-top-style: solid;
+  border-top-width: var(--border-width-sm);
   padding-block: var(--header-height);
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .body .hero .heading-wrapper {
   padding-block: var(--header-height);
   width: 100%;
+  z-index: 1;
 }
 
 .body .hero .container {
