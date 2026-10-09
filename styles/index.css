@@ -906,7 +906,6 @@ html {
 }
 
 .body .hero .heading-wrapper {
-  background-color: var(--color-wrapper);
   padding-block: var(--header-height);
   width: 100%;
 }

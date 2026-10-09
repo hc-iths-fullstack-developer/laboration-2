@@ -5,6 +5,9 @@ $breakpoint-xs: 22.5rem; // 360px
 $breakpoint-sm: 40rem; // 640 px
 $breakpoint-md: 80rem; // 1280 px
 $breakpoint-lg: 100rem; // 1600 px
+
+// Perfect Fourth
+
 $sections: (
   accretion-disk,
   birth,
@@ -1001,7 +1004,7 @@ html {
     width: 100%;
 
     .heading-wrapper {
-      background-color: var(--color-wrapper);
+      //background-color: var(--color-wrapper);
       padding-block: var(--header-height);
       width: 100%;
 
