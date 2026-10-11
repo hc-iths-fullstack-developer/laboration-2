@@ -48,6 +48,11 @@
       data-json="./data/index.json"
       defer
     ></script>
+
+    <script
+      src="./scripts/parallax.js"
+      defer
+    ></script>
   </head>
 
   <body
@@ -156,6 +161,31 @@
       id="hero"
       class="hero hero-universe"
     >
+      <div
+        class="space-layer space-bg"
+        data-speed="40"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="space-layer small-stars"
+        data-speed="60"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="space-layer medium-stars"
+        data-speed="85"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="space-layer space-nebula"
+        data-speed="100"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="space-layer big-stars"
+        data-speed="155"
+        aria-hidden="true"
+      ></div>
       <div class="container">
         <div class="heading-wrapper">
           <h1 class="heading page-title">Welcome to the Universe</h1>

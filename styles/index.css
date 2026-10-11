@@ -764,11 +764,11 @@ html {
   }
 
   .main-nav-wrapper .main-nav .main-nav-group .main-nav-item .main-nav-link::before {
-    background: linear-gradient(transparent, var(--color-surface-hover));
+    background-image: linear-gradient(transparent, var(--color-surface-hover));
   }
 
   .main-nav-wrapper .main-nav .main-nav-group .main-nav-item .main-nav-link.active {
-    background: linear-gradient(180deg, transparent, var(--color-accent-subtle));
+    background-image: linear-gradient(180deg, transparent, var(--color-accent-subtle));
     border-bottom-color: var(--color-accent);
     border-bottom-style: solid;
     border-bottom-width: var(--border-width-sm);
@@ -957,42 +957,10 @@ html {
   display: flex;
   flex-direction: column;
   grid-area: hero;
-  justify-content: center;
   height: calc(100dvh - var(--header-height));
-  width: 100%;
-}
-
-.body .hero::after {
-  background: linear-gradient(180deg, transparent, var(--color-background));
-  content: "";
-  height: 50%;
-  inset: auto 0 0;
-  pointer-events: none;
-  position: absolute;
-  transition: var(--hover-opacity-effect);
-}
-
-.body .hero .subtitle-wrapper {
-  align-self: flex-end;
-  padding-block: var(--header-height);
+  justify-content: center;
   position: relative;
   width: 100%;
-}
-
-.body .hero .heading-wrapper {
-  padding-block: var(--header-height);
-  width: 100%;
-}
-
-.body .hero .container {
-  justify-content: center;
-  z-index: 1;
-}
-
-@media (width >= 80rem) {
-  .body .hero .container {
-    align-items: start;
-  }
 }
 
 .body .hero.hero-black-holes {
@@ -1060,18 +1028,75 @@ html {
 }
 
 .body .hero.hero-universe {
-  background-image: url("../images/universe-hero-small.webp");
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.body .hero.hero-universe .space-layer {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: none;
+}
+
+.body .hero.hero-universe .space-layer.space-bg {
+  background-image: url("../images/01-dark-distant-space.png");
+  z-index: 0;
+}
+
+.body .hero.hero-universe .space-layer.small-stars {
+  background-image: url("../images/02-distant-stars-and-galaxies.png");
+  z-index: 1;
+}
+
+.body .hero.hero-universe .space-layer.medium-stars {
+  background-image: url("../images/03-medium-stars.png");
+  z-index: 2;
+}
+
+.body .hero.hero-universe .space-layer.space-nebula {
+  background-image: url("../images/04-horsehead-nebula.png");
+  z-index: 3;
+}
+
+.body .hero.hero-universe .space-layer.big-stars {
+  background-image: url("../images/05-bright-foreground-stars.png");
+  z-index: 3;
+}
+
+.body .hero.hero-universe::after {
+  background: linear-gradient(180deg, transparent, var(--color-background));
+  content: "";
+  height: 50%;
+  inset: auto 0 0;
+  pointer-events: none;
+  position: absolute;
+  transition: var(--hover-opacity-effect);
+  z-index: 4;
+}
+
+.body .hero .subtitle-wrapper {
+  align-self: flex-end;
+  padding-block: var(--header-height);
+  width: 100%;
+}
+
+.body .hero .heading-wrapper {
+  padding-block: var(--header-height);
+  width: 100%;
+}
+
+.body .hero .container {
+  justify-content: center;
+  z-index: 5;
 }
 
 @media (width >= 80rem) {
-  .body .hero.hero-universe {
-    background-image: url("../images/universe-hero-medium.webp");
-  }
-}
-
-@media (width >= 100rem) {
-  .body .hero.hero-universe {
-    background-image: url("../images/universe-hero-large.webp");
+  .body .hero .container {
+    align-items: start;
   }
 }
 
