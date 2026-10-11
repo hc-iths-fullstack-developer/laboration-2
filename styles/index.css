@@ -958,24 +958,41 @@ html {
   flex-direction: column;
   grid-area: hero;
   height: calc(100dvh - var(--header-height));
+  clip-path: inset(0);
   justify-content: center;
   position: relative;
   width: 100%;
 }
 
+.body .hero > .hero-frames {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .body .hero.hero-black-holes {
-  background-image: url("../images/black-holes-hero-small.webp");
+  --frame-size: small;
+
+  background-image: url("../images/black-hole-hero-small/frame-0001.webp");
 }
 
 @media (width >= 80rem) {
   .body .hero.hero-black-holes {
-    background-image: url("../images/black-holes-hero-medium.webp");
+    --frame-size: medium;
+
+    background-image: url("../images/black-hole-hero-medium/frame-0001.webp");
   }
 }
 
 @media (width >= 100rem) {
   .body .hero.hero-black-holes {
-    background-image: url("../images/black-holes-hero-large.webp");
+    --frame-size: large;
+
+    background-image: url("../images/black-hole-hero-large/frame-0001.webp");
   }
 }
 
@@ -1043,27 +1060,27 @@ html {
 }
 
 .body .hero.hero-universe .space-layer.space-bg {
-  background-image: url("../images/01-dark-distant-space.png");
+  background-image: url("../images/universe-hero-large/01-dark-distant-space.png");
   z-index: 0;
 }
 
 .body .hero.hero-universe .space-layer.small-stars {
-  background-image: url("../images/02-distant-stars-and-galaxies.png");
+  background-image: url("../images/universe-hero-large/02-distant-stars-and-galaxies.png");
   z-index: 1;
 }
 
 .body .hero.hero-universe .space-layer.medium-stars {
-  background-image: url("../images/03-medium-stars.png");
+  background-image: url("../images/universe-hero-large/03-medium-stars.png");
   z-index: 2;
 }
 
 .body .hero.hero-universe .space-layer.space-nebula {
-  background-image: url("../images/04-horsehead-nebula.png");
+  background-image: url("../images/universe-hero-large/04-horsehead-nebula.png");
   z-index: 3;
 }
 
 .body .hero.hero-universe .space-layer.big-stars {
-  background-image: url("../images/05-bright-foreground-stars.png");
+  background-image: url("../images/universe-hero-large/05-bright-foreground-stars.png");
   z-index: 3;
 }
 
