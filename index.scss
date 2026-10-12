@@ -1133,13 +1133,11 @@ html {
   }
 
   .hero {
-    --frame-size: small;
     align-items: center;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: inset(0);
     display: flex;
     flex-direction: column;
     grid-area: hero;
@@ -1276,30 +1274,20 @@ html {
       }
     }
 
-    .hero-frames {
-      display: block;
-      height: 100%;
-      inset: 0;
-      pointer-events: none;
-      position: fixed;
-      width: 100%;
-      z-index: 0;
-    }
-
-    .heading-wrapper {
-      padding-block: var(--header-height);
-      width: 100%;
-    }
-
-    .subtitle-wrapper {
-      align-self: flex-end;
-      padding-block: var(--header-height);
-      width: 100%;
-    }
-
     .container {
       justify-content: center;
       z-index: 5;
+
+      .heading-wrapper {
+        padding-block: var(--header-height);
+        width: 100%;
+      }
+
+      .subtitle-wrapper {
+        align-self: flex-end;
+        padding-block: var(--header-height);
+        width: 100%;
+      }
 
       @media (width >= $breakpoint-md) {
         align-items: start;
@@ -1317,12 +1305,33 @@ html {
       z-index: 4;
     }
 
+    &[data-frame-animation] {
+      --frame-size: small;
+      isolation: isolate;
+      clip-path: inset(0);
+      background-attachment: fixed;
+
+      .hero-frames {
+        display: block;
+        height: 100%;
+        inset: 0;
+        pointer-events: none;
+        position: fixed;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+
     @media (width >= $breakpoint-md) {
-      --frame-size: medium;
+      &[data-frame-animation] {
+        --frame-size: medium;
+      }
     }
 
     @media (width >= $breakpoint-lg) {
-      --frame-size: large;
+      &[data-frame-animation] {
+        --frame-size: large;
+      }
     }
 
     @media only screen and (max-device-width: $breakpoint-lg) {

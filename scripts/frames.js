@@ -1,6 +1,11 @@
-(() => {
-  const hero = document.querySelector('.hero-black-holes');
-  if (!hero) return;
+const setupFrameAnimation = (hero) => {
+  const frameCount = Number(hero.dataset.frameCount);
+  const maxFPS = Number(hero.dataset.frameFps || 30);
+  const folderPattern = hero.dataset.frameFolder;
+  if (!folderPattern || !Number.isInteger(frameCount) || frameCount < 1 || !Number.isFinite(maxFPS) || maxFPS <= 0) {
+    console.warn('Invalid frame-animation settings:', hero);
+    return;
+  };
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   if (!context) return;
@@ -8,14 +13,13 @@
   canvas.setAttribute('aria-hidden', 'true');
   hero.prepend(canvas);
 
-  const frameCount = 181;
-  const maxFPS = 200; // Playback rate while scrolling; limited by display refresh and frame readiness.
   const frameInterval = 1000 / maxFPS;
   let lastFrameTime = -Infinity;
-  const frameURL = (index, size = activeSize) => new URL(
-    `../images/black-hole-hero-${size}/frame-${String(index + 1).padStart(4, '0')}.webp`,
-    document.baseURI,
-  ).href;
+  const frameURL = (index, size) => {
+    const folder = folderPattern.replace('{size}', size).replace(/\/$/, '');
+    const filename = `frame-${String(index + 1).padStart(4, '0')}.webp`;
+    return new URL(`${folder}/${filename}`, document.baseURI).href;
+  };
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let ready = new Map();
   let loading = new Set();
@@ -26,7 +30,7 @@
   let displayedBitmap = null;
   let displayedSize = '';
 
-  function switchSize(size) {
+  const switchSize = (size) => {
     generation++;
     activeSize = size;
     // Keep the displayed image alive until its replacement has been drawn.
@@ -36,16 +40,16 @@
     ready = new Map();
     loading = new Set();
     failed = new Set();
-  }
+  };
 
-  function syncSize() {
+  const syncSize = () => {
     const value = getComputedStyle(hero).getPropertyValue('--frame-size').trim();
     const size = ['small', 'medium', 'large'].includes(value) ? value : 'large';
     if (size !== requestedSize) {
       requestedSize = size;
       switchSize(size);
     }
-  }
+  };
   const scrollIdleMs = 80; // Fallback for browsers without scrollend.
   let lastScrollTime = -Infinity;
   let lastScrollY = window.scrollY;
@@ -62,7 +66,7 @@
   // Wrap both playback and preloading across the first/last-frame boundary.
   const wrapFrame = index => ((index % frameCount) + frameCount) % frameCount;
 
-  function wantedFrames() {
+  const wantedFrames = () => {
     // Buffer around the displayed frame, in the current scroll direction.
     const base = motion.matches || window.scrollY <= 1 ? 0 : Math.max(0, current);
     const indices = [base];
@@ -73,15 +77,15 @@
       }
     }
     return [...new Set(indices.map(wrapFrame))];
-  }
+  };
 
-  function requestUpdate() {
+  const requestUpdate = () => {
     if (pending) return;
     pending = true;
     requestAnimationFrame(update);
-  }
+  };
 
-  async function load(index) {
+  const load = async (index) => {
     const loadGeneration = generation;
     const loadSize = activeSize;
     const pendingLoads = loading;
@@ -122,18 +126,18 @@
       pendingLoads.delete(index);
       requestUpdate();
     }
-  }
+  };
 
-  function preload() {
+  const preload = () => {
     // Rebuild priorities on every scroll, so reversing immediately changes the buffer.
     for (const index of wantedFrames()) {
       if (loading.size >= maxConcurrentLoads) break;
       if (index < 0 || index >= frameCount || ready.has(index) || loading.has(index) || failed.has(index)) continue;
       load(index);
     }
-  }
+  };
 
-  function update() {
+  const update = () => {
     pending = false;
     syncSize();
     const now = performance.now();
@@ -195,9 +199,9 @@
     if (current !== selected) lastFrameTime = now;
     current = selected;
     lastDraw = drawKey;
-  }
+  };
 
-  function onScroll() {
+  const onScroll = () => {
     const position = window.scrollY;
     const delta = position - lastScrollY;
     lastScrollY = position;
@@ -208,12 +212,12 @@
     lastScrollTime = now;
     scrolling = true;
     requestUpdate();
-  }
+  };
 
-  function stopPlayback() {
+  const stopPlayback = () => {
     scrolling = false;
     lastScrollTime = -Infinity;
-  }
+  };
 
   window.addEventListener('scroll', onScroll, { passive: true });
   document.addEventListener('scrollend', stopPlayback);
@@ -225,4 +229,15 @@
   motion.addEventListener('change', requestUpdate);
   new ResizeObserver(requestUpdate).observe(hero);
   requestUpdate();
-})();
+};
+
+// Start only after every helper has been initialized and the HTML is available.
+const initializeFrameAnimations = () => {
+  document.querySelectorAll('[data-frame-animation]').forEach(setupFrameAnimation);
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeFrameAnimations, { once: true });
+} else {
+  initializeFrameAnimations();
+}

@@ -48,6 +48,7 @@
       data-json="../data/stars.json"
       defer
     ></script>
+    <script src="../scripts/frames.js" defer></script>
   </head>
 
   <body
@@ -154,6 +155,10 @@
     <section
       id="hero"
       class="hero hero-stars"
+      data-frame-animation
+      data-frame-folder="../images/stars-hero-{size}"
+      data-frame-count="120"
+      data-frame-fps="30"
     >
       <div class="container">
         <div class="heading-wrapper">

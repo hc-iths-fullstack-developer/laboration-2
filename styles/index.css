@@ -949,14 +949,11 @@ html {
 }
 
 .body .hero {
-  --frame-size: small;
-
   align-items: center;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: inset(0);
   display: flex;
   flex-direction: column;
   grid-area: hero;
@@ -1070,30 +1067,20 @@ html {
   z-index: 4;
 }
 
-.body .hero .hero-frames {
-  display: block;
-  height: 100%;
-  inset: 0;
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  z-index: 0;
-}
-
-.body .hero .heading-wrapper {
-  padding-block: var(--header-height);
-  width: 100%;
-}
-
-.body .hero .subtitle-wrapper {
-  align-self: flex-end;
-  padding-block: var(--header-height);
-  width: 100%;
-}
-
 .body .hero .container {
   justify-content: center;
   z-index: 5;
+}
+
+.body .hero .container .heading-wrapper {
+  padding-block: var(--header-height);
+  width: 100%;
+}
+
+.body .hero .container .subtitle-wrapper {
+  align-self: flex-end;
+  padding-block: var(--header-height);
+  width: 100%;
 }
 
 @media (width >= 80rem) {
@@ -1113,14 +1100,32 @@ html {
   z-index: 4;
 }
 
+.body .hero[data-frame-animation] {
+  --frame-size: small;
+
+  isolation: isolate;
+  clip-path: inset(0);
+  background-attachment: fixed;
+}
+
+.body .hero[data-frame-animation] .hero-frames {
+  display: block;
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
 @media (width >= 80rem) {
-  .body .hero {
+  .body .hero[data-frame-animation] {
     --frame-size: medium;
   }
 }
 
 @media (width >= 100rem) {
-  .body .hero {
+  .body .hero[data-frame-animation] {
     --frame-size: large;
   }
 }
