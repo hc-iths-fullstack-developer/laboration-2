@@ -1084,17 +1084,6 @@ html {
   z-index: 3;
 }
 
-.body .hero.hero-universe::after {
-  background: linear-gradient(180deg, transparent, var(--color-background));
-  content: "";
-  height: 50%;
-  inset: auto 0 0;
-  pointer-events: none;
-  position: absolute;
-  transition: var(--hover-opacity-effect);
-  z-index: 4;
-}
-
 .body .hero .subtitle-wrapper {
   align-self: flex-end;
   padding-block: var(--header-height);
@@ -1115,6 +1104,17 @@ html {
   .body .hero .container {
     align-items: start;
   }
+}
+
+.body .hero::after {
+  background: linear-gradient(180deg, transparent, var(--color-background));
+  content: "";
+  height: 50%;
+  inset: auto 0 0;
+  pointer-events: none;
+  position: absolute;
+  transition: var(--hover-opacity-effect);
+  z-index: 4;
 }
 
 @media only screen and (max-device-width: 100rem) {
