@@ -275,6 +275,17 @@ html {
 }
 
 // ========================================
+// Ordering
+// ========================================
+
+// 0. Variables
+// 1. Children
+// 2. Self
+// 3. Pseudo
+// 4. Data
+// 5. Media Queries
+
+// ========================================
 // Typography
 // ========================================
 .heading {
@@ -657,7 +668,6 @@ html {
 
 .section {
   padding-top: var(--header-height);
-  //min-height: calc(100dvh - var(--header-height));
 
   &.right-aligned {
     background: linear-gradient(
@@ -779,6 +789,20 @@ html {
           transition: var(--hover-color-effect);
           width: 100%;
 
+          &.active {
+            color: var(--color-text);
+            background: linear-gradient(
+              270deg,
+              transparent,
+              var(--color-accent-subtle)
+            );
+            border-left-color: var(--color-accent);
+            border-left-style: solid;
+            border-left-width: var(--border-width-sm);
+            font-weight: var(--font-weight-text-active);
+            margin-left: unset;
+          }
+
           &::before {
             background: linear-gradient(
               270deg,
@@ -800,20 +824,6 @@ html {
             &::before {
               opacity: 1;
             }
-          }
-
-          &.active {
-            color: var(--color-text);
-            background: linear-gradient(
-              270deg,
-              transparent,
-              var(--color-accent-subtle)
-            );
-            border-left-color: var(--color-accent);
-            border-left-style: solid;
-            border-left-width: var(--border-width-sm);
-            font-weight: var(--font-weight-text-active);
-            margin-left: unset;
           }
 
           &:focus-visible {
@@ -911,13 +921,6 @@ html {
             margin-left: unset;
             text-align: center;
 
-            &::before {
-              background-image: linear-gradient(
-                transparent,
-                var(--color-surface-hover)
-              );
-            }
-
             &.active {
               background-image: linear-gradient(
                 180deg,
@@ -931,6 +934,13 @@ html {
               border-left-style: unset;
               border-left-width: unset;
               margin-bottom: calc(-1 * var(--border-width-sm));
+            }
+
+            &::before {
+              background-image: linear-gradient(
+                transparent,
+                var(--color-surface-hover)
+              );
             }
           }
         }
@@ -1123,42 +1133,30 @@ html {
   }
 
   .hero {
+    --frame-size: small;
     align-items: center;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    clip-path: inset(0);
     display: flex;
     flex-direction: column;
     grid-area: hero;
     height: calc(100dvh - var(--header-height));
-    //isolation: isolate;
-    clip-path: inset(0);
+    isolation: isolate;
     justify-content: center;
     position: relative;
     width: 100%;
 
-    > .hero-frames {
-      position: fixed;
-      inset: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
     &.hero-black-holes {
-      --frame-size: small;
       background-image: url('../images/black-hole-hero-small/frame-0001.webp');
 
       @media (width >= $breakpoint-md) {
-        --frame-size: medium;
         background-image: url('../images/black-hole-hero-medium/frame-0001.webp');
       }
 
       @media (width >= $breakpoint-lg) {
-        --frame-size: large;
         background-image: url('../images/black-hole-hero-large/frame-0001.webp');
       }
     }
@@ -1201,16 +1199,15 @@ html {
 
     &.hero-universe {
       overflow: hidden;
-      isolation: isolate;
 
       .space-layer {
-        position: absolute;
-        inset: 0;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        pointer-events: none;
         animation: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        inset: 0;
+        position: absolute;
+        pointer-events: none;
 
         &.space-bg {
           background-image: url('../images/universe-hero-large/01-dark-distant-space.png');
@@ -1266,7 +1263,7 @@ html {
 
         &.big-stars {
           background-image: url('../images/universe-hero-large/05-bright-foreground-stars.png');
-          z-index: 3;
+          z-index: 4;
 
           @media (width >= $breakpoint-md) {
             //background-image: url('../images/universe-hero-medium.webp');
@@ -1279,13 +1276,23 @@ html {
       }
     }
 
-    .subtitle-wrapper {
-      align-self: flex-end;
+    .hero-frames {
+      display: block;
+      height: 100%;
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .heading-wrapper {
       padding-block: var(--header-height);
       width: 100%;
     }
 
-    .heading-wrapper {
+    .subtitle-wrapper {
+      align-self: flex-end;
       padding-block: var(--header-height);
       width: 100%;
     }
@@ -1308,6 +1315,14 @@ html {
       position: absolute;
       transition: var(--hover-opacity-effect);
       z-index: 4;
+    }
+
+    @media (width >= $breakpoint-md) {
+      --frame-size: medium;
+    }
+
+    @media (width >= $breakpoint-lg) {
+      --frame-size: large;
     }
 
     @media only screen and (max-device-width: $breakpoint-lg) {
