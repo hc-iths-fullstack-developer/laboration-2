@@ -1148,14 +1148,14 @@ html {
     width: 100%;
 
     &.hero-black-holes {
-      background-image: url('../images/black-hole-hero-small/frame-0001.webp');
+      background-image: url('../images/black-holes-hero-small/frame-0001.webp');
 
       @media (width >= $breakpoint-md) {
-        background-image: url('../images/black-hole-hero-medium/frame-0001.webp');
+        background-image: url('../images/black-holes-hero-medium/frame-0001.webp');
       }
 
       @media (width >= $breakpoint-lg) {
-        background-image: url('../images/black-hole-hero-large/frame-0001.webp');
+        background-image: url('../images/black-holes-hero-large/frame-0001.webp');
       }
     }
 
@@ -1184,14 +1184,14 @@ html {
     }
 
     &.hero-stars {
-      background-image: url('../images/stars-hero-small.webp');
+      background-image: url('../images/star-hero-small/frame-0001.webp');
 
       @media (width >= $breakpoint-md) {
-        background-image: url('../images/stars-hero-medium.webp');
+        background-image: url('../images/star-hero-medium/frame-0001.webp');
       }
 
       @media (width >= $breakpoint-lg) {
-        background-image: url('../images/stars-hero-large.webp');
+        background-image: url('../images/star-hero-large/frame-0001.webp');
       }
     }
 

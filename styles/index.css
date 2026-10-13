@@ -965,18 +965,18 @@ html {
 }
 
 .body .hero.hero-black-holes {
-  background-image: url("../images/black-hole-hero-small/frame-0001.webp");
+  background-image: url("../images/black-holes-hero-small/frame-0001.webp");
 }
 
 @media (width >= 80rem) {
   .body .hero.hero-black-holes {
-    background-image: url("../images/black-hole-hero-medium/frame-0001.webp");
+    background-image: url("../images/black-holes-hero-medium/frame-0001.webp");
   }
 }
 
 @media (width >= 100rem) {
   .body .hero.hero-black-holes {
-    background-image: url("../images/black-hole-hero-large/frame-0001.webp");
+    background-image: url("../images/black-holes-hero-large/frame-0001.webp");
   }
 }
 
@@ -1013,18 +1013,18 @@ html {
 }
 
 .body .hero.hero-stars {
-  background-image: url("../images/stars-hero-small.webp");
+  background-image: url("../images/star-hero-small/frame-0001.webp");
 }
 
 @media (width >= 80rem) {
   .body .hero.hero-stars {
-    background-image: url("../images/stars-hero-medium.webp");
+    background-image: url("../images/star-hero-medium/frame-0001.webp");
   }
 }
 
 @media (width >= 100rem) {
   .body .hero.hero-stars {
-    background-image: url("../images/stars-hero-large.webp");
+    background-image: url("../images/star-hero-large/frame-0001.webp");
   }
 }
 
