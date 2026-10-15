@@ -1090,23 +1090,10 @@ html {
   }
 }
 
-.body .hero::after {
-  background: linear-gradient(180deg, transparent, var(--color-background));
-  content: "";
-  height: 50%;
-  inset: auto 0 0;
-  pointer-events: none;
-  position: absolute;
-  transition: var(--hover-opacity-effect);
-  z-index: 4;
-}
-
 .body .hero[data-frame-animation] {
   --frame-size: small;
 
-  isolation: isolate;
   clip-path: inset(0);
-  background-attachment: fixed;
 }
 
 .body .hero[data-frame-animation] .hero-frames {
