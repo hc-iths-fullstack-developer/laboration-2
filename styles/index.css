@@ -960,6 +960,7 @@ html {
   height: calc(100dvh - var(--header-height));
   isolation: isolate;
   justify-content: center;
+  scroll-margin-top: var(--header-height);
   position: relative;
   width: 100%;
 }
@@ -1269,6 +1270,16 @@ html {
 }
 
 .body:has(#galaxy-bars:target) .toc-nav-item:has(.toc-nav-link[href="#galaxy-bars"]) .toc-nav-link {
+  background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
+  border-right-color: var(--color-accent);
+  border-right-style: solid;
+  border-right-width: var(--border-width-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-text-active);
+  margin-right: calc(-1 * var(--border-width-sm));
+}
+
+.body:has(#hero:target) .toc-nav-item:has(.toc-nav-link[href="#hero"]) .toc-nav-link {
   background: linear-gradient(90deg, transparent, var(--color-accent-subtle));
   border-right-color: var(--color-accent);
   border-right-style: solid;
